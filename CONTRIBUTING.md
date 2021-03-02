@@ -44,6 +44,44 @@ Always write a clear log message for your commits. One-line messages are fine fo
 
 Please make a new Pull Request with a clear list of what you've done (read more about [pull requests](https://www.atlassian.com/git/tutorials/making-a-pull-request)). Assign merge requests to someone else for a code review. Don't approve your own requests. Follow our coding standards (below). Make all of your commits atomic (one feature per commit).
 
+### Template
+
+Use the following template for Pull Request descriptions:
+
+- _(Replace text in brackets `[]`.)_
+- _(Italicized text in `_()_` is for your info and should be deleted.)_
+
+```markdown
+# Description
+
+[add description of work done here]
+
+## Spec
+
+Designs: [link to design if applicable; delete if not]
+
+See Ticket: [link to ticket if applicable; delete if not]
+
+---
+
+## Validation
+
+1. Make sure all merge request checks have passed (CI/CD).
+1. Pull related branches locally.
+1. Navigate to... [continue instructions]
+
+_(For an example of good validation instructions, check out [Bryan's Bouncy Ball PR](https://github.com/sparkbox/bouncy-ball/pull/56#issue-192153701).)_
+
+---
+
+## Change Log
+
+_(copy/paste-able change log notes. check the box when the change is also in CHANGELOG.md)_
+
+* [Add _____](link to commitid)
+* [Fix _____](link to commitid)
+```
+
 ### Change log
 
 All features should be added to the [CHANGELOG.md](CHANGELOG.md). The changes can be also used for release notes.
