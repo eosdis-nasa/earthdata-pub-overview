@@ -5,11 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## 0.0.3 - 2021-03-15
-- [Update links for path based routing](2e8b5dd93159e6697863681d28fde9a87ac2f229)
-
 ## [Unreleased]
 
+## 0.0.3 - 2021-03-15
+
+- [Update links for path based routing](2e8b5dd93159e6697863681d28fde9a87ac2f229)
 - [Add pull request template to CONTRIBUTING.md](8b89e506a7d09bbca43dea8772427e687ddcef79)
 
 ## 0.0.2 - 2021-01-05
