@@ -9,6 +9,10 @@
     ],
     "table": {
       "caption": "Table 1. NASA DAACs and Science Disciplines",
+      "header": [
+        "NASA DAAC",
+        "Scientific Disciplines"
+      ],
       "rows": [
         {
           "number": 1,

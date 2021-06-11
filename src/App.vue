@@ -1,22 +1,23 @@
 // App.vue
 
 <template>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-lg">
+          <a class="navbar-brand nasa">Earthdata Pub Overview</a>
+      </div>
+  </nav>
   <div id="app">
-    <Overview />
+    <Daacs />
   </div>
 </template>
 
 <script>
-import Overview from './components/Overview.vue'
+import Daacs from './components/Daacs.vue'
 
 export default {
   name: 'app',
   components: {
-    Overview
+    Daacs
   }
 }
 </script>
-
-<style>
-@import "https://cdn.earthdata.nasa.gov/eui/1.1.8/stylesheets/application.css";
-</style>
