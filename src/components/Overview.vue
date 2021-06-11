@@ -3,7 +3,7 @@
 <template>
   <div class="container">
     <h1>Earthdata Pub Overview</h1>
-    <button v-on:click="getOverviewData">Get DAACs List</button>
+    <!-- <button v-on:click="getOverviewData">Get DAACs List</button> -->
     <div v-for="overviewData in overviewDataList" :key="overviewData.id" class="overview-data">
       <h2>{{overviewData.heading}}</h2>
       <p v-for="(value, index) in overviewData.paragraphs" :key="index">{{value}}</p>
@@ -34,12 +34,10 @@ export default {
       overviewDataList: []
     };
   },
-  methods: {
-    getOverviewData() {
-      fetch("overview.json")
-        .then(response => response.json())
-        .then(data => (this.overviewDataList = data));
-    }
+  mounted() {
+    fetch("overview.json")
+      .then(response => response.json())
+      .then(data => (this.overviewDataList = data));
   }
 };
 </script>
