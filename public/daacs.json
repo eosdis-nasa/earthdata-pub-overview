@@ -51,7 +51,10 @@
         },
         {
           "number": 6,
-          "columns": ["Land Processes DAAC (LPDAAC)", "Land data products "]
+          "columns": [
+            "Land Processes DAAC (LPDAAC)",
+            "Land data products "
+          ]
         },
         {
           "number": 7,
@@ -76,7 +79,10 @@
         },
         {
           "number": 10,
-          "columns": ["Ocean Biology DAAC (OB.DAAC)", "Ocean Biology"]
+          "columns": [
+            "Ocean Biology DAAC (OB.DAAC)",
+            "Ocean Biology"
+          ]
         },
         {
           "number": 11,
