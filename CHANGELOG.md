@@ -7,9 +7,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## 0.0.4 - 2021-06-09
+<!-- Unreleased changes can be added here. -->
+<!-- Note:  Version 1.0.0 is reserved for the first working version of the actual Overview page(s) application. -->
 
-- [Prototype Overview app]()
+## 0.1.1 - 2021-06-28
+
+- [Add snyk](a3b1f543737c3a25f383dd43e3957462188811cf)
+- [Add bootstrap 5 and EUI 2.0](00f24ca404ae5178c6e769f0d9a13f3c9e0f85a4)
+- [Prototype Overview app](9f417cebaa4e9e2a00287072c90fe80a2dc16e71)
+
+## 0.1.0 - 2021-03-18
+
+- Release for testing
+- [Update CHANGELOG unreleased note](8374e596615709a958dfbb7b5dd764cd3d98ddce)
+
 ## 0.0.3 - 2021-03-15
 
 - [Update links for path based routing](2e8b5dd93159e6697863681d28fde9a87ac2f229)
