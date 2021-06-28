@@ -5,8 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
 <!-- Unreleased changes can be added here. -->
 <!-- Note:  Version 1.0.0 is reserved for the first working version of the actual Overview page(s) application. -->
+
+## 0.1.1 - 2021-06-28
+
+- [Add snyk](a3b1f543737c3a25f383dd43e3957462188811cf)
+- [Add bootstrap 5 and EUI 2.0](00f24ca404ae5178c6e769f0d9a13f3c9e0f85a4)
+- [Prototype Overview app](9f417cebaa4e9e2a00287072c90fe80a2dc16e71)
 
 ## 0.1.0 - 2021-03-18
 
