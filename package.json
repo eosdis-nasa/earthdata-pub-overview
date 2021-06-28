@@ -6,6 +6,9 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "snyk-test": "snyk test",
+    "snyk-prepare": "npm run snyk-protect",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -19,6 +22,7 @@
   "dependencies": {
     "bootstrap": "^5.0.1",
     "core-js": "^3.6.5",
+    "snyk": "^1.649.0",
     "vue": "^3.0.0"
   },
   "devDependencies": {
@@ -49,5 +53,6 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "snyk": true
 }
