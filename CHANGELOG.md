@@ -8,7 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 <!-- Unreleased changes can be added here. -->
-<!-- Note:  Version 1.0.0 is reserved for the first working version of the actual Overview page(s) application. -->
+
+## 1.0.0 - 2021-06-29
+
+- [Open source release 1.0.0](d4b4cd2adbc386195a7734273d2a73c4e1d1e6d8)
 
 ## 0.1.1 - 2021-06-28
 

@@ -1,6 +1,6 @@
 {
   "name": "earthdata-pub-overview",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Overview for Earthdata Pub",
   "main": "index.js",
   "private": true,
