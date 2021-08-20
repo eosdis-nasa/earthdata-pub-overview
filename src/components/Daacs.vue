@@ -1,5 +1,3 @@
-// Daacs.vue
-
 <template>
   <div class="container">
     <div v-for="daacsData in daacsDataList" :key="daacsData.id" class="container-lg">
