@@ -5,33 +5,20 @@
         <h2 class="display-4">{{data.heading}}</h2>
         <p v-for="(value, index) in data.paragraphs" :key="index">{{value}}</p>
       </div>
-      <table class="table table-striped">
-        <caption>{{data.table.caption}}</caption>
-        <thead>
-          <tr>
-            <td v-for="(col, index) in data.table.header" :key="index">{{col}}</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(row, index) in data.table.rows" :key="index">
-            <td v-for="(col, index) in row.columns" :key="index">{{col}}</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Daacs",
+  name: "Publication",
   data() {
     return {
       dataList: []
     };
   },
   mounted() {
-    fetch("daacs.json")
+    fetch("publication.json")
       .then(response => response.json())
       .then(data => (this.dataList = data));
   }

@@ -1,0 +1,12 @@
+[
+  {
+    "id": 2,
+    "heading": "What is Data Publication? (In work)",
+    "paragraphs": [
+      "Data publication is the part of the data lifecycle during which data products are released to the public. Data publication involves a series of activities performed cooperatively by data producers and the NASA DAAC.",
+      "Although the primary goal of the data publication process is to make your data available to the general public, data publication at a NASA DAAC encompasses much more than this, and begins well before the data are actually released to the public. The data publication process is a collaboration between you and a NASA DAAC, and begins as soon as your data are assigned to a DAAC. [detail to be added]",
+      "[A table below will outline the typical data publication activities, as well as the role of the DAAC and the data producer in these activities.] Keep in mind that requirements can differ for each mission or campaign, and each DAAC has its own processes. You may be asked to perform some tasks that are not shown here, and you may not be asked to perform some tasks that are shown here.",
+      "For more information on the role of NASA DAACs and Data Producers in the data publication process, visit the Earthdata Adding New Data to EOSDIS page."
+    ]
+  }
+]
