@@ -15,7 +15,7 @@ import Daacs from "./Daacs.vue";
 import Policy from "./Policy.vue";
 import Publication from "./Publication.vue"
 import Steps from "./Steps.vue"
-import Testing from "./Testing.vue";
+import Testing from "./testing/Testing.vue";
 
 export default {
   name: "app",

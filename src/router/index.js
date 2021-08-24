@@ -1,10 +1,13 @@
 import { createWebHistory, createRouter }  from 'vue-router'
 import Home from '@/components/Home'
-import Beta from '@/components/Beta'
-import Feedback from '@/components/Feedback'
-import Instructions from '@/components/Instructions'
-import Task1 from '@/components/Task1'
 import PageNotFound from '@/components/PageNotFound'
+
+import Beta from '@/components/Beta'
+import Instructions from '@/components/testing/Instructions'
+import ContentReview from '@/components/testing/ContentReview'
+import SelectDAAC from '@/components/testing/SelectDAAC'
+import CompleteAccessionReq from '@/components/testing/CompleteAccessionReq'
+import ReviewDashboard from '@/components/testing/ReviewDashboard'
 
 const routes = [
   {
@@ -24,14 +27,24 @@ const routes = [
     component: Instructions
   },
   {
-    path: '/feedback',
-    name: 'Feedback',
-    component: Feedback
+    path: '/contentreview',
+    name: 'ContentReview',
+    component: ContentReview
   },
   {
-    path: '/task1',
-    name: 'Task1',
-    component: Task1
+    path: '/selectdaac',
+    name: 'SelectDAAC',
+    component: SelectDAAC
+  },
+  {
+    path: '/accession',
+    name: 'CompleteAccessionReq',
+    component: CompleteAccessionReq
+  },
+  {
+    path: '/reviewdashboard',
+    name: 'ReviewDashboard',
+    component: ReviewDashboard
   },
   {
     path: '/404*',
