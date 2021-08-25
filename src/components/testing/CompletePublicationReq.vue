@@ -6,7 +6,7 @@
         <p>The links on this page marked <i class="fas fa-external-link-alt"></i> will open a new tab. You can switch back to this tab to review the task instructions.</p>
         <ol>
             <li>Visit the <a href="/dashboard" target="_blank">Dashboard <i class="fas fa-external-link-alt"></i></a>.</li>
-            <li>Creat a new Data Accession Request. You can start a new request or continue with your existing request.</li>
+            <li>Create a new Data Publication Request. You can start a new request or continue with your existing request.</li>
             <li>While filling out the form, consider how clear the questions and descriptions are.</li>
             <li>Consider how easy to use the form interactions are.</li>
             <li>Consider whether this is the right amount of metadata for a publication request.</li>
@@ -19,7 +19,7 @@
                 </ul>
             </li>
             <li>Consider whether the error messages are helpful and actionable.</li>
-            <li>Submit the form.</li>
+            <li>Submit the Data Publication Request.</li>
             <li>Provide feedback using the form below.</li>
             <li>Return to <router-link to="/instructions">How to Test</router-link> instructions.</li>
         </ol>

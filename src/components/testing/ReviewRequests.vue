@@ -6,7 +6,7 @@
         <p>The links on this page marked <i class="fas fa-external-link-alt"></i> will open a new tab. You can switch back to this tab to review the task instructions.</p>
         <ol>
             <li>Visit the <a href="/dashboard" target="_blank">Dashboard <i class="fas fa-external-link-alt"></i></a>.</li>
-            <li>Observe all visible request.</li>
+            <li>Observe all visible requests.</li>
             <li>Identify the status of any requests.</li>
             <li>Consider the usefulness of the presentation of the requests.</li>
             <li>Consider what information you would like to know about the requests for your DAAC or group.</li>

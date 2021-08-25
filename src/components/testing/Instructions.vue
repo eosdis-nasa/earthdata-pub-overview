@@ -18,7 +18,7 @@
                 </ul>
                 <h3 class="display-7">Testing Tasks</h3>
                 <p>Keep these instructions open in your browser to make it easier to come back to them.</p>
-                <p>The folowing testing tasks are separated by persona. For the first set of tasks, imagine you are a data producer who is interested in requesting data publistion with NASA Earthdata.</p>
+                <p>The folowing testing tasks are separated by persona. For the first set of tasks, imagine you are a data producer who is interested in requesting data publiation with NASA Earthdata.</p>
                 <ol>
                     <li><router-link to="/instructions/contentreview">Review Content</router-link></li>
                     <li><router-link to="/instructions/selectdaac">Select a DAAC</router-link></li>
@@ -28,7 +28,7 @@
                 </ol>
                 <p>If you are testing Earthdata Pub as a EOSDIS staff member, please continue with the following instructions. For these tasks, imagine you are a EOSDIS staff member who expects to use the data provided in the Earthdata Pub forms.</p>
                 <ol>
-                    <li>Log out of the Earthdata Pub <a href="/dashboard" target="_blank">Dashboard <i class="fas fa-external-link-alt"></i></a>. Log in back as a Data Manager.</li>
+                    <li>Log out of the Earthdata Pub <a href="/dashboard" target="_blank">Dashboard <i class="fas fa-external-link-alt"></i></a>. Log back in as a EOSDIS staff member.</li>
                     <li><router-link to="/instructions/contentreview">Review Content</router-link> *</li>
                     <li><router-link to="/instructions/accessionreq">Complete Data Accession Request</router-link> *</li>
                     <li><router-link to="/instructions/publicationreq">Complete Data Publication Request</router-link> *</li>
