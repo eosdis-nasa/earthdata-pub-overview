@@ -2,14 +2,14 @@
   <div class="container">
     <div class="container-lg">
       <div class="pt-5 justify-content-center">
-        <h2 class="display-4">3. Complete Data Accession Request</h2>
+        <h2 class="display-4">5. Complete Data Publication Request</h2>
         <p>The links on this page marked <i class="fas fa-external-link-alt"></i> will open a new tab. You can switch back to this tab to review the task instructions.</p>
         <ol>
-            <li>Go back to your open Data Accession Request or open a new <a href="/forms" target="_blank">Data Accession Request <i class="fas fa-external-link-alt"></i></a>.
-            </li>
+            <li>Visit the <a href="/dashboard" target="_blank">Dashboard <i class="fas fa-external-link-alt"></i></a>.</li>
+            <li>Creat a new Data Accession Request. You can start a new request or continue with your existing request.</li>
             <li>While filling out the form, consider how clear the questions and descriptions are.</li>
             <li>Consider how easy to use the form interactions are.</li>
-            <li>Consider whether this is the right amount of metadata for an accession request.</li>
+            <li>Consider whether this is the right amount of metadata for a publication request.</li>
             <li>Fill out the form using metadata for a dataset at your DAAC or an example dataset like this one <a href="https://doi.org/10.3334/ORNLDAAC/1" target="_blank">https://doi.org/10.3334/ORNLDAAC/1</a></li>
             <li>Try to break the form:
                 <ul>

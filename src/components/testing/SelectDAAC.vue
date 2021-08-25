@@ -3,7 +3,7 @@
     <div class="container-lg">
       <div class="pt-5 justify-content-center">
         <h2 class="display-4">2. Select DAAC</h2>
-        <p>The links on this page will open a new tab. You can switch back to this tab to review the task instructions.</p>
+        <p>The links on this page marked <i class="fas fa-external-link-alt"></i> will open a new tab. You can switch back to this tab to review the task instructions.</p>
         <ol>
             <li>Visit the first Earthdata Pub Form: <a href="/forms" target="_blank">Data Accession Request <i class="fas fa-external-link-alt"></i></a>.
             </li>

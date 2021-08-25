@@ -3,7 +3,7 @@
     <div class="container-lg">
       <div class="pt-5 justify-content-center">
         <h2 class="display-4">1. Review Content</h2>
-        <p>The links on this page will open a new tab. You can switch back to this tab to review the task instructions.</p>
+        <p>The links on this page marked <i class="fas fa-external-link-alt"></i> will open a new tab. You can switch back to this tab to review the task instructions.</p>
         <ol>
             <li>Visit the Earthdata Pub Overview <router-link to="/beta" target="_blank">Content <i class="fas fa-external-link-alt"></i></router-link>.
             </li>

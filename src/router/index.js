@@ -8,6 +8,8 @@ import ContentReview from '@/components/testing/ContentReview'
 import SelectDAAC from '@/components/testing/SelectDAAC'
 import CompleteAccessionReq from '@/components/testing/CompleteAccessionReq'
 import ReviewDashboard from '@/components/testing/ReviewDashboard'
+import CompletePublicationReq from '@/components/testing/CompletePublicationReq'
+import ReviewRequests from '@/components/testing/ReviewRequests'
 
 const routes = [
   {
@@ -27,24 +29,34 @@ const routes = [
     component: Instructions
   },
   {
-    path: '/contentreview',
+    path: '/instructions/contentreview',
     name: 'ContentReview',
     component: ContentReview
   },
   {
-    path: '/selectdaac',
+    path: '/instructions/selectdaac',
     name: 'SelectDAAC',
     component: SelectDAAC
   },
   {
-    path: '/accession',
+    path: '/instructions/accessionreq',
     name: 'CompleteAccessionReq',
     component: CompleteAccessionReq
   },
   {
-    path: '/reviewdashboard',
+    path: '/instructions/reviewdashboard',
     name: 'ReviewDashboard',
     component: ReviewDashboard
+  },
+  {
+    path: '/instructions/publicationreq',
+    name: 'CompletePublicationReq',
+    component: CompletePublicationReq
+  },
+  {
+    path: '/instructions/reviewrequests',
+    name: 'ReviewRequests',
+    component: ReviewRequests
   },
   {
     path: '/404*',

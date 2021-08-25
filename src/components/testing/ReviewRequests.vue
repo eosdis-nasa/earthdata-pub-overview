@@ -1,16 +1,23 @@
+Review overview of submissions on the Dashboard Submissions page as a Data Manager
+Go back to the Dashboard Submissions page
+Select your Submission
+Has the Data Product Questionnaire been completed for this Submission?
+Answer the following questions about the feature used in this task
+How useful is this feature?
+What is something you like about this feature?
+What don't you like about this feature?
 <template>
   <div class="container">
     <div class="container-lg">
       <div class="pt-5 justify-content-center">
-        <h2 class="display-4">4. Review requests on Dashboard</h2>
+        <h2 class="display-4">6. Review Requests in Dashboard</h2>
         <p>The links on this page marked <i class="fas fa-external-link-alt"></i> will open a new tab. You can switch back to this tab to review the task instructions.</p>
         <ol>
-            <li>Visit <a href="/dashboard/requests" target="_blank">Dashboard Requests <i class="fas fa-external-link-alt"></i></a> Page.</li>
-            <li>Observe your request.</li>
-            <li>Identify the current status of your request.</li>
-            <li>Consider how useful the presentation of the request is.</li>
-            <li>Consider what information you would like to know about your request.</li>
-            <li>Keep the Dashboard open for the next task.</li>
+            <li>Visit the <a href="/dashboard" target="_blank">Dashboard <i class="fas fa-external-link-alt"></i></a>.</li>
+            <li>Observe all visible request.</li>
+            <li>Identify the status of any requests.</li>
+            <li>Consider the usefulness of the presentation of the requests.</li>
+            <li>Consider what information you would like to know about the requests for your DAAC or group.</li>
             <li>Provide feedback using the form below.</li>
             <li>Return to <router-link to="/instructions">How to Test</router-link> instructions.</li>
         </ol>
