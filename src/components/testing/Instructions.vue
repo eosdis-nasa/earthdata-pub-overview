@@ -22,7 +22,7 @@
                 <ol>
                     <li><router-link to="/instructions/contentreview">Review Content</router-link></li>
                     <li><router-link to="/instructions/selectdaac">Select a DAAC</router-link></li>
-                    <li><router-link to="/instructions/accession">Complete Data Accession Request</router-link></li>
+                    <li><router-link to="/instructions/accessionreq">Complete Data Accession Request</router-link></li>
                     <li><router-link to="/instructions/reviewdashboard">Review requests on Dashboard</router-link></li>
                     <li><router-link to="/instructions/publicationreq">Complete Data Publication Request</router-link></li>
                 </ol>
@@ -30,7 +30,7 @@
                 <ol>
                     <li>Log out of the Earthdata Pub <a href="/dashboard" target="_blank">Dashboard <i class="fas fa-external-link-alt"></i></a>. Log in back as a Data Manager.</li>
                     <li><router-link to="/instructions/contentreview">Review Content</router-link> *</li>
-                    <li><router-link to="/instructions/accession">Complete Data Accession Request</router-link> *</li>
+                    <li><router-link to="/instructions/accessionreq">Complete Data Accession Request</router-link> *</li>
                     <li><router-link to="/instructions/publicationreq">Complete Data Publication Request</router-link> *</li>
                     <li><router-link to="/instructions/reviewrequests">Review Requests in Dashboard</router-link></li>
                 </ol>
