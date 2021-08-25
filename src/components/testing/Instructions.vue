@@ -23,7 +23,7 @@
                     <li><router-link to="/instructions/contentreview">Review Content</router-link></li>
                     <li><router-link to="/instructions/selectdaac">Select a DAAC</router-link></li>
                     <li><router-link to="/instructions/accessionreq">Complete Data Accession Request</router-link></li>
-                    <li><router-link to="/instructions/reviewdashboard">Review requests on Dashboard</router-link></li>
+                    <li><router-link to="/instructions/reviewdashboard">Review Your Requests on Dashboard</router-link></li>
                     <li><router-link to="/instructions/publicationreq">Complete Data Publication Request</router-link></li>
                 </ol>
                 <p>If you are testing Earthdata Pub as a EOSDIS staff member, please continue with the following instructions. For these tasks, imagine you are a EOSDIS staff member who expects to use the data provided in the Earthdata Pub forms.</p>
@@ -32,7 +32,7 @@
                     <li><router-link to="/instructions/contentreview">Review Content</router-link> *</li>
                     <li><router-link to="/instructions/accessionreq">Complete Data Accession Request</router-link> *</li>
                     <li><router-link to="/instructions/publicationreq">Complete Data Publication Request</router-link> *</li>
-                    <li><router-link to="/instructions/reviewrequests">Review Requests in Dashboard</router-link></li>
+                    <li><router-link to="/instructions/reviewrequests">Review All Requests in Dashboard</router-link></li>
                 </ol>
                 <p>* - same instructions as above</p>
                 <p>You can also provide general <a href="https://app.smartsheet.com/b/form/4978cb9677ad4198a96afd40102e9f2d">Feedback <i class="fas fa-external-link-alt"></i></a> at any time.</p>

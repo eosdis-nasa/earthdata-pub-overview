@@ -1,16 +1,8 @@
-Review overview of submissions on the Dashboard Submissions page as a Data Manager
-Go back to the Dashboard Submissions page
-Select your Submission
-Has the Data Product Questionnaire been completed for this Submission?
-Answer the following questions about the feature used in this task
-How useful is this feature?
-What is something you like about this feature?
-What don't you like about this feature?
 <template>
   <div class="container">
     <div class="container-lg">
       <div class="pt-5 justify-content-center">
-        <h2 class="display-4">6. Review Requests in Dashboard</h2>
+        <h2 class="display-4">6. Review All Requests in Dashboard</h2>
         <p>The links on this page marked <i class="fas fa-external-link-alt"></i> will open a new tab. You can switch back to this tab to review the task instructions.</p>
         <ol>
             <li>Visit the <a href="/dashboard" target="_blank">Dashboard <i class="fas fa-external-link-alt"></i></a>.</li>

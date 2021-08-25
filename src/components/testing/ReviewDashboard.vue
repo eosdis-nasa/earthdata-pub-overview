@@ -2,7 +2,7 @@
   <div class="container">
     <div class="container-lg">
       <div class="pt-5 justify-content-center">
-        <h2 class="display-4">4. Review requests on Dashboard</h2>
+        <h2 class="display-4">4. Review Your Requests on Dashboard</h2>
         <p>The links on this page marked <i class="fas fa-external-link-alt"></i> will open a new tab. You can switch back to this tab to review the task instructions.</p>
         <ol>
             <li>Visit <a href="/dashboard/requests" target="_blank">Dashboard Requests <i class="fas fa-external-link-alt"></i></a> Page.</li>
