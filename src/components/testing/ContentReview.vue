@@ -8,7 +8,7 @@
             <li>Visit the Earthdata Pub Overview <router-link to="/beta" target="_blank">Content <i class="fas fa-external-link-alt"></i></router-link>.
             </li>
             <li>Read the sections "What is a NASA DAAC?" and "Data Scope and Acceptance Policy", which have completed their first draft.</li>
-            <li>Consider what information you would need that is not provided or mentioned as in draft.</li>
+            <li>Consider what information is needed or expected that is not currently provided in these draft sections.</li>
             <li>Provide feedback using the form below.</li>
             <li>Return to <router-link to="/instructions">How to Test</router-link> instructions.</li>
         </ol>
