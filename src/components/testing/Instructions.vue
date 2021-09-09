@@ -35,7 +35,7 @@
                     <li><router-link to="/instructions/reviewrequests">Review All Requests in Dashboard</router-link></li>
                 </ol>
                 <p>* - same instructions as above</p>
-                <p>We have already identified a list of <router-link to="/instructions/knownbugs">Known Bugs</router-link></p>
+                <p>We have already identified a list of <router-link to="/instructions/knownissues">Known Issues</router-link></p>
                 <p>You can also provide general <a href="https://app.smartsheet.com/b/form/4978cb9677ad4198a96afd40102e9f2d">Feedback <i class="fas fa-external-link-alt"></i></a> at any time.</p>
             </div>
         </div>
