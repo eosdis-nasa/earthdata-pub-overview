@@ -5,7 +5,7 @@
         <h2 class="display-4">5. Complete Data Publication Request</h2>
         <p>The links on this page marked <i class="fas fa-external-link-alt"></i> will open a new tab. You can switch back to this tab to review the task instructions.</p>
         <ol>
-            <li>Visit the <a href="/dashboard" target="_blank">Dashboard <i class="fas fa-external-link-alt"></i></a>.</li>
+            <li>Visit the <a href="/dashboard/requests " target="_blank">Dashboard <i class="fas fa-external-link-alt"></i></a>.</li>
             <li>Create a new Data Publication Request. You can start a new request or continue with your existing request.</li>
             <li>While filling out the form, consider how clear the questions and descriptions are.</li>
             <li>Consider how easy to use the form interactions are.</li>
