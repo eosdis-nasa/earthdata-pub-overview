@@ -10,7 +10,7 @@ import CompleteAccessionReq from '@/components/testing/CompleteAccessionReq'
 import ReviewDashboard from '@/components/testing/ReviewDashboard'
 import CompletePublicationReq from '@/components/testing/CompletePublicationReq'
 import ReviewRequests from '@/components/testing/ReviewRequests'
-import KnownBugs from '@/components/testing/KnownBugs'
+import KnownIssues from '@/components/testing/KnownIssues'
 
 const routes = [
   {
@@ -60,9 +60,9 @@ const routes = [
     component: ReviewRequests
   },
   {
-    path: '/instructions/knownbugs',
-    name: 'KnownBugs',
-    component: KnownBugs
+    path: '/instructions/knownissues',
+    name: 'KnownIssues',
+    component: KnownIssues
   },
   {
     path: '/404*',
