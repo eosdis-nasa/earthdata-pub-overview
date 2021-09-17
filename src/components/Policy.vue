@@ -1,14 +1,12 @@
-// Policy.vue
-
 <template>
   <div class="container">
-    <div v-for="policyData in policyDataList" :key="policyData.id" class="container-lg">
+    <div v-for="data in dataList" :key="data.id" class="container-lg">
       <div class="row pt-5 justify-content-center">
-        <h2 class="display-4">{{policyData.heading}}</h2>
-        <p v-for="(value, index) in policyData.paragraphs" :key="index">{{value}}</p>
+        <h2 class="display-4">{{data.heading}}</h2>
+        <p v-for="(value, index) in data.paragraphs" :key="index">{{value}}</p>
       </div>
       <ul>
-        <li v-for="(item, index) in policyData.list" :key="index">{{item}}</li>
+        <li v-for="(item, index) in data.list" :key="index">{{item}}</li>
       </ul>
     </div>
   </div>
@@ -19,13 +17,13 @@ export default {
   name: "Policy",
   data() {
     return {
-      policyDataList: []
+      dataList: []
     };
   },
   mounted() {
     fetch("policy.json")
       .then(response => response.json())
-      .then(data => (this.policyDataList = data));
+      .then(data => (this.dataList = data));
   }
 };
 </script>
