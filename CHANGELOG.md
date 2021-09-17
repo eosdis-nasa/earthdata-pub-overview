@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <!-- Unreleased changes can be added here. -->
 
+## 1.0.1 - 2021-09-09
+
+- [add known bugs page to overview](117e56bb134e7729598fe07484bf3ab74a66f902)
+- [add testing tasks](9affb44bdcfe5e9bd4caf08efeb8508b3675f387)
+
 ## 1.0.0 - 2021-06-29
 
 - [Open source release 1.0.0](d4b4cd2adbc386195a7734273d2a73c4e1d1e6d8)
