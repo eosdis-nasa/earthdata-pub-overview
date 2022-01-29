@@ -37,23 +37,23 @@ export default {
     };
   },
   mounted() {
-    fetch(`${process.env.VUE_APP_API_ROOT}/overview`)
+    fetch(`${process.env.VUE_APP_API_ROOT}/pages`)
         .then(response => response.json())
         .then(data => {
           this.benefits = data.find(page => {
-            return page.page_name === 'benefits'
+            return page.page_key === 'benefits'
           }).content;
           this.daacs = data.find(page => {
-            return page.page_name === 'daacs'
+            return page.page_key === 'daacs'
           }).content;
           this.policy = data.find(page => {
-            return page.page_name === 'policy'
+            return page.page_key === 'policy'
           }).content;
           this.publication = data.find(page => {
-            return page.page_name === 'publication'
+            return page.page_key === 'publication'
           }).content;
           this.steps = data.find(page => {
-            return page.page_name === 'steps'
+            return page.page_key === 'steps'
           }).content;
         })
   }
