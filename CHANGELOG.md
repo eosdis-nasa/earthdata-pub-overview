@@ -17,6 +17,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Updated CONTRIBUTING.md
 
+## 1.0.2 - 2022-1-28
+- Update overview content to pull from API instead of repo files.
+
 ## 1.0.1 - 2021-09-09
 
 - Add known bugs page to overview

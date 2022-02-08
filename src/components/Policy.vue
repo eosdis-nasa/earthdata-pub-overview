@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div v-for="data in dataList" :key="data.id" class="container-lg">
+    <div v-for="data in policy" :key="data.id" class="container-lg">
       <div class="row pt-5 justify-content-center">
         <h2 class="display-4">{{data.heading}}</h2>
         <p v-for="(value, index) in data.paragraphs" :key="index">{{value}}</p>
@@ -15,15 +15,6 @@
 <script>
 export default {
   name: "Policy",
-  data() {
-    return {
-      dataList: []
-    };
-  },
-  mounted() {
-    fetch("policy.json")
-      .then(response => response.json())
-      .then(data => (this.dataList = data));
-  }
+  props: ['policy']
 };
 </script>

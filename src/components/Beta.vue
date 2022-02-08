@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <Testing />
-    <Daacs />
-    <Publication />
-    <Steps />
-    <Policy />
-    <Benefits />
+    <Daacs v-bind:daacs="daacs"/>
+    <Publication v-bind:publication="publication"/>
+    <Steps v-bind:steps="steps"/>
+    <Policy v-bind:policy="policy"/>
+    <Benefits v-bind:benefits="benefits"/>
   </div>
 </template>
 
@@ -27,5 +27,35 @@ export default {
     Steps,
     Testing,
   },
+  data() {
+    return {
+      benefits: [],
+      daacs: [],
+      policy: [],
+      publication: [],
+      steps: []
+    };
+  },
+  mounted() {
+    fetch(`${process.env.VUE_APP_API_ROOT}/pages`)
+        .then(response => response.json())
+        .then(data => {
+          this.benefits = data.find(page => {
+            return page.page_key === 'benefits'
+          }).content;
+          this.daacs = data.find(page => {
+            return page.page_key === 'daacs'
+          }).content;
+          this.policy = data.find(page => {
+            return page.page_key === 'policy'
+          }).content;
+          this.publication = data.find(page => {
+            return page.page_key === 'publication'
+          }).content;
+          this.steps = data.find(page => {
+            return page.page_key === 'steps'
+          }).content;
+        })
+  }
 };
 </script>
