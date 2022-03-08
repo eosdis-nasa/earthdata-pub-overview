@@ -6,12 +6,25 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "clean-modules": "rm -rf package-lock.json node_modules/",
     "snyk-protect": "snyk protect",
     "snyk-test": "snyk test",
     "snyk-prepare": "npm run snyk-protect",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start-overview-dev": "docker-compose -f docker-compose-dev.yml up -d",
+    "stop-overview-dev": "docker-compose -f docker-compose-dev.yml down",
+    "start-overview": "docker-compose -f docker-compose.yml up -d",
+    "stop-overview": "docker-compose -f docker-compose.yml down",
+    "start-api": "cd ../api && npm run start:detached",
+    "stop-api": "cd ../api && npm run stop",
+    "start-dashboard": "cd ../dashboard && npm run start-dashboard",
+    "stop-dashboard": "cd ../dashboard && npm run stop-dashboard",
+    "start-forms-dev": "cd ../forms && npm run start-forms-dev",
+    "stop-forms-dev": "cd ../forms && npm run stop-forms-dev",
+    "start-dev": "npm run start-api; npm run start-dashboard; npm run start-forms-dev; npm run start-overview-dev",
+    "stop-dev": "npm run stop-api; npm run stop-dashboard; npm run stop-forms-dev; npm run stop-overview-dev"
   },
   "repository": {
     "type": "git",
