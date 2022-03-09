@@ -4,8 +4,14 @@
   "description": "Overview for Earthdata Pub",
   "main": "index.js",
   "private": true,
+  "engines": {
+    "node": ">=12.19.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress": "npx cypress open",
+    "cypress-headless": "npx cypress run",
+    "cypress-headless-all": "npx cypress run --browser chrome; npx cypress run --browser chromium; npx cypress run --browser edge; npx cypress run --browser electron",
     "clean-modules": "rm -rf package-lock.json node_modules/",
     "snyk-protect": "snyk protect",
     "snyk-test": "snyk test",
@@ -37,7 +43,9 @@
     "core-js": "^3.6.5",
     "snyk": "^1.649.0",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.11"
+    "vue-router": "^4.0.11",
+    "cypress-localstorage-commands": "^1.6.1",
+    "dotenv": "^14.3.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -46,7 +54,10 @@
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0"
+    "eslint-plugin-vue": "^7.0.0",
+    "axe-core": "^4.4.1",
+    "cypress": "^9.5.1",
+    "cypress-axe": "^0.14.0"
   },
   "eslintConfig": {
     "root": true,
