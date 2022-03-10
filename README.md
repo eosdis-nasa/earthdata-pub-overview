@@ -11,8 +11,8 @@ of contact. The content of the Overview is provided by the Info Team.
 
 ## Contributing
 
-The [`CONTRIBUTING.md`](./CONTRIBUTING.md) has instruction for contributing to
-the Earthdata Pub Overview. Be sure to read that before submitting pull requests.
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for instruction for contributing to
+the EDPub project. Be sure to read that before submitting pull requests.
 
 ## Quick start
 
