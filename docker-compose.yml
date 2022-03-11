@@ -1,0 +1,12 @@
+version: '3'
+services:
+    overview:
+        build: .
+        image: earthdata-pub-overview
+        environment: 
+            API_ROOT: "localhost:8080"
+            DASHBOARD_ROOT: "localhost:3000"
+            OVERVIEW_ROOT: "/"
+        ports:
+            - "8082:8080"
+        tty: true
