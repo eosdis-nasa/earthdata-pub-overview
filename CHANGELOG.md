@@ -17,6 +17,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Updated CONTRIBUTING.md
 
+## 1.0.4 - 2022-3-09
+
+- Added cypress testing to overview app.  Added accessibility testing.
+
 ## 1.0.3 - 2022-3-08
 
 - Containerized overview app for dev and production envs.

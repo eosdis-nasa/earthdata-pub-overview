@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
+  <div>
     <Testing />
-    <Daacs v-bind:daacs="daacs"/>
+    <Daacs v-bind:daacs="daacs" />
     <Publication v-bind:publication="publication"/>
-    <Steps v-bind:steps="steps"/>
+    <Steps v-bind:steps="steps" />
     <Policy v-bind:policy="policy"/>
     <Benefits v-bind:benefits="benefits"/>
   </div>

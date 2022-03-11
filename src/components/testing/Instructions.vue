@@ -2,12 +2,12 @@
     <div class="container">
         <div class="container-lg">
             <div class="pt-5 justify-content-center">
-                <h2 class="display-4">How to Test</h2>
-                <h3 class="display-7">Background</h3>
+                <h1 class="display-4">How to Test</h1>
+                <h2 class="display-7">Background</h2>
                 <p>An initial round of Earthdata Pub (EDPub) user testing was conducted internally on April 1-30, 2021. Since that time the EDPub Development and Information teams have collaborated to prioritize and address the resulting content and usability feedback. A number of high priority changes have been implemented, and as of Aug. 25, 2021, a new feedback solicitation is open for user testing of Earthdata Pub in the production environment.</p>
                 <p>Participants from a variety of DAAC and stakeholder roles are invited to take part in this second round of user testing -- members of the EDPub Information Team, ESDIS Management / Engineering, DAAC Managers, DAAC Operations staff, Data Managers and QA teams, DAAC Scientists, and interested team members across the EED-3 Program.</p>
                 <p>The current feedback solicitation will run until <strong>Oct. 1</strong>.</p>
-                <h3 class="display-7">Participation Notes</h3>
+                <h2 class="display-7">Participation Notes</h2>
                 <p>To sign up for testing, please enter your information in the form below. This is necessary to receive an email invitation to register for a login account for Earthdata Pub in production.</p>
                 <p class="fw-bold">Sign-up Form: <a href="https://forms.gle/ep3TBgfvciTjCAjP9">https://forms.gle/ep3TBgfvciTjCAjP9</a></p>
                 <p class="fw-bold">On receiving the registration link for Earthdata Pub, proceed to log in and complete the ordered tasks in the section below.</p>
@@ -16,7 +16,7 @@
                     <li>All data entered/uploaded into the Earthdata Pub Dashboard and Forms during testing will be deleted following the close of the feedback solicitation.</li>
                     <li>Plans for external testing - The EDPub Development and Information Teams are coordinating with the DAACs on extending the Earthdata Pub feedback solicitation to UWG members. Each DAAC will decide how to request feedback from their UWG and Data Providers.</li>
                 </ul>
-                <h3 class="display-7">Testing Tasks</h3>
+                <h2 class="display-7">Testing Tasks</h2>
                 <p>Keep these instructions open in your browser to make it easier to come back to them.</p>
                 <p>The folowing testing tasks are separated by persona. For the first set of tasks, imagine you are a data producer who is interested in requesting data publiation with NASA Earthdata.</p>
                 <ol>
