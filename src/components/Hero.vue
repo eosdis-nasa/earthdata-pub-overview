@@ -15,7 +15,7 @@
       <div class="row pt-4 justify-content-center cta">
         <div class="col-md-8 text-center">
           <a class="btn btn-lg btn-success text-white" href="/" role="button">Data Producer Resources</a>        
-          <a class="btn btn-lg btn-danger text-white" :href="formsRoot" role="button">New Request</a>
+          <a class="btn btn-lg btn-danger text-white" :href="formsDaacSelection" role="button">New Request</a>
           <a class="btn btn-lg btn-info text-white" :href="dashboardRoot" role="button">Dashboard</a>
         </div>
         <div class="row pt-5"></div>
@@ -32,8 +32,8 @@ export default {
     dashboardRoot() {
       return process.env.VUE_APP_DASHBOARD_ROOT;
     },
-    formsRoot() {
-      return process.env.VUE_APP_FORMS_ROOT;
+    formsDaacSelection() {
+      return `${process.env.VUE_APP_FORMS_ROOT}/daacs/selection`;
     },
   },
 };
