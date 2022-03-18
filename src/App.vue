@@ -7,9 +7,7 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <div class="navbar-nav"  id="navbarSupportedContent">
-            <router-link class="nav-item nav-link" to="/beta">Content</router-link>
             <a class="nav-item nav-link" href="/dashboard">Dashboard</a>
-            <router-link class="nav-item nav-link" to="/instructions">How to Test</router-link>
             <a class="nav-item nav-link" href="https://app.smartsheet.com/b/form/4978cb9677ad4198a96afd40102e9f2d" target="_blank">Feedback <i class="fas fa-external-link-alt"></i></a>
           </div>
         </div>

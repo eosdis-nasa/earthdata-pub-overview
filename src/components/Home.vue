@@ -1,16 +1,16 @@
 <template>
   <div>
-    <ComingSoon />
+    <Content />
   </div>
 </template>
 
 <script>
-import ComingSoon from "./ComingSoon.vue";
+import Content from "./Content.vue";
 
 export default {
   name: "app",
   components: {
-    ComingSoon,
+    Content,
   },
 };
 </script>
