@@ -2,7 +2,6 @@ import { createWebHistory, createRouter }  from 'vue-router'
 import Home from '@/components/Home'
 import PageNotFound from '@/components/PageNotFound'
 
-import Beta from '@/components/Beta'
 import Instructions from '@/components/testing/Instructions'
 import ContentReview from '@/components/testing/ContentReview'
 import SelectDAAC from '@/components/testing/SelectDAAC'
@@ -17,12 +16,6 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
-  },
-  {
-    path: '/beta',
-    name: 'Beta',
-    component: Beta,
-    alias: '/beta'
   },
   {
     path: '/instructions',

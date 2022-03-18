@@ -4,7 +4,7 @@
         "api_reseed":"http://localhost:8080/reseed",
         "overview_root": "http://localhost:8082",
         "overview_pages":{
-            "beta" : "/beta",
+            "content" : "/",
             "instructions":"/instructions",
             "contentreview":"/instructions/contentreview",
             "selectdaac":"/instructions/selectdaac",
