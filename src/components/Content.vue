@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Hero v-bind:hero="hero" />
     <Daacs v-bind:daacs="daacs" />
     <Publication v-bind:publication="publication"/>
     <Steps v-bind:steps="steps" />
@@ -11,6 +12,7 @@
 <script>
 import Benefits from "./Benefits.vue";
 import Daacs from "./Daacs.vue";
+import Hero from "./Hero.vue";
 import Policy from "./Policy.vue";
 import Publication from "./Publication.vue"
 import Steps from "./Steps.vue"
@@ -20,6 +22,7 @@ export default {
   components: {
     Benefits,
     Daacs,
+    Hero,
     Policy,
     Publication,
     Steps,
@@ -28,6 +31,7 @@ export default {
     return {
       benefits: [],
       daacs: [],
+      hero: [],
       policy: [],
       publication: [],
       steps: []
