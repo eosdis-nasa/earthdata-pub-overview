@@ -3,12 +3,12 @@
     <div class="container-lg">
       <div class="row pt-5">
         <h1 class="text-center text-light display-5">Earthdata Pub helps you publish your NASA data</h1>
-        <div class="row pt-4 justify-content-center text-center h5 text-white-50">
+        <div class="row pt-4 justify-content-center text-center h5 text-light">
           <ul class="list-inline text-center">
-            <li class="list-inline-item h5 text-white-50">1. Create new requests</li>
-            <li class="list-inline-item h5 text-white-50">2. Provide metadata</li>
-            <li class="list-inline-item h5 text-white-50">3. Track publication status</li>
-            <li class="list-inline-item h5 text-white-50">4. Communicate with DAAC staff</li>
+            <li class="list-inline-item h5">1. Create new requests</li>
+            <li class="list-inline-item h5">2. Provide metadata</li>
+            <li class="list-inline-item h5">3. Track publication status</li>
+            <li class="list-inline-item h5">4. Communicate with DAAC staff</li>
           </ul>
           </div>
       </div>
@@ -16,7 +16,7 @@
         <div class="col-md-8 text-center">
           <a class="btn btn-lg btn-success text-white" href="/" role="button">Data Producer Resources</a>        
           <a class="btn btn-lg btn-danger text-white" :href="formsDaacSelection" role="button">New Request</a>
-          <a class="btn btn-lg btn-info text-white" :href="dashboardRoot" role="button">Dashboard</a>
+          <a class="btn btn-lg btn-blue text-white" :href="dashboardRoot" role="button">Dashboard</a>
         </div>
         <div class="row pt-5"></div>
       </div>
