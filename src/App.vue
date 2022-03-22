@@ -17,8 +17,18 @@
     </nav>
   <router-view />
 </template>
-<style scoped>
-.badge {
-  margin-left: 15px;
-}
+<style>
+  .badge {
+    margin-left: 15px;
+  }
+  .btn-success, .bs-green, .bs-success {
+    background-color:#158749!important;
+    border-color: #158749!important;
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    color:white!important;
+  }
+  h1 {
+    font-size: 2rem!important;
+  }
 </style>

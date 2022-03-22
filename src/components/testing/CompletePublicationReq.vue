@@ -2,7 +2,7 @@
   <div class="container">
     <div class="container-lg">
       <div class="pt-5 justify-content-center">
-        <h2 class="display-4">5. Complete Data Publication Request</h2>
+        <h1 class="display-4">5. Complete Data Publication Request</h1>
         <p>The links on this page marked <i class="fas fa-external-link-alt"></i> will open a new tab. You can switch back to this tab to review the task instructions.</p>
         <ol>
             <li>Visit the <a href="/dashboard/requests " target="_blank">Dashboard <i class="fas fa-external-link-alt"></i></a>.</li>
@@ -26,7 +26,7 @@
         <hr />
         <p>Please reflect on your experience with Earthdata Pub during this task and use the form below to submit your feedback.</p>
         <p>You may submit an unlimited number of responses (i.e. to describe separate issues, requests, suggestions, etc.). The form will refresh after each submission.</p>
-        <iframe width="900" height="1000" src="https://app.smartsheet.com/b/form/7ebf3370c7314d3c9a90c4d68abdbf71"></iframe>
+        <iframe width="900" height="1000" src="https://app.smartsheet.com/b/form/7ebf3370c7314d3c9a90c4d68abdbf71" title="Feedback Form"></iframe>
       </div>
     </div>
   </div>
