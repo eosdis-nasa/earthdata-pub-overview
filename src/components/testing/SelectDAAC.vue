@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <div class="container-lg">
+    <div class="container-lg" >
       <div class="pt-5 justify-content-center">
-        <h2 class="display-4">2. Select DAAC</h2>
+        <h1 class="display-4">2. Select DAAC</h1>
         <p>The links on this page marked <i class="fas fa-external-link-alt"></i> will open a new tab. You can switch back to this tab to review the task instructions.</p>
         <ol>
             <li>Visit the first Earthdata Pub Form: <a href="/forms" target="_blank">Data Accession Request <i class="fas fa-external-link-alt"></i></a>.
@@ -18,7 +18,7 @@
         <hr />
         <p>Please reflect on your experience with Earthdata Pub during this task and use the form below to submit your feedback.</p>
         <p>You may submit an unlimited number of responses (i.e. to describe separate issues, requests, suggestions, etc.). The form will refresh after each submission.</p>
-        <iframe width="900" height="1000" src="https://app.smartsheet.com/b/form/49dac59c203e4312ae28ce7222dbe4af"></iframe>
+        <iframe width="900" height="1000" src="https://app.smartsheet.com/b/form/49dac59c203e4312ae28ce7222dbe4af" title="Feedback Form"></iframe>
       </div>
     </div>
   </div>

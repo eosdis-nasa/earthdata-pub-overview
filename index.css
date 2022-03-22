@@ -1,6 +1,7 @@
 .header {
   width: 100%;
-  background: #2276ac;
+  /* background: #2276ac; */
+  background: #2275AA;
   -webkit-box-shadow: 0 5px 5px rgba(189, 195, 199, 0.15);
   box-shadow: 0 5px 5px rgba(189, 195, 199, 0.15);
   display: -webkit-box;
@@ -23,7 +24,8 @@ footer {
   padding-top:2rem;
 }
 .container {
-  background: #2276ac;
+  /* background: #2276ac; */
+  background: #2275AA
 }
 .content {
   background: white;

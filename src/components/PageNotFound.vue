@@ -1,5 +1,5 @@
 <template lang="html">
-  <div role="main">
+  <div>
     Error - Page Not Found
   </div>
 </template>
