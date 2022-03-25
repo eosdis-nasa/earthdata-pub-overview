@@ -12,13 +12,3 @@
     </div>
   </footer>
 </template>
-<script>
-export default {
-  mounted() {
-    const tophat2 = document.createElement("script");
-    tophat2.setAttribute("src", "//cdn.earthdata.nasa.gov/tophat2/tophat2.js");
-    tophat2.async = true;
-    document.head.appendChild(tophat2);
-  },
-};
-</script>
