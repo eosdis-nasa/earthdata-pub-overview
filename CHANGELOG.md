@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Updated
 
+## 1.0.6 - 2022-03-25
+
+- Turn on Earthdata Feedback Module
+
 ## 1.0.5 - 2022-03-18
 
 - Revert temporary testing commits
