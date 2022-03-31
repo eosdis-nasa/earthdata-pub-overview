@@ -9,37 +9,39 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <!-- Unreleased changes can be added here. -->
 
-### Added
+## 1.0.0 - 2022-03-29
 
-- Added NASA Apache open source license
+- EDPub MVP release
 
-### Updated
+## 0.2.6 - 2022-03-25
 
-## 1.0.5 - 2022-03-18
+- Turn on Earthdata Feedback Module
+
+## 0.2.5 - 2022-03-18
 
 - Revert temporary testing commits
 - Updated CONTRIBUTING.md
 
-## 1.0.4 - 2022-3-09
+## 0.2.4 - 2022-3-09
 
 - Added cypress testing to overview app.  Added accessibility testing.
 
-## 1.0.3 - 2022-3-08
+## 0.2.3 - 2022-3-08
 
 - Containerized overview app for dev and production envs.
 
-## 1.0.2 - 2022-1-28
+## 0.2.2 - 2022-1-28
 
 - Update overview content to pull from API instead of repo files.
 
-## 1.0.1 - 2021-09-09
+## 0.2.1 - 2021-09-09
 
 - Add known bugs page to overview
 - Add testing tasks
 
-## 1.0.0 - 2021-06-29
+## 0.2.0 - 2021-06-29
 
-- Open source release 1.0.0
+- Open source release 0.2.0 [note: number retroactively changes to 0.2 to allow MVP release number]
 
 ## 0.1.1 - 2021-06-28
 
@@ -47,7 +49,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add bootstrap 5 and EUI 2.0
 - Prototype Overview app
 
-## 0.1.0 - 2021-03-18
+## 0.0.2 - 2021-03-18
 
 - Release for testing
 - Update CHANGELOG unreleased note
