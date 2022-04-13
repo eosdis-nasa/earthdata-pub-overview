@@ -15,6 +15,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Updated
 
+## 1.0.6 - 2022-04-13
+- Update node version to v14.19.1
+
 ## 1.0.5 - 2022-03-18
 
 - Revert temporary testing commits
