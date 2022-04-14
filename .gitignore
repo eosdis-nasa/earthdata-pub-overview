@@ -153,3 +153,4 @@ package-lock.json
 # Testing videos/ fixtures
 cypress/videos/*
 cypress/fixtures/*
+cypress/screenshots/*
