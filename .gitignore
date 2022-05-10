@@ -150,5 +150,7 @@ autodocs
 .snyk
 package-lock.json
 
-# Videos from testing
-videos/*.*
+# Testing videos/ fixtures
+cypress/videos/*
+cypress/fixtures/*
+cypress/screenshots/*
