@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <div v-for="data in policy" :key="data.id" class="container-lg">
+    <div class="container-lg">
       <div class="row pt-5 justify-content-center">
-        <h1 class="display-4">{{data.heading}}</h1>
-        <p v-for="(value, index) in data.paragraphs" :key="index">{{value}}</p>
+        <h1 class="display-4">{{policy.heading}}</h1>
+        <p v-for="(value, index) in policy.paragraphs" :key="index">{{value}}</p>
       </div>
       <ul>
-        <li v-for="(item, index) in data.list" :key="index">{{item}}</li>
+        <li v-for="(item, index) in policy.list" :key="index">{{item}}</li>
       </ul>
     </div>
   </div>
