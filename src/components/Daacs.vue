@@ -6,7 +6,9 @@
         <p v-for="(value, index) in daacs.paragraphs" :key="index">{{value}}</p>
       </div>
       <table v-if="daacs.table" class="table table-striped">
-        <caption>{{daacs.table.caption}}</caption>
+        <template v-if="daacs.table.caption">
+          <caption>{{daacs.table.caption}}</caption>
+        </template>
         <thead>
           <tr>
             <td v-for="(col, index) in daacs.table.header" :key="index">{{col}}</td>

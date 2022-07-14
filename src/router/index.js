@@ -12,7 +12,12 @@ const routes = [
     path: '/404*',
     name: '404',
     component: PageNotFound
-  }
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'Not Found',
+    component: PageNotFound,
+  },
 ]
 
 const router = createRouter({
