@@ -1,62 +1,70 @@
 <template>
   <div>
-    <Hero v-bind:hero="hero" />
-    <Daacs v-bind:daacs="daacs" />
-    <Publication v-bind:publication="publication"/>
-    <Steps v-bind:steps="steps" />
-    <Policy v-bind:policy="policy"/>
-    <Benefits v-bind:benefits="benefits"/>
+    <Hero v-if="hero!==undefined" v-bind:hero="hero" />
+    <Home v-if="home!==undefined" v-bind:home="home" />
+    <!--<DataProducerResources v-if="data_producer_resources!==undefined" v-bind:data_producer_resources="data_producer_resources"/>
+    <Publication v-if="publication!==undefined" v-bind:publication="publication"/>
+    <Daacs v-if="daacs!==undefined" v-bind:daacs="daacs"/>
+    <HowToUseEdpub v-if="how_to_use_edpub!==undefined" v-bind:how_to_use_edpub="how_to_use_edpub"/>-->
   </div>
 </template>
 
 <script>
-import Benefits from "./Benefits.vue";
-import Daacs from "./Daacs.vue";
+//import Bubble from "./Bubble.vue";
 import Hero from "./Hero.vue";
-import Policy from "./Policy.vue";
+import Home from "./Home.vue";
+/*import InfoBubble from "./InfoBubble.vue"
+import DataProducerResources from "./DataProducerResources.vue";
 import Publication from "./Publication.vue"
-import Steps from "./Steps.vue"
+import Daacs from "./Daacs.vue"
+import HowToUseEdpub from "./HowToUseEdpub.vue";*/
 
 export default {
   name: "app",
   components: {
-    Benefits,
-    Daacs,
     Hero,
-    Policy,
-    Publication,
-    Steps,
+    Home,
+    //InfoBubble
+    //DataProducerResources,
+    //Publication,
+    //Daacs,
+    //HowToUseEdpub
   },
   data() {
     return {
-      benefits: [],
-      daacs: [],
       hero: [],
-      policy: [],
+      home: [],
+      data_producer_resources: [],
       publication: [],
-      steps: []
+      daacs: [],
+      how_to_use_edpub: []
     };
   },
   mounted() {
+    window.content = this;
+    console.log('content mounted')
     fetch(`${process.env.VUE_APP_API_ROOT}/pages`)
-        .then(response => response.json())
-        .then(data => {
-          this.benefits = data.find(page => {
-            return page.page_key === 'benefits'
-          }).content;
-          this.daacs = data.find(page => {
-            return page.page_key === 'daacs'
-          }).content;
-          this.policy = data.find(page => {
-            return page.page_key === 'policy'
-          }).content;
-          this.publication = data.find(page => {
-            return page.page_key === 'publication'
-          }).content;
-          this.steps = data.find(page => {
-            return page.page_key === 'steps'
-          }).content;
-        })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        for (let ea in data){
+          if(data[ea].page_key === 'home'){
+            this.home = data[ea].content
+          } else
+          if(data[ea].page_key === 'data_producer_resources'){
+            this.data_producer_resources = data[ea].content
+          } else
+          if(data[ea].page_key === 'publication'){
+            this.publication = data[ea].content
+          } else
+          if(data[ea].page_key === 'daacs'){
+            this.daacs = data[ea].content
+          } else
+          if(data[ea].page_key === 'how_to_use_edpub'){
+            this.how_to_use_edpub = data[ea].content
+          }
+        }
+      })
   }
 };
 </script>

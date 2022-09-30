@@ -1,0 +1,37 @@
+<template class='popper'>
+  <Popper arrow>
+    <span class="fa fa-info-circle"></span>
+    <template #content>
+      <h1 v-if="heading"><hr>{{heading}}</h1>
+      <p v-if="text">{{text}}</p>
+      <template v-if="icon && icon.indexOf('.') !==-1">
+        <img :src="icon" />
+      </template>
+      <template v-else>
+        <i :class="icon"></i><a :href="link_url" :title="link_title" target="_blank">{{ link_text }}</a>
+      </template>
+    </template>
+  </Popper>
+</template>
+
+<script>
+export default {
+  name: "InfoBubble",
+  props: ["heading", "text", "icon", "link_url", "link_title", "link_text"]
+};
+</script>
+<style>
+  :root {
+    --popper-theme-background-color: #ffffff;
+    --popper-theme-background-color-hover: #ffffff;
+    --popper-theme-border-width: 1px;
+    --popper-theme-border-style: solid;
+    --popper-theme-border-color: #eeeeee;
+    --popper-theme-border-radius: 6px;
+    --popper-theme-padding: 32px;
+    --popper-theme-box-shadow: 0px 3px 3px #0000001F;
+    --popper-theme-font: normal normal normal 14px/25px Open Sans;
+    --popper-theme-letter-spacing: 0px;
+    --popper-theme-text-color: #000000;
+  }
+</style>
