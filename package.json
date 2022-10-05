@@ -39,7 +39,6 @@
   "author": "Earthdata Pub Dev Team",
   "license": "Apache-2.0",
   "dependencies": {
-    "matrix-js-sdk": "19.6.0",
     "bootstrap": "^5.1.0",
     "core-js": "^3.6.5",
     "cypress-localstorage-commands": "^1.6.1",
