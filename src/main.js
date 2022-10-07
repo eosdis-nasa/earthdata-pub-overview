@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import VueRouter from "vue-router" 
+import router from './router'
 import Popper from 'vue3-popper'
 import InfoBubble from './components/InfoBubble'
 
@@ -17,11 +17,10 @@ import InfoBubble from './components/InfoBubble'
         }
     }
 }*/
-
   
 const Vue = createApp(App)
+Vue.use(router)
 
-Vue.use(VueRouter)
 Vue.component("Popper", Popper);
 Vue.component("InfoBubble", InfoBubble)
 

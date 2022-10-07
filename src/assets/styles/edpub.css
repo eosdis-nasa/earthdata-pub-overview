@@ -4,6 +4,28 @@
 .display-4 {
   font-size: 2rem;
 }
+.eui-fa-chevron-circle-up,
+.eui-fa-chevron-circle-down {
+  color: #2276ac;
+}
+.container-grid:not(:has(.left-content.collapsed)) {
+  display: inline-grid;
+  grid-template-columns: 250px auto;
+  justify-content: space-between; /* justify items */
+  width: 100%;
+}
+.container-grid .left-content {
+  background: #2275AA;
+  min-height:100%;
+  color:white;
+  width: 250px;
+  top: 20;
+}
+.container-grid .left-content.collapsed {
+  display: block;
+  width: 0px;
+  height: 0px;
+}
 /* footer styling */
 footer {
   background: #2276ac;
@@ -27,29 +49,35 @@ footer ul li:not(:first-child):before {
   margin: 0 0.5em;
 }
 footer .badge {
-  background-color: #2c3e50;
   position: relative;
+  font-size:16px;
+  font-weight:normal;
   top: -2px;
 }
 /* end of footer styling */
-.home.container ul {
+.home.container ul,
+.producer.container ul,
+.how_to_use_edpub ul {
   margin-top:.5em;
-}
-.home.container ul {
+  list-style: none;
   margin-bottom:0.20em;
 }
-.home.container ul {
-  list-style: none;
-}
-.home.container ul li {
+.home.container ul li,
+.producer.container ul li,
+.how_to_use_edpub ul li {
   line-height: 25px;
 }
-.home.container ul li:before {
+.home.container ul li:before,
+.producer.container ul li:before,
+.how_to_use_edpub ul li:before {
   content: "•";
   font-size: 220%;
   padding-right: .5em;
   padding-left:.5em;
   vertical-align:bottom;
+}
+.how_to_use_edpub ul {
+  margin-bottom:1.5rem!important;
 }
 .fa-info-circle, a:visited, a:link {
   color:#2276ac;
@@ -122,13 +150,18 @@ a:link.ext:after, a:visited.ext:after {
   #earthdata-tophat2 {
     overflow: hidden } 
 }
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: unset !important;
+  }
+}
 @media (max-width: 1200px) {
   .header.row.pt-5{
     margin-right: 1rem;
     margin-left: 1rem;}}
 
 .display-4.main-width hr{
-  margin: 1rem -50px 0;
+  margin: 1rem -48px 0;
 }
 .card-grid {
   display: inline-grid;
@@ -139,7 +172,24 @@ a:link.ext:after, a:visited.ext:after {
   margin-top:.75rem;
   margin-bottom:.5rem;
 }
-.home.container{
+.card-grid .card:has(.icon_div) {
+  min-height:8em;
+  padding-top:3rem;
+  margin-bottom:2rem;
+  margin-top:2rem;
+}
+.how_to_use_edpub .card-grid {
+  text-align: center;
+  justify-content: space-evenly;
+  grid-template-columns: auto auto;
+}
+.how_to_use_edpub .card-grid .card:has(.icon_div) {
+  padding-top:2rem;
+}
+.home .card-grid .card {
+  min-height:11.75rem;
+}
+.container{
   padding-bottom:2rem;
 }
 .home.container h1{
@@ -148,7 +198,7 @@ a:link.ext:after, a:visited.ext:after {
 html {
   clear: both;
   margin: 0 auto 3rem auto;
-  width: 1200px;
+  width: 1450px;
   height: auto;
   background-color: #FCFCFC;
   box-shadow: 0px 0px 25px #555;
@@ -168,4 +218,91 @@ html {
   align-items: center;
   justify-items: center;
   margin-bottom:.5rem;
+}
+.popper p {
+  margin-bottom:0;
+}
+.publication img {
+  margin-top:2rem;
+  margin-bottom:2rem;
+  max-width:100%;
+  max-height:100%;
+}
+.nav-item{
+  text-decoration: none;
+}
+.nav-item.active{
+  text-decoration: underline;
+}
+.daacs table {
+  width:90%
+}
+.breadcrumbs .nav-item {
+  text-decoration: underline;
+}
+.breadcrumbs {
+  display:inline-block;
+  font-size:smaller;
+  width:100%;
+  padding-top: 12px;
+  margin-left:3rem;
+}
+.separator {
+  display:inline-block;
+  color: #CCC;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.version{
+  background-color: #195983;
+}
+.producer.container p{
+  margin-bottom:3rem;
+}
+.producer.container ul{
+  margin-bottom:2rem;
+}
+.box_link:has(.card) {
+  color:black;
+  text-decoration:none;
+}
+.card .icon_div {
+  background: #2877AA 0% 0% no-repeat padding-box;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius:50%;
+  padding:.5rem;
+  position:absolute;
+  top:-2rem;
+  left:7.15rem;
+}
+.card .icon {
+  opacity: 1; 
+  width: 100%;
+  height: 100%;
+}
+.how_to_use_edpub .step-grid {
+  display: inline-grid;
+  grid-gap: 10px;
+  justify-content: space-evenly;
+  grid-template-columns: auto auto;
+}
+.how_to_use_edpub .step-grid .card:has(.icon_div) {
+  min-height:8em;
+  padding-top:3rem;
+  margin-bottom:2rem;
+  margin-top:2rem;
+}
+.btn-to-top {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; 
+  scroll-behavior: unset;
+  border: 1px solid #70707040;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
+}
+.btn-to-top-text {
+  color:#2276ac;
 }

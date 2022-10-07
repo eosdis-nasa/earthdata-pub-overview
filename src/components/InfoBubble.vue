@@ -4,11 +4,13 @@
     <template #content>
       <h1 v-if="heading"><hr>{{heading}}</h1>
       <p v-if="text">{{text}}</p>
-      <template v-if="icon && icon.indexOf('.') !==-1">
-        <img :src="icon" />
-      </template>
-      <template v-else>
-        <i :class="icon"></i><a :href="link_url" :title="link_title" target="_blank">{{ link_text }}</a>
+      <template v-if="icon || link_url || link_title || link_text">
+        <template v-if="icon && icon.indexOf('.') !==-1">
+          <img :src="icon" alt="info bubble image" />
+        </template>
+        <template v-else>
+          <i :class="icon"></i><a :href="link_url" :title="link_title" target="_blank">{{ link_text }}</a>
+        </template>
       </template>
     </template>
   </Popper>

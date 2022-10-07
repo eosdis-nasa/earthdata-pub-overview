@@ -10,7 +10,7 @@
       <div class="row pt-4 justify-content-center cta">
         <div class="col-md-8 text-center">
           <a class="btn btn-lg btn-green text-white" :href="formsDaacSelection" role="button">Get Started</a>
-          <a class="btn btn-lg btn-transparant text-white" href="/" role="button">Data Producer Resources</a>
+          <router-link :to="{ name: 'Data Producer Resources' }" class="btn btn-lg btn-transparant text-white">Data Producer Resources</router-link>
         </div>
         <div class="row pt-5"></div>
       </div>
@@ -21,11 +21,7 @@
 <script>
 export default {
   name: "Hero",
-  props: ["hero"],
   computed: {
-    dashboardRoot() {
-      return process.env.VUE_APP_DASHBOARD_ROOT;
-    },
     formsDaacSelection() {
       return `${process.env.VUE_APP_FORMS_ROOT}/daacs/selection`;
     },

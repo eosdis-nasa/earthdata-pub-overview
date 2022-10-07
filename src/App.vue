@@ -1,21 +1,25 @@
 <template>
   <navbar />
   <router-view/>
-  <Content />
   <Footer />
+  <BackToTop/>
 </template>
 <script>
-import Footer from './components/Footer.vue';
 import Navbar from './components/Navbar.vue';
-import Content from './components/Content.vue';
+import Footer from './components/Footer.vue';
+import BackToTop from './components/BackToTop.vue';
 export default {
   components: { 
     Navbar,
-    Content, 
-    Footer
+    Footer,
+    BackToTop
   },
   mounted() {
-    console.log('app mounted')
+  },
+  methods: {
+    getImgUrl(pic) {
+      return require('./assets/'+pic);
+    }
   }
 };
 </script>
