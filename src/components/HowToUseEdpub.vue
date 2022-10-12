@@ -143,6 +143,9 @@ export default {
   .how_to_use_edpub .card-grid .card:has(.icon_div) {
     padding-top:2rem;
   }
+  h5 {
+    margin-top:1rem;
+  }
   .icon_div {
     border-radius: 8px;
     border: 1px solid #ebebeb;
@@ -185,11 +188,11 @@ export default {
   .how_to_use_edpub {
     margin-bottom:2rem;
   }
-  .how_to_use_edpub h5 {
-    margin-top:1rem;
-  }
   .note {
     margin-bottom:1rem;
+  }
+  .note .icon_div {
+    margin-top:1rem;
   }
   .sections {
     margin-bottom:1.75rem;

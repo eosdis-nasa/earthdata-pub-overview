@@ -1,5 +1,5 @@
-<template v-if="list">
-  <ul>
+<template>
+  <ul v-if="list">
     <template v-for="(item, list_index) in list" :key="list_index">
       <template v-if="item.indexOf('<') !==-1">
         <li><Rerender :html="item" /></li> 

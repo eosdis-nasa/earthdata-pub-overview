@@ -67,8 +67,8 @@ export default {
     padding-left:20px;
     padding-top:10px;
     padding-bottom:10px;
-    margin-top: 2rem;
-    margin-bottom:2rem;
+    margin-top: 1.75rem;
+    margin-bottom:1rem;
     background-color:#ffffff;
     display:block;
     cursor:pointer;

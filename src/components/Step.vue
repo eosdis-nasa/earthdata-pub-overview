@@ -87,8 +87,8 @@ export default {
     padding-left:20px;
     padding-top:10px;
     padding-bottom:10px;
-    margin-top: 1.75rem;
-    margin-bottom:2rem;
+    margin-top: 1.5rem;
+    margin-bottom:.75rem;
     background-color:#ffffff;
     display:flex;
     align-items: center;
@@ -114,13 +114,14 @@ export default {
     margin-top:2rem;
     margin-bottom:2rem;
   }
-  .how_to_use_edpub .step-grid {
+  .step-grid {
     display: inline-grid;
     grid-gap: 10px;
     justify-content: space-evenly;
     grid-template-columns: auto auto;
+    margin-bottom:1rem;
   }
-  .how_to_use_edpub .step-grid .card:has(.icon_div) {
+  .step-grid .card:has(.icon_div) {
     min-height:8em;
     padding-top:3rem;
   }

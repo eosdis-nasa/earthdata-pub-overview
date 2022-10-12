@@ -75,7 +75,6 @@ export default {
   .home .card-grid .card {
     min-height:11.75rem;
     margin-bottom:1.5rem;
-    margin-top:-.5rem;
   }
   .home h1{
     padding-top:2rem;
