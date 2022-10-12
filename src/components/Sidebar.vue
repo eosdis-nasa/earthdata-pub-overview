@@ -49,6 +49,11 @@ export default {
 }
 </script>
 <style scoped>
+  @-moz-document url-prefix() {
+    /*#sidebar {
+      display:none
+    }*/
+  }
   .left-content{
     position:relative;
   }

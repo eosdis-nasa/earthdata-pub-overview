@@ -59,4 +59,7 @@ export default {
   .producer{
     margin-bottom:3rem;
   }
+  .producer .card-grid .card.has-icon {
+    padding-top: 3rem;
+  }
 </style>

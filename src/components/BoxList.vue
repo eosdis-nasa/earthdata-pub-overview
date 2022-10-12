@@ -1,5 +1,5 @@
 <template>
-    <div class="card" style="width: 18rem;">
+    <div class="card" :class="{'has-icon': list.icon}" style="width: 18rem;">
       <template v-if="list.icon">
         <div class="icon_div">
           <img :src="getImgUrl(list.icon)" class="icon" alt="box icon image">

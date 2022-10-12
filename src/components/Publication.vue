@@ -1,6 +1,6 @@
 <template>
-  <div class="container-grid">
-    <Sidebar />
+  <div class="container-grid" :class="{'left-collapsed': leftCollapsed }">
+    <Sidebar ref="sidebar" />
     <div class="right-content" v-if="publication.paragraphs">
       <BreadCrumbs />
       <div class="publication">
@@ -35,7 +35,8 @@ export default {
   data() {
     return {
       publication: [],
-      pic:null
+      pic:null,
+      leftCollapsed: false
     }
   },
   methods: {
@@ -44,6 +45,7 @@ export default {
     }
   },
   mounted() {
+    this.$watch(() => this.$refs.sidebar.collapsed, () => { this.leftCollapsed = this.$refs.sidebar.collapsed })
     fetch(`${process.env.VUE_APP_API_ROOT}/pages/publication`)
       .then(response => response.json())
       .then(data => {

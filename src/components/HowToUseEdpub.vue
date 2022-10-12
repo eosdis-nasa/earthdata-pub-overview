@@ -1,6 +1,6 @@
 <template>
-  <div class="container-grid">
-    <Sidebar />
+  <div class="container-grid" :class="{'left-collapsed': leftCollapsed }">
+    <Sidebar ref="sidebar" />
     <div class="right-content" v-if="how_to_use_edpub.paragraphs">
       <BreadCrumbs />
       <div class="how_to_use_edpub">
@@ -101,10 +101,12 @@ export default {
   data() {
     return {
       how_to_use_edpub: [],
-      pic:null
+      pic:null,
+      leftCollapsed: false
     }
   },
   mounted() {
+    this.$watch(() => this.$refs.sidebar.collapsed, () => { this.leftCollapsed = this.$refs.sidebar.collapsed })
     fetch(`${process.env.VUE_APP_API_ROOT}/pages/how_to_use_edpub`)
       .then(response => response.json())
       .then(data => {
@@ -200,5 +202,8 @@ export default {
   }
   .last-button {
     margin-bottom:1rem;
+  }
+  .how_to_use_edpub .card-grid .card.has-icon {
+    padding-top: 2rem;
   }
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <div class="container-grid">
-    <Sidebar />
+  <div class="container-grid"  :class="{'left-collapsed': leftCollapsed }">
+    <Sidebar ref="sidebar" />
     <div class="right-content" v-if="daacs.paragraphs">
       <BreadCrumbs />
       <div class="daacs">
@@ -35,10 +35,12 @@ export default {
   name: "Daacs",
   data() {
     return {
-      daacs: []
+      daacs: [],
+      leftCollapsed: false
     }
   },
   mounted() {
+    this.$watch(() => this.$refs.sidebar.collapsed, () => { this.leftCollapsed = this.$refs.sidebar.collapsed })
     fetch(`${process.env.VUE_APP_API_ROOT}/pages/daacs`)
       .then(response => response.json())
       .then(data => {
