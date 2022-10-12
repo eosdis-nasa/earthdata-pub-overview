@@ -121,8 +121,4 @@ export default {
     grid-template-columns: auto auto;
     margin-bottom:1rem;
   }
-  .step-grid .card:has(.icon_div) {
-    min-height:8em;
-    padding-top:3rem;
-  }
 </style>
