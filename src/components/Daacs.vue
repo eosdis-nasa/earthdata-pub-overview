@@ -1,7 +1,7 @@
 <template>
   <div class="container-grid">
     <Sidebar />
-    <div class="right-content">
+    <div class="right-content" v-if="daacs.paragraphs">
       <BreadCrumbs />
       <div class="daacs">
         <div class="mx-5">

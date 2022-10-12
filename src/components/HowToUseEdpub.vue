@@ -1,7 +1,7 @@
 <template>
   <div class="container-grid">
     <Sidebar />
-    <div class="right-content">
+    <div class="right-content" v-if="how_to_use_edpub.paragraphs">
       <BreadCrumbs />
       <div class="how_to_use_edpub">
         <div class="mx-5">
