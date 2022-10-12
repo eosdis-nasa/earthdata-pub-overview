@@ -20,12 +20,7 @@
             <span class="display-4 main-width"><hr></span>
             <div class="home-bottom-grid ">
               <template v-for="(col, col_index) in value.three_columns" :key="col_index">
-                <div v-if="col.text">
-                  <p v-if="col.text && col.text.indexOf('<') !==-1">
-                    <Rerender :html="col.text" />
-                  </p>
-                  <p v-else-if="col.text">{{col.text}}</p>
-                </div>
+                <Paragraph v-if="col.text" :text="col.text" />
                 <div v-else-if="col.image"><img :src="getImgUrl(col.image)" :alt="col.image_alt_text"></div>
               </template>
             </div>
@@ -38,7 +33,6 @@
 
 <script>
 import Hero from './Hero.vue';
-import Rerender from './Rerender.vue';
 import BoxList from './BoxList.vue';
 import Paragraph from './Paragraph.vue';
 import List from './List.vue';
@@ -46,7 +40,6 @@ export default {
   components: { 
     Hero,
     BoxList,
-    Rerender,
     Paragraph,
     List
   },
