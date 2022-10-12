@@ -10,8 +10,6 @@ export default {
   mounted() {
     this.compiled = compile(this.html)
   },
-  computed: {
-  },
   data(){
     return {
       compiled: null

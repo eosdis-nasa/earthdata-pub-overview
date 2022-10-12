@@ -8,6 +8,9 @@
         <template v-if="icon && icon.indexOf('.') !==-1">
           <img :src="icon" alt="info bubble image" />
         </template>
+        <template v-else-if="link_name">
+          <i :class="icon"></i><OverviewLink :name="link_name" :link_title="link_title" :link_text="link_text" />
+        </template>
         <template v-else>
           <i :class="icon"></i><a :href="link_url" :title="link_title" target="_blank">{{ link_text }}</a>
         </template>
@@ -19,7 +22,7 @@
 <script>
 export default {
   name: "InfoBubble",
-  props: ["heading", "text", "icon", "link_url", "link_title", "link_text"]
+  props: ["heading", "text", "icon", "link_url", "link_title", "link_text", "link_name"]
 };
 </script>
 <style>

@@ -12,3 +12,32 @@
     </div>
   </footer>
 </template>
+<style scoped>
+  footer {
+    background: #2276ac;
+    color: white;
+    padding: 1em 2em;
+  }
+  footer a:link,
+  footer a:visited {
+    color: white;
+    background: #2276ac;
+  }
+  footer ul {
+    margin: 0.25em 0;
+    padding: 0;
+  }
+  footer ul li {
+    display: inline;
+  }
+  footer ul li:not(:first-child):before {
+    content: "\b7";
+    margin: 0 0.5em;
+  }
+  footer .badge {
+    position: relative;
+    font-size:16px;
+    font-weight:normal;
+    top: -2px;
+  }
+</style>

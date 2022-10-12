@@ -1,27 +1,13 @@
 <template>
   <BreadCrumbs />
-  <div class="producer container">
-    <div class="container-lg">
+  <div class="producer">
+    <div class="mx-5">
       <div class="row pt-5 justify-content-center">
         <h1 class="display-4" v-if="data_producer_resources.heading!==undefined">{{data_producer_resources.heading}}<hr></h1>
         <template v-for="(value, index) in data_producer_resources.paragraphs" :key="index">
           <h1 class="display-4" v-if="value.heading">{{value.heading}}<hr></h1>
-          <p v-if="value.text && value.text.indexOf('<') !==-1">
-            <Rerender :html="value.text" />
-          </p>
-          <p v-else-if="value.text">{{value.text}}</p>
-          <template v-if="value.list">
-            <ul>
-              <template v-for="(item, list_index) in value.list" :key="list_index">
-                <template v-if="item.indexOf('<') !==-1">
-                  <li><Rerender :html="item" /></li> 
-                </template>
-                <template v-else> 
-                  <li>{{item}}</li>
-                </template>
-              </template>
-            </ul>
-          </template>
+          <Paragraph :text="value.text" />
+          <List :list="value.list" />
           <template v-if="value.box_list">
             <div class="card-grid">
               <template v-for="(box_item, box_index) in value.box_list" :key="box_index">
@@ -35,14 +21,16 @@
   </div>
 </template>
 <script>
-import Rerender from './Rerender.vue';
 import BoxList from './BoxList.vue';
 import BreadCrumbs from './BreadCrumbs.vue';
+import Paragraph from './Paragraph.vue';
+import List from './List.vue';
 export default {
   components: { 
-    Rerender,
     BoxList,
-    BreadCrumbs
+    BreadCrumbs,
+    Paragraph,
+    List
   },
   name: "DataProducerResources",
   data() {
@@ -59,3 +47,16 @@ export default {
   },
 };
 </script>
+<style scoped>
+  .producer h1{
+    padding-top:1rem;
+  }
+  .producer .card-grid .card {
+    min-height:9.5rem;
+    margin-bottom:1.5rem;
+    margin-top:1.25rem;
+  }
+  .producer{
+    margin-bottom:3rem;
+  }
+</style>

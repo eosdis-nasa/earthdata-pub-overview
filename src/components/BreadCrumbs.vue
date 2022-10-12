@@ -25,3 +25,21 @@ export default {
   props: ['breadcrumbs']
 };
 </script>
+<style scoped>
+  .breadcrumbs .nav-item {
+    text-decoration: underline;
+  }
+  .breadcrumbs {
+    display:inline-block;
+    font-size:smaller;
+    width:100%;
+    padding-top: 12px;
+    margin-left:3rem;
+  }
+  .separator {
+    display:inline-block;
+    color: #CCC;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+</style>

@@ -1,6 +1,6 @@
 
 <template>
-  <div class="container">
+  <div>
     <div class="container-lg">
       <div class="row step-grid">
         <div class="number_div">
@@ -8,10 +8,7 @@
         </div>
         <div class="data_div">
           <template class="heading" v-if="step.heading"><p><b>{{step.heading}}</b></p></template>
-          <p v-if="step.text && step.text.indexOf('<') !==-1">
-            <Rerender :html="step.text" />
-          </p>
-          <p v-else-if="step.text">{{step.text}}</p>
+          <Paragraph :text="step.text" />
           <template v-if="step.icon">
             <div class="icon_div">
               <div class="icon_box">
@@ -42,10 +39,12 @@
 <script>
 import Rerender from './Rerender.vue';
 import Accordian from './Accordian.vue';
+import Paragraph from './Paragraph.vue';
 export default {
   components: { 
     Rerender,
-    Accordian
+    Accordian,
+    Paragraph
   },
   name: "Step",
   props: ['step'],
@@ -88,7 +87,8 @@ export default {
     padding-left:20px;
     padding-top:10px;
     padding-bottom:10px;
-    margin-top: 1.5rem;
+    margin-top: 1.75rem;
+    margin-bottom:2rem;
     background-color:#ffffff;
     display:flex;
     align-items: center;
@@ -111,6 +111,17 @@ export default {
   .step_image {
     border: 1px solid #ebebeb;
     border-radius: 8px;
-    margin-top:1rem;
+    margin-top:2rem;
+    margin-bottom:2rem;
+  }
+  .how_to_use_edpub .step-grid {
+    display: inline-grid;
+    grid-gap: 10px;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto;
+  }
+  .how_to_use_edpub .step-grid .card:has(.icon_div) {
+    min-height:8em;
+    padding-top:3rem;
   }
 </style>

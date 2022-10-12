@@ -13,13 +13,6 @@ export default {
     Navbar,
     Footer,
     BackToTop
-  },
-  mounted() {
-  },
-  methods: {
-    getImgUrl(pic) {
-      return require('./assets/'+pic);
-    }
   }
 };
 </script>

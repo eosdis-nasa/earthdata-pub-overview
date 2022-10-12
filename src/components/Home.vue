@@ -1,28 +1,14 @@
 <template>
   <Hero/>
-  <div class="home container">
-    <div class="container-lg">
-      <div class="row pt-5 justify-content-center">
+  <div class="home">
+    <div class="mx-5">
+      <div class="row pt-5 justify-content-center" >
         <h1 class="display-4" v-if="home.heading">{{home.heading}}<hr></h1>
         <template v-for="(value, index) in home.paragraphs" :key="index">
           <span class="display-4 main-width" v-if="value.heading && (value.heading=='Earthdata Pub Features' || value.heading=='Earthdata Pub Process')"><hr></span>
           <h1 class="display-4" v-if="value.heading">{{value.heading}}<hr></h1>
-          <p v-if="value.text && value.text.indexOf('<') !==-1">
-            <Rerender :html="value.text" />
-          </p>
-          <p v-else-if="value.text">{{value.text}}</p>
-          <template v-if="value.list">
-            <ul>
-              <template v-for="(item, list_index) in value.list" :key="list_index">
-                <template v-if="item.indexOf('<') !==-1">
-                  <li><Rerender :html="item" /></li> 
-                </template>
-                <template v-else> 
-                  <li>{{item}}</li>
-                </template>
-              </template>
-            </ul>
-          </template>
+          <Paragraph :text="value.text" />
+          <List :list="value.list" />
           <template v-if="value.box_list">
             <div class="card-grid">
               <template v-for="(box_item, box_index) in value.box_list" :key="box_index">
@@ -30,18 +16,21 @@
               </template>
             </div>
           </template> 
+          <template v-if="value.three_columns">
+            <span class="display-4 main-width"><hr></span>
+            <div class="home-bottom-grid ">
+              <template v-for="(col, col_index) in value.three_columns" :key="col_index">
+                <div v-if="col.text">
+                  <p v-if="col.text && col.text.indexOf('<') !==-1">
+                    <Rerender :html="col.text" />
+                  </p>
+                  <p v-else-if="col.text">{{col.text}}</p>
+                </div>
+                <div v-else-if="col.image"><img :src="getImgUrl(col.image)" :alt="col.image_alt_text"></div>
+              </template>
+            </div>
+          </template>
         </template>
-        <span class="display-4 main-width"><hr></span>
-        <div class="home-bottom-grid ">
-          <div>
-            <p>Earthdata Pub is a set of tools to help you publish your Earth Science data with a NASA DAAC.</p>
-            <p> If you are ready to submit your information for consideration, start here.</p>
-          </div>
-          <div class="col-md-8 text-center">
-            <a class="btn btn-lg btn-green text-white include-icon" :href="formsDaacSelection" role="button">Get Started<img src="../assets/ic_arrow_up.png" alt="Home Form Screenshot Image" /></a>
-          </div>
-          <div><img src="../assets/img_edpub_form_types_300.png" alt="Home Form Screenshot Image" /></div>
-        </div>
       </div>
     </div>
   </div>
@@ -51,11 +40,15 @@
 import Hero from './Hero.vue';
 import Rerender from './Rerender.vue';
 import BoxList from './BoxList.vue';
+import Paragraph from './Paragraph.vue';
+import List from './List.vue';
 export default {
   components: { 
     Hero,
     BoxList,
-    Rerender
+    Rerender,
+    Paragraph,
+    List
   },
   name: "Home",
   data() {
@@ -70,11 +63,34 @@ export default {
         this.home = data.content;
       })
   },
-  computed: {
-    formsDaacSelection() {
-      return `${process.env.VUE_APP_FORMS_ROOT}/daacs/selection`;
-    },
-  },
+  methods: {
+    getImgUrl(pic) {
+      return require('../assets/'+pic);
+    }
+  }
 };
 
 </script>
+<style scoped>
+  .home .card-grid .card {
+    min-height:11.75rem;
+    margin-bottom:1.5rem;
+    margin-top:-.5rem;
+  }
+  .home h1{
+    padding-top:2rem;
+  }
+  .home h1:first-of-type{
+    padding-top:0;
+  }
+  .home-bottom-grid {
+    display: inline-grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: left;
+    margin-top:2rem;
+    align-items: center;
+    justify-items: center;
+    margin-bottom:2rem;
+  }
+</style>

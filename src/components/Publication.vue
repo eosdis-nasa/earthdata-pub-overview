@@ -9,10 +9,7 @@
             <h1 class="display-4" v-if="publication.heading">{{publication.heading}}<hr></h1>
             <template v-for="(value, index) in publication.paragraphs" :key="index">
               <h1 class="display-4" v-if="value.heading">{{value.heading}}<hr></h1>
-              <p v-if="value.text && value.text.indexOf('<') !==-1">
-                <Rerender :html="value.text" />
-              </p>
-              <p v-else-if="value.text">{{value.text}}</p>
+              <Paragraph :text="value.text" />
               <div v-if="value.image && value.image_alt_text">
                 <img :src="getImgUrl(value.image)" v-bind="pic" :alt="value.image_alt_text">
               </div>
@@ -25,14 +22,14 @@
 </template>
 
 <script>
-import Rerender from './Rerender.vue';
 import BreadCrumbs from './BreadCrumbs.vue';
 import Sidebar from './Sidebar.vue';
+import Paragraph from './Paragraph.vue';
 export default {
   components: { 
-    Rerender,
     BreadCrumbs,
-    Sidebar
+    Sidebar,
+    Paragraph
   },
   name: "Publication",
   data() {
@@ -57,6 +54,18 @@ export default {
 </script>
 <style scoped>
   div.publication {
+    margin-bottom:1.5rem;
+  }
+  .publication img {
+    margin-top:2rem;
     margin-bottom:2rem;
+    max-width:100%;
+    max-height:100%;
+  }
+  .publication h1{
+    padding-top:1rem;
+  }
+  .publication h1:first-of-type{
+    padding-top:0;
   }
 </style>

@@ -129,7 +129,6 @@ export default {
     padding-left:20px;
     padding-top:10px;
     padding-bottom:10px;
-    margin-top: 1.5rem;
     background-color:#ffffff;
     display:flex;
     align-items: center;

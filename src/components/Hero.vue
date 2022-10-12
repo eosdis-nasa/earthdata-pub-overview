@@ -1,5 +1,5 @@
 <template>
-  <div class="hero-callout" style="background-color: #2276ac">
+  <div class="hero-callout">
     <div class="container-lg">
       <div class="header row pt-5">
         <h1 class="justify-content-left text-light display-5">NASA Earthdata Pub</h1>
@@ -9,7 +9,7 @@
       </div>
       <div class="row pt-4 justify-content-center cta">
         <div class="col-md-8 text-center">
-          <a class="btn btn-lg btn-green text-white" :href="formsDaacSelection" role="button">Get Started</a>
+          <OtherLink link_title="Get Started" link_url="daac/selection" link_text="Get Started" link_class="btn btn-lg btn-green text-white" />
           <router-link :to="{ name: 'Data Producer Resources' }" class="btn btn-lg btn-transparant text-white">Data Producer Resources</router-link>
         </div>
         <div class="row pt-5"></div>
@@ -20,11 +20,14 @@
 
 <script>
 export default {
-  name: "Hero",
-  computed: {
-    formsDaacSelection() {
-      return `${process.env.VUE_APP_FORMS_ROOT}/daacs/selection`;
-    },
-  },
+  name: "Hero"
 };
 </script>
+<style scoped>
+  .hero-callout .btn {
+    margin-right: 15px;
+  }
+  .hero-callout {
+    background-color: #2276ac;
+  }
+</style>

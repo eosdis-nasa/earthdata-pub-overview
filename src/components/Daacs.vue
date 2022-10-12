@@ -8,29 +8,9 @@
           <div class="row pt-5 justify-content-center">
             <h1 class="display-4" v-if="daacs.heading!==undefined">{{ daacs.heading }}<hr /></h1>
             <template v-for="(value, index) in daacs.paragraphs" :key="index">
-              <h1 class="display-4" v-if="value.heading"><br>{{value.heading}}<hr></h1>
-              <p v-if="value.text && value.text.indexOf('<') !==-1">
-                <Rerender :html="value.text" />
-              </p>
-              <p v-else-if="value.text">{{value.text}}</p>
-              <table v-if="value.table" class="table table-striped">
-              <template v-if="value.table.caption">
-                <caption>{{value.table.caption}}
-                </caption>
-              </template>
-              <thead>
-                <tr>
-                  <th v-for="(col, index) in value.table.heading" :key="index">
-                    {{ col }}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="(row, index) in value.table.rows" :key="index">
-                  <td v-for="(col, index) in row.columns" :key="index">{{ col }}</td>
-                </tr>
-              </tbody>
-            </table>
+              <h1 class="display-4" v-if="value.heading">{{value.heading}}<hr></h1>
+              <Paragraph :text="value.text" />
+              <Table :table="value.table" />
             </template>
           </div>
         </div>
@@ -40,15 +20,17 @@
 </template>
 
 <script>
-import Rerender from './Rerender.vue';
 import BreadCrumbs from './BreadCrumbs.vue';
 import Sidebar from './Sidebar.vue';
+import Table from './Table.vue';
+import Paragraph from './Paragraph.vue';
 
 export default {
   components: { 
-    Rerender,
     BreadCrumbs,
-    Sidebar
+    Sidebar,
+    Table,
+    Paragraph
   },
   name: "Daacs",
   data() {
@@ -68,6 +50,12 @@ export default {
 <style scoped>
   table{
     width:90%;
-    margin-bottom:3rem;
+    margin-bottom:2.5rem;
+  }
+  .daacs h1{
+    padding-top:1rem;
+  }
+  .daacs h1:first-of-type{
+    padding-top:0;
   }
 </style>

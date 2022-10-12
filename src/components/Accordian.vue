@@ -1,7 +1,7 @@
 <template class="accordian">            
   <div class="eui-accordion">
     <header class="eui-accordion__header">
-      <h7 class="accordian_header" :id="`${header.toLowerCase().replace(/ /g,'_')}_heading`" @click="toggleAccordian(`${header.toLowerCase().replace(/ /g,'_')}`)">
+      <h6 class="accordian_header" :id="`${header.toLowerCase().replace(/ /g,'_')}_heading`" @click="toggleAccordian(`${header.toLowerCase().replace(/ /g,'_')}`)">
         {{header}}
         <i class="eui-icon eui-fa-chevron-circle-down"></i>
         <div class="eui-accordion__icon" tabindex="0">
@@ -10,12 +10,13 @@
           </span>
         </div>
         <div class="eui-accordion__body hidden" :id="`${header.toLowerCase().replace(/ /g,'_')}`">
+          <br>
           <span v-if="body.indexOf('<') !==-1">
             <Rerender :html="body" />
           </span>
           <span v-else>{{body}}</span>
         </div>
-      </h7>
+      </h6>
     </header>
   </div>
 </template>
@@ -30,17 +31,18 @@ export default {
   methods: {
     toggleAccordian(id) {
       let icon_element = document.querySelectorAll(`#${id}_heading i`)[0]
-      if (document.getElementById(id) !== null && document.getElementById(id)!==undefined) {
-        if(document.getElementById(id).classList.contains('active')){
-          document.getElementById(id).classList.remove('active')
-          document.getElementById(id).classList.add('hidden')
+      let lid = document.getElementById(id)
+      if (lid !== null && lid!==undefined) {
+        if(lid.classList.contains('active')){
+          lid.classList.remove('active')
+          lid.classList.add('hidden')
           if (icon_element !==undefined && icon_element.classList !== undefined) {
             icon_element.classList.remove('eui-fa-chevron-circle-up')
             icon_element.classList.add('eui-fa-chevron-circle-down')
           }
         } else {
-          document.getElementById(id).classList.remove('hidden')
-          document.getElementById(id).classList.add('active')
+          lid.classList.remove('hidden')
+          lid.classList.add('active')
           if (icon_element !==undefined && icon_element.classList !== undefined) {
             icon_element.classList.remove('eui-fa-chevron-circle-down')
             icon_element.classList.add('eui-fa-chevron-circle-up')
@@ -48,10 +50,7 @@ export default {
         }
       }
     }
-  },
-  mounted() {
-    
-  },
+  }
 };
 </script>
 <style scoped>
@@ -68,7 +67,8 @@ export default {
     padding-left:20px;
     padding-top:10px;
     padding-bottom:10px;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom:2rem;
     background-color:#ffffff;
     display:block;
     cursor:pointer;
@@ -78,5 +78,8 @@ export default {
     float:right;
     padding-right:20px;
     padding-top:3px;
-  }  
+  } 
+  .eui-accordion__body {
+    font-weight:normal;
+  }
 </style>

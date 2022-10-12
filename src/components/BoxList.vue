@@ -1,5 +1,4 @@
 <template>
-  <a :href="list.box_link || 'javascript:{}'" :title="`${list.text} link`" class="box_link">
     <div class="card" style="width: 18rem;">
       <template v-if="list.icon">
         <div class="icon_div">
@@ -7,21 +6,27 @@
         </div>
       </template>
       <div class="card-body">
-        <h5 class="card-title" v-if="list.heading">{{list.heading}}<hr></h5>
-        <h6 class="card-subtitle mb-2 text-muted" v-if="list.subtitle">{{list.subtitle}}</h6>
-        <p class="card-text" v-if="list.text && list.text.indexOf('<') !==-1">
-          <Rerender :html="list.text" />
-        </p>
-        <p v-else-if="list.text">{{list.text}}</p>
+        <template v-if="list.link_name">
+          <router-link :to="{ name: list.link_name }" :title="list.link_title">{{list.link_text}}
+            <Card :list=list />
+          </router-link>
+        </template>
+        <template v-else-if="list.box_link">
+          <a :href="list.box_link || 'javascript:{}'" :title="`${list.text} link`" class="box_link">
+            <Card :list=list />
+          </a>
+        </template>
+        <template v-else>
+          <Card :list=list />
+        </template>
       </div>
     </div>
-  </a>
 </template>
 <script>
-import Rerender from './Rerender.vue';
+import Card from './Card.vue';
 export default {
   components: { 
-    Rerender
+    Card
   },
   name: "BoxList",
   props: ['list'],
@@ -34,6 +39,9 @@ export default {
     getImgUrl(pic) {
       return require('../assets/'+pic);
     }
+  },
+  computed: {
+    
   },
   mounted() {
   }

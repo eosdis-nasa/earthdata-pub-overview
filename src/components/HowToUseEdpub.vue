@@ -10,24 +10,10 @@
             <template v-for="(value, index) in how_to_use_edpub.paragraphs" :key="index">
               <h1 class="display-4" id="how" v-if="value.heading && value.heading=='How to Publish with Earthdata Pub'">{{value.heading}}<hr></h1>
               <h1 class="display-4" id="scope" v-else-if="value.heading && value.heading=='Data Scope and Acceptance Policy'">{{value.heading}}<hr></h1>
-              <span class="display-4 main-width" v-else-if="value.heading && value.heading.indexOf(':') !==-1"><b>{{value.heading}}</b></span>
+              <span class="display-4 main-width sections" v-else-if="value.heading && value.heading.indexOf(':') !==-1"><b>{{value.heading}}</b></span>
               <h5 v-else-if="value.heading"><b>{{value.heading}}</b><hr></h5>
-              <p v-if="value.text && value.text.indexOf('<') !==-1">
-                <Rerender :html="value.text" />
-              </p>
-              <p v-else-if="value.text">{{value.text}}</p>
-              <template v-if="value.list">
-                <ul>
-                  <template v-for="(item, list_index) in value.list" :key="list_index">
-                    <template v-if="item.indexOf('<') !==-1">
-                      <li><Rerender :html="item" /></li> 
-                    </template>
-                    <template v-else> 
-                      <li>{{item}}</li>
-                    </template>
-                  </template>
-                </ul>
-              </template>
+              <Paragraph :text="value.text" />
+              <List :list="value.list" />
               <template v-if="value.box_list">
                 <span class="display-4 main-width"><hr></span>
                 <div class="card-grid">
@@ -79,10 +65,10 @@
                   </div>
                 </div>
               </template>
-              <template v-if="how_to_use_edpub.paragraphs.length === index+4">
+              <template v-if="value.button">
                 <span class="display-4 main-width" ><hr></span>
-                <div class="justify-content-center text-center last-button">
-                  <a class='btn btn-md btn-green text-white ext' href='https://pub.earthdata.nasa.gov/dashboard/requests' title='Start New Request' role='button'>Start New Request</a>
+                <div class="justify-content-center text-center last-button" v-if="value.button && value.button.indexOf('<') !==-1">
+                  <Rerender :html="value.button" />
                 </div>
                 <span class="display-4 main-width" ><hr></span>
               </template>
@@ -99,13 +85,17 @@ import BoxList from './BoxList.vue';
 import Step from './Step.vue';
 import BreadCrumbs from './BreadCrumbs.vue';
 import Sidebar from './Sidebar.vue';
+import Paragraph from './Paragraph.vue';
+import List from './List.vue';
 export default {
   components: { 
     Rerender,
     BoxList,
     Step,
     BreadCrumbs,
-    Sidebar
+    Sidebar,
+    Paragraph,
+    List
   },
   name: "HowToUseEdpub",
   data() {
@@ -132,9 +122,26 @@ export default {
   .how_to_use_edpub .main-width hr {
     margin-bottom:2rem;
   }
-  .icon {
-    color: #2276AC;
-    min-width: .5rem;
+  .card-grid {
+    margin-top:.75rem;
+    margin-bottom:.5rem;
+  }
+  .card-grid .card:has(.icon_div) {
+    margin-bottom:1.5rem;
+    margin-top:1rem;
+  }
+  .how_to_use_edpub .card-grid {
+    text-align: center;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto;
+  }
+  .how_to_use_edpub .card-grid {
+    text-align: center;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto;
+  }
+  .how_to_use_edpub .card-grid .card:has(.icon_div) {
+    padding-top:2rem;
   }
   .icon_div {
     border-radius: 8px;
@@ -143,7 +150,6 @@ export default {
     padding-top:10px;
     padding-bottom:10px;
     padding-right:20px;
-    margin-top: .75rem;
     background-color:#ffffff;
     display: flex;
     align-items: center;
@@ -155,9 +161,6 @@ export default {
   .group_template .icon_div .group {
     display:flex;
     align-items:center;
-  }
-  .group_template .icon_div .group .icon_text {
-    padding:1rem;
   }
   .icon_box {
     background: #F2FAFF 0% 0% no-repeat padding-box;
@@ -173,28 +176,26 @@ export default {
   }
   .note .icon_text {
     margin-left: 10px;
-    margin-bottom: unset;
     width:95%;
+  }
+  p.icon_text {
+    margin-bottom:unset!important;
+    padding: 10px;
+  }
+  .how_to_use_edpub {
+    margin-bottom:2rem;
+  }
+  .how_to_use_edpub h5 {
+    margin-top:1rem;
   }
   .note {
     margin-bottom:1rem;
   }
-  .icon_text {
-    margin-left:20px;
-  }
-  .icon_div a {
-    margin-left:20px;
-  }
-  .how_to_use_edpub h2 {
-    padding-top:1rem;
+  .sections {
+    margin-bottom:1.75rem;
+    margin-top:1.75rem;
   }
   .last-button {
-    margin-bottom:2rem;
-  }
-  .how_to_use_edpub p {
-    margin-bottom:2rem;
-  }
-  div.note.group_template {
-    margin-top:-.75rem;
+    margin-bottom:1rem;
   }
 </style>
