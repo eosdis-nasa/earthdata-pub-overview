@@ -49,11 +49,6 @@ export default {
 }
 </script>
 <style scoped>
-  @-moz-document url-prefix() {
-    /*#sidebar {
-      display:none
-    }*/
-  }
   .left-content{
     position:relative;
   }
@@ -127,30 +122,5 @@ export default {
   .links_block .router-link-active {
     text-decoration: underline!important;
     text-underline-offset: .5rem;
-  }
-  .icon_div {
-    border-radius: 8px;
-    border: 1px solid #ebebeb;
-    padding-left:20px;
-    padding-top:10px;
-    padding-bottom:10px;
-    background-color:#ffffff;
-    display:flex;
-    align-items: center;
-  }
-  .icon_box {
-    background: #F2FAFF 0% 0% no-repeat padding-box;
-    border: 1px solid #195983;
-    width: 2.5rem!important;
-    height: 2.5rem;
-    border-radius: 50%;
-    padding: 0.35rem;
-    text-align: center;
-  }
-  .icon_text {
-    margin-left:20px;
-  }
-  .icon_div a {
-    margin-left:20px;
   }
 </style>
