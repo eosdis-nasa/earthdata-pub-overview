@@ -1,22 +1,16 @@
 <template>
-  <div class="hero-callout" style="background-color: #2276ac">
+  <div class="hero-callout">
     <div class="container-lg">
-      <div class="row pt-5">
-        <h1 class="text-center text-light display-5">Earthdata Pub helps you publish your NASA data</h1>
-        <div class="row pt-4 justify-content-center text-center h5 text-light">
-          <ul class="list-inline text-center">
-            <li class="list-inline-item h5">1. Create new requests</li>
-            <li class="list-inline-item h5">2. Provide metadata</li>
-            <li class="list-inline-item h5">3. Track publication status</li>
-            <li class="list-inline-item h5">4. Communicate with DAAC staff</li>
-          </ul>
+      <div class="header row pt-5">
+        <h1 class="justify-content-left text-light display-5">NASA Earthdata Pub</h1>
+        <div class="row pt-4 justify-content-left text-left h5 text-light">
+          <p>Earthdata Pub is the easy, online place for NASA Earth science researchers to publish their data at a NASA Distributed Active Archive Center (DAAC)</p>
           </div>
       </div>
       <div class="row pt-4 justify-content-center cta">
         <div class="col-md-8 text-center">
-          <a class="btn btn-lg btn-success text-white" href="/" role="button">Data Producer Resources</a>        
-          <a class="btn btn-lg btn-danger text-white" :href="formsDaacSelection" role="button">New Request</a>
-          <a class="btn btn-lg btn-blue text-white" :href="dashboardRoot" role="button">Dashboard</a>
+          <OtherLink link_title="Get Started" link_url="daac/selection" link_text="Get Started" link_class="btn btn-lg btn-green text-white" />
+          <router-link :to="{ name: 'Data Producer Resources' }" class="btn btn-lg btn-transparant text-white">Data Producer Resources</router-link>
         </div>
         <div class="row pt-5"></div>
       </div>
@@ -26,15 +20,14 @@
 
 <script>
 export default {
-  name: "Hero",
-  props: ["hero"],
-  computed: {
-    dashboardRoot() {
-      return process.env.VUE_APP_DASHBOARD_ROOT;
-    },
-    formsDaacSelection() {
-      return `${process.env.VUE_APP_FORMS_ROOT}/daacs/selection`;
-    },
-  },
+  name: "Hero"
 };
 </script>
+<style scoped>
+  .hero-callout .btn {
+    margin-right: 15px;
+  }
+  .hero-callout {
+    background-color: #2276ac;
+  }
+</style>
