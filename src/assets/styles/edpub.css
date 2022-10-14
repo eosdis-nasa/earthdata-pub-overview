@@ -143,6 +143,9 @@ html {
   background-color: #FCFCFC;
   box-shadow: 0px 0px 25px #555;
 }
+.fa-external-link-alt:before {
+  content: "\f35d"!important;
+}
 .fa.fa-external-link-alt{
   margin-right:10px;
 }
