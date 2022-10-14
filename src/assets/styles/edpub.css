@@ -112,8 +112,8 @@ a:link.ext:after, a:visited.ext:after {
   grid-template-columns: auto auto auto;
   text-align: center;
   justify-content: space-between; 
-  margin-top:.75rem;
-  margin-bottom:.5rem;
+  margin-top:.75rem!important;
+  margin-bottom:.5rem!important;
 }
 .card-grid .card.has-icon {
   min-height:8em;
