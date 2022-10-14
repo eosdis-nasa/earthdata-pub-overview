@@ -11,7 +11,7 @@
               <h1 class="display-4" v-if="value.heading">{{value.heading}}<hr></h1>
               <Paragraph :text="value.text" />
               <div v-if="value.image && value.image_alt_text">
-                <img :src="getImgUrl(value.image)" v-bind="pic" :alt="value.image_alt_text">
+                <img :src="`${this.publicPath}${value.image}`" v-bind="pic" :alt="value.image_alt_text">
               </div>
             </template>
           </div>
@@ -36,12 +36,13 @@ export default {
     return {
       publication: [],
       pic:null,
-      leftCollapsed: false
+      leftCollapsed: false,
+      publicPath: process.env.BASE_URL
     }
   },
   methods: {
     getImgUrl(pic) {
-      return require('../assets/'+pic);
+      return require(`${this.publicPath}`+pic);
     }
   },
   mounted() {
