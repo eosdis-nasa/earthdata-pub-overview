@@ -146,8 +146,8 @@ html {
 .fa-external-link-alt:before {
   content: "\f35d"!important;
 }
-.fas.fa-external-link-alt{
-  margin-right:10px;
+.fa-external-link-alt{
+  margin-right:10px!important;
 }
 .nav-item{
   text-decoration: none;
