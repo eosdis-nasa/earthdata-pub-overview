@@ -3,7 +3,7 @@
 }
 .eui-fa-chevron-circle-up,
 .eui-fa-chevron-circle-down {
-  color: #2276ac!important;
+  color: #2276ac;
 }
 .container-grid:not(.left-collapsed) {
   display: inline-grid;
@@ -12,7 +12,7 @@
   width: 100%;
 }
 .container-grid .left-content {
-  background: #2275AA!important;
+  background: #2275AA;
   min-height:100%;
   color:white;
   width: 250px;
@@ -24,31 +24,31 @@
   height: 0px;
 }
 .fa-info-circle, a:visited, a:link {
-  color:#2276ac!important;
+  color:#2276ac;
 }
 .fa-info-circle {
   padding-left:5px;
   cursor:pointer;
 }
 a:link.ext:after, a:visited.ext:after {
-  display: inline-block!important;
-  padding-left: 0.3em!important;
-  font-family: "EUI-Icon-Library"!important;
-  content: "\f111"!important;
+  display: inline-block;
+  padding-left: 0.3em;
+  font-family: "EUI-Icon-Library";
+  content: "\f111";
 }
 /* button styles taken from juanisa's adobe document as directed */
 .btn-dark-blue{
   background: #195983 0% 0% no-repeat padding-box!important;
   box-shadow: 0px 3px 6px #00000029!important;
   border: 1px solid #70707040!important;
-  border-radius: 8px!important;
+  border-radius: 8px;
   opacity: 1;
 }
 .btn-green {
   background: #158749 0% 0% no-repeat padding-box!important;
   box-shadow: 0px 3px 6px #00000029!important;
   border: 1px solid #70707040!important;
-  border-radius: 8px!important;
+  border-radius: 8px;
   opacity: 1;
 }
 .btn-green img {
@@ -77,7 +77,7 @@ a:link.ext:after, a:visited.ext:after {
 .btn-transparant {
   background: #2877AA 0% 0% no-repeat padding-box!important;
   border: 2px solid #FFFFFF!important;
-  border-radius: 8px!important;
+  border-radius: 8px;
   opacity: 1;
 }
 .header.row.pt-5{
@@ -107,11 +107,11 @@ a:link.ext:after, a:visited.ext:after {
   margin: 1rem -48px 0;
 }
 .card-grid {
-  display: inline-grid!important;
-  grid-gap: 10px!important;
-  grid-template-columns: auto auto auto!important;
-  text-align: center!important;
-  justify-content: space-between!important; 
+  display: inline-grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  justify-content: space-between; 
   margin-top:.75rem;
   margin-bottom:.5rem;
 }
@@ -121,7 +121,7 @@ a:link.ext:after, a:visited.ext:after {
   margin-top:2rem;
 }
 .card .icon_div {
-  background: #2877AA 0% 0% no-repeat padding-box!important;
+  background: #2877AA 0% 0% no-repeat padding-box;
   width: 3.75rem;
   height: 3.75rem;
   border-radius:50%;
@@ -140,8 +140,8 @@ html {
   margin: 0 auto 3rem auto;
   width: 1450px;
   height: auto;
-  background-color: #FCFCFC!important;
-  box-shadow: 0px 0px 25px #555!important;
+  background-color: #FCFCFC;
+  box-shadow: 0px 0px 25px #555;
 }
 .fa.fa-external-link-alt{
   margin-right:10px;
@@ -153,7 +153,7 @@ html {
   text-decoration: underline;
 }
 .version{
-  background-color: #195983!important;
+  background-color: #195983;
 }
 .btn-to-top {
   width: 80px;
@@ -161,10 +161,10 @@ html {
   border-radius: 50%; 
   scroll-behavior: unset;
   border: 1px solid #70707040;
-  background: #FFFFFF 0% 0% no-repeat padding-box!important;
-  box-shadow: 0px 3px 6px #00000029!important;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
   opacity: 1;
 }
 .btn-to-top-text {
-  color:#2276ac!important;
+  color:#2276ac;
 }
