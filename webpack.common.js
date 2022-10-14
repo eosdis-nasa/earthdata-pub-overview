@@ -8,12 +8,6 @@ const CommonConfig = {
     'core-js/stable',
     'regenerator-runtime/runtime'
   ],
-  output: {
-    filename: 'bundle.js',
-    chunkFilename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: process.env.BASE_URL
-  },
   // node: { Automatic Node.js Polyfills Removed - see resolve.fallback options
   resolve: {
     extensions: ['.js', '.jsx', '.scss'],
