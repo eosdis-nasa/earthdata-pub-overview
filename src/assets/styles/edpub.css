@@ -1,5 +1,5 @@
 .display-4 {
-  font-size: 2rem;
+  font-size: 2rem!important;
 }
 .eui-fa-chevron-circle-up,
 .eui-fa-chevron-circle-down {
@@ -31,10 +31,10 @@
   cursor:pointer;
 }
 a:link.ext:after, a:visited.ext:after {
-  display: inline-block;
-  padding-left: 0.3em;
+  display: inline-block!important;
+  padding-left: 0.3em!important;
   font-family: "EUI-Icon-Library";
-  content: "\f111";
+  content: "\f111"!important;
 }
 /* button styles taken from juanisa's adobe document as directed */
 .btn-dark-blue{
