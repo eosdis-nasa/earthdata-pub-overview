@@ -17,7 +17,7 @@
     "snyk-test": "snyk test",
     "snyk-prepare": "npm run snyk-protect",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "NODE_ENV=production webpack --config webpack.common.js",
     "lint": "vue-cli-service lint",
     "start-overview-dev": "docker-compose -f docker-compose-dev.yml up -d",
     "stop-overview-dev": "docker-compose -f docker-compose-dev.yml down",
@@ -50,6 +50,7 @@
     "vue3-popper": "^1.5.0"
   },
   "devDependencies": {
+    "@babel/register": "^7.12.1",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
@@ -59,7 +60,10 @@
     "cypress": "^9.5.1",
     "cypress-axe": "^0.14.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0"
+    "eslint-plugin-vue": "^7.0.0",
+    "@webpack-cli/serve": "^1.0.1",
+    "mini-css-extract-plugin": "^2.4.5",
+    "webpack-cli": "^4.10.0"
   },
   "eslintConfig": {
     "root": true,
