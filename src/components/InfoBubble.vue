@@ -12,7 +12,7 @@
           <i :class="icon"></i><OverviewLink :name="link_name" :link_title="link_title" :link_text="link_text" />
         </template>
         <template v-else>
-          <i :class="icon"></i><a :href="link_url" :title="link_title" target="_blank">{{ link_text }}</a>
+          <i class="fa fa-external-link-alt"></i><a :href="link_url" :title="link_title" target="_blank">{{ link_text }}</a>
         </template>
       </template>
     </template>
