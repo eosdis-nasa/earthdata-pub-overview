@@ -17,7 +17,7 @@
     "snyk-test": "snyk test",
     "snyk-prepare": "npm run snyk-protect",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "NODE_ENV=production webpack --config webpack.config.js",
     "lint": "vue-cli-service lint",
     "start-overview-dev": "docker-compose -f docker-compose-dev.yml up -d",
     "stop-overview-dev": "docker-compose -f docker-compose-dev.yml down",
@@ -60,6 +60,7 @@
     "cypress-axe": "^0.14.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0",
+    "file-loader": "^6.2.0",
     "webpack-cli": "^4.10.0"
   },
   "eslintConfig": {
