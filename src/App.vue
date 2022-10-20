@@ -1,12 +1,18 @@
 <template>
   <navbar />
-  <router-view />
+  <router-view/>
   <Footer />
+  <BackToTop/>
 </template>
 <script>
-import Footer from './components/Footer.vue';
 import Navbar from './components/Navbar.vue';
+import Footer from './components/Footer.vue';
+import BackToTop from './components/BackToTop.vue';
 export default {
-  components: { Navbar, Footer },
+  components: { 
+    Navbar,
+    Footer,
+    BackToTop
+  }
 };
 </script>
