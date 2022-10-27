@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <!-- Unreleased changes can be added here. -->
 
+## 1.0.3 - - 2022-10-25
+
+- Changed png files to use svg files instead
+
 ## 1.0.2 - - 2022-10-12
 
 - Updated overview app with additional pages.
