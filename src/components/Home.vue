@@ -21,7 +21,9 @@
             <div class="home-bottom-grid ">
               <template v-for="(col, col_index) in value.three_columns" :key="col_index">
                 <Paragraph v-if="col.text" :text="col.text" />
-                <div v-else-if="col.image"><img :src="getImgUrl(col.image)" :alt="col.image_alt_text"></div>
+                <div v-else-if="col.image">
+                  <img :src="getImgUrl(col.image)" :alt="col.image_alt_text">
+                </div>
               </template>
             </div>
           </template>
