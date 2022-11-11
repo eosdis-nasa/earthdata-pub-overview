@@ -1,7 +1,8 @@
 <template class='popper'>
-  <Popper arrow>
+  <Popper locked="true" :offsetSkid="pageOffset" :key="pageOffset">
     <span class="fa fa-info-circle"></span>
     <template #content>
+      <div style="max-width: 240px;">
       <h1 v-if="heading"><hr>{{heading}}</h1>
       <p v-if="text">{{text}}</p>
       <template v-if="icon || link_url || link_title || link_text">
@@ -15,6 +16,7 @@
           <span class="fas fa-external-link-alt"></span><a :href="link_url" :title="link_title" target="_blank">{{ link_text }}</a>
         </template>
       </template>
+      </div>
     </template>
   </Popper>
 </template>
@@ -22,7 +24,25 @@
 <script>
 export default {
   name: "InfoBubble",
-  props: ["heading", "text", "icon", "link_url", "link_title", "link_text", "link_name"]
+  props: ["heading", "text", "icon", "link_url", "link_title", "link_text", "link_name"],
+  data() {
+    return{
+      pageOffset: (window.innerWidth - 1450) / 2
+    }
+  },
+  methods: {
+    onResize() {
+      this.pageOffset = (window.innerWidth - 1450) / 2
+    }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.onResize);
+    })
+  },
+  beforeUnmount() { 
+    window.removeEventListener('resize', this.onResize); 
+  }
 };
 </script>
 <style>
