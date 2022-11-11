@@ -9,15 +9,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <!-- Unreleased changes can be added here. -->
 
-## 1.0.3 - - 2022-10-25
+## 1.0.4 - 2022-11-11
+
+- Updated infographic with less text and updated infobubble to reset parent and popper location.
+  
+## 1.0.3 - 2022-10-25
 
 - Changed png files to use svg files instead
 
-## 1.0.2 - - 2022-10-12
+## 1.0.2 - 2022-10-12
 
 - Updated overview app with additional pages.
 
-## 1.0.1 - - 2022-04-13
+## 1.0.1 - 2022-04-13
 
 - Update node version to v14.19.1
 
