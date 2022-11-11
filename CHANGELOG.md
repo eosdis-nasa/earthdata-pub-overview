@@ -9,10 +9,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <!-- Unreleased changes can be added here. -->
 
-## 1.0.4 - 2022-11-11
+## 1.0.5 - 2022-11-11
 
 - Updated infographic with less text and updated infobubble to reset parent and popper location
   
+## 1.0.4 - 2022-11-10
+
+- Changed Justin Rice to Doug Newman
+
 ## 1.0.3 - 2022-10-25
 
 - Changed png files to use svg files instead
