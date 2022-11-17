@@ -22,17 +22,41 @@
 </template>
 
 <script>
+let isFullscreen = window.outerWidth == screen.width && window.outerHeight == screen.height
+let firefoxWidthProperty = isFullscreen ? window.outerWidth : window.innerWidth
 export default {
   name: "InfoBubble",
   props: ["heading", "text", "icon", "link_url", "link_title", "link_text", "link_name"],
   data() {
     return{
-      pageOffset: (window.innerWidth - 1450) / 2
+      pageOffset: this.fnBrowserDetect() === 'firefox' ? (firefoxWidthProperty - 1450) / 2 : (window.innerWidth - 1450) / 2,
     }
   },
   methods: {
     onResize() {
-      this.pageOffset = (window.innerWidth - 1450) / 2
+      isFullscreen = window.outerWidth == screen.width && window.outerHeight == screen.height
+      firefoxWidthProperty = isFullscreen ? window.outerWidth : window.innerWidth
+      this.pageOffset = this.fnBrowserDetect() === 'firefox' ? (firefoxWidthProperty - 1450) / 2 : (window.innerWidth - 1450) / 2
+    },
+    fnBrowserDetect(){
+      let userAgent = navigator.userAgent;
+      let browserName;
+      
+      if(userAgent.match(/chrome|chromium|crios/i)){
+          browserName = "chrome";
+        }else if(userAgent.match(/firefox|fxios/i)){
+          browserName = "firefox";
+        }  else if(userAgent.match(/safari/i)){
+          browserName = "safari";
+        }else if(userAgent.match(/opr\//i)){
+          browserName = "opera";
+        } else if(userAgent.match(/edg/i)){
+          browserName = "edge";
+        }else{
+          browserName="No browser detection";
+        }
+      
+      return browserName;
     }
   },
   mounted() {
