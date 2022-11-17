@@ -4,7 +4,7 @@
       <div class="header row pt-5">
         <h1 class="justify-content-left text-light display-5">NASA Earthdata Pub</h1>
         <div class="row pt-4 justify-content-left text-left h5 text-light">
-          <p>Earthdata Pub is the easy, online place for NASA Earth science researchers to publish their data at a NASA Distributed Active Archive Center (DAAC)</p>
+          <p>Earthdata Pub is the easy, online place for Earth Science researchers to publish their data at a NASA Distributed Active Archive Center (DAAC)</p>
           </div>
       </div>
       <div class="row pt-4 justify-content-center cta">

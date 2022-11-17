@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## 1.0.5 - 2022-11-11
 
 - Updated infographic with less text and updated infobubble to reset parent and popper location
+- Updated content based on google doc feedback from info team
   
 ## 1.0.4 - 2022-11-10
 
