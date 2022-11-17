@@ -24,19 +24,21 @@
 <script>
 let isFullscreen = window.outerWidth == screen.width && window.outerHeight == screen.height
 let firefoxWidthProperty = isFullscreen ? window.outerWidth : window.innerWidth
+let windowWidth = null
 export default {
   name: "InfoBubble",
   props: ["heading", "text", "icon", "link_url", "link_title", "link_text", "link_name"],
   data() {
     return{
-      pageOffset: this.fnBrowserDetect() === 'firefox' ? (firefoxWidthProperty - 1450) / 2 : (window.innerWidth - 1450) / 2,
+      pageOffset: 0
     }
   },
   methods: {
     onResize() {
       isFullscreen = window.outerWidth == screen.width && window.outerHeight == screen.height
       firefoxWidthProperty = isFullscreen ? window.outerWidth : window.innerWidth
-      this.pageOffset = this.fnBrowserDetect() === 'firefox' ? (firefoxWidthProperty - 1450) / 2 : (window.innerWidth - 1450) / 2
+      windowWidth = this.fnBrowserDetect() === 'firefox' ? firefoxWidthProperty : window.innerWidth
+      this.pageOffset = windowWidth > 1450 ? (windowWidth - 1450) / 2 : 0
     },
     fnBrowserDetect(){
       let userAgent = navigator.userAgent;
@@ -60,6 +62,7 @@ export default {
     }
   },
   mounted() {
+    this.onResize()
     this.$nextTick(() => {
       window.addEventListener('resize', this.onResize);
     })
