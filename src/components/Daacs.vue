@@ -1,32 +1,63 @@
 <template>
-  <div class="container">
-    <div class="container-lg">
-      <div class="row pt-5 justify-content-center">
-        <h1 class="display-4">{{daacs.heading}}</h1>
-        <p v-for="(value, index) in daacs.paragraphs" :key="index">{{value}}</p>
+  <div class="container-grid"  :class="{'left-collapsed': leftCollapsed }">
+    <Sidebar ref="sidebar" />
+    <div class="right-content" v-if="daacs.paragraphs">
+      <BreadCrumbs />
+      <div class="daacs">
+        <div class="mx-5">
+          <div class="row pt-5 justify-content-center">
+            <h1 class="display-4" v-if="daacs.heading!==undefined">{{ daacs.heading }}<hr /></h1>
+            <template v-for="(value, index) in daacs.paragraphs" :key="index">
+              <h1 class="display-4" v-if="value.heading">{{value.heading}}<hr></h1>
+              <Paragraph :text="value.text" />
+              <Table :table="value.table" />
+            </template>
+          </div>
+        </div>
       </div>
-      <table v-if="daacs.table" class="table table-striped">
-        <template v-if="daacs.table.caption">
-          <caption>{{daacs.table.caption}}</caption>
-        </template>
-        <thead>
-          <tr>
-            <td v-for="(col, index) in daacs.table.header" :key="index">{{col}}</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(row, index) in daacs.table.rows" :key="index">
-            <td v-for="(col, index) in row.columns" :key="index">{{col}}</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </div>
 </template>
 
 <script>
+import BreadCrumbs from './BreadCrumbs.vue';
+import Sidebar from './Sidebar.vue';
+import Table from './Table.vue';
+import Paragraph from './Paragraph.vue';
+
 export default {
+  components: { 
+    BreadCrumbs,
+    Sidebar,
+    Table,
+    Paragraph
+  },
   name: "Daacs",
-  props: ['daacs']
+  data() {
+    return {
+      daacs: [],
+      leftCollapsed: false
+    }
+  },
+  mounted() {
+    this.$watch(() => this.$refs.sidebar.collapsed, () => { this.leftCollapsed = this.$refs.sidebar.collapsed })
+    fetch(`${process.env.VUE_APP_API_ROOT}/pages/daacs`)
+      .then(response => response.json())
+      .then(data => {
+        this.daacs = data.content;
+      })
+  },
 };
 </script>
+<style scoped>
+  table{
+    width:90%;
+    margin-bottom:2.5rem;
+  }
+  .daacs h1{
+    padding-top:1rem;
+  }
+  .daacs h1:first-of-type{
+    padding-top:0;
+  }
+</style>
