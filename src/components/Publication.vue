@@ -8,7 +8,7 @@
           <div class="row pt-5 justify-content-center">
             <h1 class="display-4" v-if="publication.heading">{{publication.heading}}<hr></h1>
             <template v-for="(value, index) in publication.paragraphs" :key="index">
-              <h1 class="display-4" v-if="value.heading">{{value.heading}}<hr></h1>
+              <h3 v-if="value.heading">{{value.heading}}<hr></h3>
               <Paragraph :text="value.text" />
               <div v-if="value.image && value.image_alt_text">
                 <img :src="getImgUrl(value.image)" v-bind="pic" :alt="value.image_alt_text">
