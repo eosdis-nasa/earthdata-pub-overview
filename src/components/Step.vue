@@ -34,6 +34,9 @@
           <template v-if="step.accordian_header && step.accordian_body">
             <Accordian :header="step.accordian_header" :body="step.accordian_body"/>
           </template>
+          <template v-if="step.paragraph">
+            <Paragraph :text="step.paragraph" />
+          </template>
           <template v-if="step.image && step.image_alt_text">
             <img :src="getImgUrl(step.image)" class="step_image" :alt="step.image_alt_text">
           </template>
@@ -126,5 +129,8 @@ export default {
     justify-content: space-evenly;
     grid-template-columns: auto auto;
     margin-bottom:1rem;
+  }
+  .eui-accordion {
+    margin-bottom:1.75rem!important;
   }
 </style>
