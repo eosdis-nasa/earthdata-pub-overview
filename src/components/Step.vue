@@ -16,8 +16,14 @@
               </div>
               <template v-if="step.icon_text">
                 <span class="icon_text">
-                  <template v-if="step.icon == 'lightbulb.svg'">Tip: </template>
-                  {{step.icon_text}}
+                  <template v-if="step.icon == 'lightbulb.svg'">Tip:&nbsp;&nbsp;</template>
+                  <template v-else-if="step.icon == 'sticky-note.svg'">Note:&nbsp;&nbsp;</template>
+                  <template v-if="step.icon_text && step.icon_text.indexOf('<') !==-1">
+                    <Rerender :html="step.icon_text" />  
+                  </template>
+                  <template v-else>
+                    {{step.icon_text}}
+                  </template>
                 </span>
                 <template v-if="step.button && step.button.indexOf('<') !==-1">
                   <Rerender :html="step.button" />
