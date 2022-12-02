@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <!-- Unreleased changes can be added here. -->
 
+## 1.0.6 - 2022-11-29
+
+- Updated overview register box on how to use Earthdata pub to use feedback form.
+
 ## 1.0.5 - 2022-11-11
 
 - Updated infographic with less text and updated infobubble to reset parent and popper location

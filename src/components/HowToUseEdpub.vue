@@ -38,7 +38,12 @@
                       <p class="icon_text">
                         <template v-if="value.icon == 'lightbulb.svg'">Tip:&nbsp;&nbsp;</template>
                         <template v-if="value.icon == 'sticky-note.svg'">Note:&nbsp;&nbsp;</template>
-                        {{value.icon_text}}
+                        <template v-if="value.icon_text && value.icon_text.indexOf('<') !==-1">
+                          <Rerender :html="value.icon_text" />  
+                        </template>
+                        <template v-else-if="value.icon_text">
+                          {{value.icon_text}}
+                        </template>
                       </p>
                       <template v-if="value.button && value.button.indexOf('<') !==-1">
                         <Rerender :html="value.button" />

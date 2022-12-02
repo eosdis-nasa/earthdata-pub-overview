@@ -1,5 +1,5 @@
 <template class='popper'>
-  <Popper locked="true" :offsetSkid="pageOffset" :key="pageOffset">
+  <Popper :locked=true :offsetSkid="pageOffset" :key="pageOffset">
     <span class="fa fa-info-circle"></span>
     <template #content>
       <div style="max-width: 240px;">
@@ -30,7 +30,7 @@ export default {
   props: ["heading", "text", "icon", "link_url", "link_title", "link_text", "link_name"],
   data() {
     return{
-      pageOffset: 0
+      pageOffset: "0"
     }
   },
   methods: {
@@ -38,7 +38,7 @@ export default {
       isFullscreen = window.outerWidth == screen.width && window.outerHeight == screen.height
       firefoxWidthProperty = isFullscreen ? window.outerWidth : window.innerWidth
       windowWidth = this.fnBrowserDetect() === 'firefox' ? firefoxWidthProperty : window.innerWidth
-      this.pageOffset = windowWidth > 1450 ? (windowWidth - 1450) / 2 : 0
+      this.pageOffset = windowWidth > 1450 ? ((windowWidth - 1450) / 2).toString() : "0"
     },
     fnBrowserDetect(){
       let userAgent = navigator.userAgent;
