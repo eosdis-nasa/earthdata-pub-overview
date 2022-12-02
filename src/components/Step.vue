@@ -16,8 +16,14 @@
               </div>
               <template v-if="step.icon_text">
                 <span class="icon_text">
-                  <template v-if="step.icon == 'lightbulb.svg'">Tip: </template>
-                  {{step.icon_text}}
+                  <template v-if="step.icon == 'lightbulb.svg'">Tip:&nbsp;&nbsp;</template>
+                  <template v-else-if="step.icon == 'sticky-note.svg'">Note:&nbsp;&nbsp;</template>
+                  <template v-if="step.icon_text && step.icon_text.indexOf('<') !==-1">
+                    <Rerender :html="step.icon_text" />  
+                  </template>
+                  <template v-else>
+                    {{step.icon_text}}
+                  </template>
                 </span>
                 <template v-if="step.button && step.button.indexOf('<') !==-1">
                   <Rerender :html="step.button" />
@@ -27,6 +33,9 @@
           </template>
           <template v-if="step.accordian_header && step.accordian_body">
             <Accordian :header="step.accordian_header" :body="step.accordian_body"/>
+          </template>
+          <template v-if="step.paragraph">
+            <Paragraph :text="step.paragraph" />
           </template>
           <template v-if="step.image && step.image_alt_text">
             <img :src="getImgUrl(step.image)" class="step_image" :alt="step.image_alt_text">
@@ -120,5 +129,8 @@ export default {
     justify-content: space-evenly;
     grid-template-columns: auto auto;
     margin-bottom:1rem;
+  }
+  .eui-accordion {
+    margin-bottom:1.75rem!important;
   }
 </style>
