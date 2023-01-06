@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <!-- Unreleased changes can be added here. -->
 
+## 1.0.7 - 2023-01-06
+
+- Added css media queries to make app responsive.
+
 ## 1.0.6 - 2022-11-29
 
 - Updated overview register box on how to use Earthdata pub to use feedback form.

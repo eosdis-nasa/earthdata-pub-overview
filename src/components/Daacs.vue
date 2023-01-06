@@ -1,5 +1,5 @@
 <template>
-  <div class="container-grid"  :class="{'left-collapsed': leftCollapsed }">
+  <div class="container-grid"  :class="{'left-collapsed': leftCollapsed }" id='sidebar-container'>
     <Sidebar ref="sidebar" />
     <div class="right-content" v-if="daacs.paragraphs">
       <BreadCrumbs />
@@ -46,7 +46,58 @@ export default {
       .then(data => {
         this.daacs = data.content;
       })
+      .then(() => this.onResize())
+      this.$nextTick(() => {
+        window.addEventListener('resize', this.onResize);
+      })
   },
+  methods: {
+    collapseWindow(){
+      if (document.getElementById('sidebar').classList !== null && document.getElementById('sidebar').classList.contains('collapsed')) {
+        const link = document.getElementById('expand-window-button');
+        for(var i = 0; i < 1; i++)
+          link.click();
+      }
+    },
+    expandWindow(){
+      if (document.getElementById('sidebar').classList !== null && !document.getElementById('sidebar').classList.contains('collapsed')) {
+        const link = document.getElementById('expand-window-button');
+        for(var i = 0; i < 1; i++)
+          link.click();
+      }
+    },
+    onResize() {
+      let isFullscreen = window.outerWidth == screen.width && window.outerHeight == screen.height
+      let firefoxWidthProperty = isFullscreen ? window.outerWidth : window.innerWidth
+      let windowWidth = this.fnBrowserDetect() === 'firefox' ? firefoxWidthProperty : window.innerWidth
+      this.pageOffset = windowWidth > 1450 ? ((windowWidth - 1450) / 2).toString() : "0"
+      if (windowWidth < 1280) {
+        this.expandWindow()
+      } else {
+        this.collapseWindow()
+      }
+    },
+    fnBrowserDetect(){
+      let userAgent = navigator.userAgent;
+      let browserName;
+      
+      if(userAgent.match(/chrome|chromium|crios/i)){
+          browserName = "chrome";
+        }else if(userAgent.match(/firefox|fxios/i)){
+          browserName = "firefox";
+        }  else if(userAgent.match(/safari/i)){
+          browserName = "safari";
+        }else if(userAgent.match(/opr\//i)){
+          browserName = "opera";
+        } else if(userAgent.match(/edg/i)){
+          browserName = "edge";
+        }else{
+          browserName="No browser detection";
+        }
+      
+      return browserName;
+    }
+  }
 };
 </script>
 <style scoped>

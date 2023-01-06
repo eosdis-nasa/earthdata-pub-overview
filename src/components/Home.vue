@@ -80,11 +80,17 @@ export default {
   .home-bottom-grid {
     display: inline-grid;
     grid-gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr;
+    
+    grid-template-columns: 1fr 1fr auto;
+
     text-align: left;
     margin-top:2rem;
     align-items: center;
     justify-items: center;
+    justify-content: space-between;
     margin-bottom:2rem;
+  }
+  .home-bottom-grid div { 
+    text-align-last: right;
   }
 </style>
