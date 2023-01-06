@@ -53,14 +53,14 @@ export default {
   },
   methods: {
     collapseWindow(){
-      if (document.getElementById('sidebar').classList !== null && document.getElementById('sidebar').classList.contains('collapsed')) {
+      if (document.getElementById('sidebar') !== null && document.getElementById('sidebar').classList !== null && document.getElementById('sidebar').classList.contains('collapsed')) {
         const link = document.getElementById('expand-window-button');
         for(var i = 0; i < 1; i++)
           link.click();
       }
     },
     expandWindow(){
-      if (document.getElementById('sidebar').classList !== null && !document.getElementById('sidebar').classList.contains('collapsed')) {
+      if (document.getElementById('sidebar') !== null && document.getElementById('sidebar').classList !== null && !document.getElementById('sidebar').classList.contains('collapsed')) {
         const link = document.getElementById('expand-window-button');
         for(var i = 0; i < 1; i++)
           link.click();
