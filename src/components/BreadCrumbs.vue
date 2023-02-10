@@ -32,7 +32,6 @@ export default {
   .breadcrumbs {
     display:inline-block;
     font-size:smaller;
-    width:100%;
     padding-top: 12px;
     margin-left:3rem;
   }

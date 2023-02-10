@@ -30,6 +30,9 @@
   padding-left:5px;
   cursor:pointer;
 }
+.hidden {
+  display:none;
+}
 a:link.ext:after, a:visited.ext:after {
   display: inline-block!important;
   padding-left: 0.3em!important;
@@ -84,6 +87,15 @@ a:link.ext:after, a:visited.ext:after {
   margin-right: calc(2rem * 2);
   margin-left: calc(5rem * 2);
 }
+.navbar-nav {
+  align-items: right;
+}
+.navbar-collapse{
+  margin-left:2rem;
+}
+.navbar div a {
+  white-space: break-spaces;
+}
 @media (min-width: 250px) {
   .navbar {
     width: 100%;}
@@ -100,14 +112,82 @@ a:link.ext:after, a:visited.ext:after {
 }
 @media (max-width: 1200px) {
   .header.row.pt-5{
-    margin-right: 1rem;
-    margin-left: 1rem;}}
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+}
+/*  > 981 */
+@media (max-width: 1200px) { 
+  .card-grid {
+    grid-template-columns: auto auto auto!important;
+    /* background-color:purple; */
+  }
+  footer {
+    padding: 1em 2em 2em!important;
+  }
+}
+/*  682 - 980 */
+@media (max-width: 980px) { 
+  .card-grid {
+    grid-template-columns: auto auto auto!important;
+    /* background-color:red; */
+  }
+  .card-body {
+    padding: 1rem 0.5rem;
+  }
+  .producer .card .icon_div,
+  .how_to_use_edpub .card .icon_div {
+    left: calc(50% - 25px); /* 50% - 3/4 of icon height */
+  }
+  .home-bottom-grid {
+    grid-template-columns: 1fr auto;
+  }
+  footer {
+    padding: 1em 2em 2em;
+  }
+}
+/*  < 650px */
+@media (max-width: 649px) {
+  .navbar-expand-md .container-lg {
+    display: inline-grid;
+    justify-self: end;
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 681px) {
+  .card-grid {
+    grid-template-columns: auto!important;
+    display: inline-grid!important;
+    /* background-color:orange; */
+  }
+  .card {
+    width:unset!important;
+  }
+  .producer .card .icon_div,
+  .how_to_use_edpub .card .icon_div {
+    left: calc(50% - 25px); /* 50% - 3/4 of icon height */
+  }
+  .producer .card-grid,
+  .how_to_use_edpub .card-grid {
+    display: block!important;
+  }
+  .home .card-grid .card {
+    min-height: unset!important;
+    margin-bottom: unset;
+  }
+  .home-bottom-grid {
+    grid-template-columns: auto!important;
+  }
+  footer {
+    padding: 1em 2em 2em;
+  }
+}
 
 .display-4.main-width hr{
   margin: 1rem -48px 0;
 }
 .card-grid {
-  display: inline-grid;
+  display: flex;
   grid-gap: 10px;
   grid-template-columns: auto auto auto;
   text-align: center;
@@ -138,7 +218,7 @@ a:link.ext:after, a:visited.ext:after {
 html {
   clear: both;
   margin: 0 auto 3rem auto;
-  width: 1450px;
+  max-width: 1450px;
   height: auto;
   background-color: #FCFCFC;
   box-shadow: 0px 0px 25px #555;
