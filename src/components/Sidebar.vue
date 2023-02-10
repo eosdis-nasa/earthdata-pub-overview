@@ -1,10 +1,10 @@
 <template>
   <div class="left-content" :class="{ collapsed }" id="sidebar">
-    <button type="button" class="btn expand_collapse text-white" aria-label="expand window" @click="toggleCollapseExpand">
-      <i v-if="!collapsed" class="fa fa-caret-left"></i>
-      <i v-else class="fa fa-caret-right"></i>
+    <button type="button" class="btn expand_collapse text-white" aria-label="expand window" @click="toggleCollapseExpand" id='expand-window-button'>
+      <i v-if="!collapsed" class="fa fa-caret-left" id='caret'></i>
+      <i v-else class="fa fa-caret-right" id='caret'></i>
     </button>
-    <div class="sidebar_links" :class="{'collapsed':collapsed}">
+    <div class="sidebar_links" :class="{'collapsed':collapsed}" id='sidebar-links'>
       <div class="heading">
         <router-link :to="{ name: 'Data Producer Resources' }" class="text-white">Data Producer Resources</router-link>
       </div>
