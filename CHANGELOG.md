@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Unreleased
 
 <!-- Unreleased changes can be added here. -->
+ - Updated Node version to v18.14.1
+ - Updated config for eslint update
 
 ## 1.0.7 - 2023-01-06
 

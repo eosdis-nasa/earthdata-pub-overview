@@ -7,7 +7,7 @@
           <template v-if="step.number"><span class="number">{{step.number}}</span></template>
         </div>
         <div class="data_div">
-          <template class="heading" v-if="step.heading"><p><b>{{step.heading}}</b></p></template>
+          <template v-if="step.heading"><p><b>{{step.heading}}</b></p></template>
           <Paragraph :text="step.text" />
           <template v-if="step.icon">
             <div class="icon_div">
