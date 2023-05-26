@@ -90,8 +90,10 @@ export default {
     }
   },
   mounted() {
+    this.publication = require('@/assets/publication.json');
     this.$watch(() => this.$refs.sidebar.collapsed, () => { this.leftCollapsed = this.$refs.sidebar.collapsed; })
-    fetch(`${process.env.VUE_APP_API_ROOT}/pages/publication`)
+    // fetch(`${process.env.VUE_APP_API_ROOT}/pages/publication`)
+    /* fetch(`@/assets/publication.json`)
       .then(response => response.json())
       .then(data => {
         this.publication = data.content;
@@ -99,7 +101,7 @@ export default {
       .then(() => this.onResize())
       this.$nextTick(() => {
         window.addEventListener('resize', this.onResize);
-      })
+      })*/
   }
 };
 </script>

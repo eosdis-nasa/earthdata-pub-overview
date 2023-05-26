@@ -1,13 +1,13 @@
 <template>
   <div class="container-grid" :class="{'left-collapsed': leftCollapsed }" id='sidebar-container'>
     <Sidebar ref="sidebar" />
-    <div class="right-content" v-if="how_to_use_edpub.paragraphs">
+    <div class="right-content" v-if="getting_started.paragraphs">
       <BreadCrumbs />
-      <div class="how_to_use_edpub">
+      <div class="getting_started">
         <div class="mx-5">
           <div class="row pt-5 justify-content-center">
-            <h1 class="display-4" v-if="how_to_use_edpub.heading">{{how_to_use_edpub.heading}}<hr></h1>
-            <template v-for="(value, index) in how_to_use_edpub.paragraphs" :key="index">
+            <h1 class="display-4" v-if="getting_started.heading">{{getting_started.heading}}<hr></h1>
+            <template v-for="(value, index) in getting_started.paragraphs" :key="index">
               <h1 class="display-4" id="how" v-if="value.heading && value.heading=='How to Publish with Earthdata Pub'">{{value.heading}}<hr></h1>
               <h1 class="display-4" id="scope" v-else-if="value.heading && value.heading=='Data Scope and Acceptance Policy'">{{value.heading}}<hr></h1>
               <span class="display-4 main-width sections" v-else-if="value.heading && value.heading.indexOf(':') !==-1"><b>{{value.heading}}</b></span>
@@ -102,22 +102,22 @@ export default {
     Paragraph,
     List
   },
-  name: "HowToUseEdpub",
+  name: "GettingStarted",
   data() {
     return {
-      how_to_use_edpub: [],
+      getting_started: [],
       pic:null,
       leftCollapsed: false
     }
   },
   mounted() {
-    this.how_to_use_edpub = require('@/assets/how_to_use_edpub.json');
+    this.getting_started = require('@/assets/getting_started.json');
     this.$watch(() => this.$refs.sidebar.collapsed, () => { this.leftCollapsed = this.$refs.sidebar.collapsed })
-    // fetch(`${process.env.VUE_APP_API_ROOT}/pages/how_to_use_edpub`)
-    /* fetch(`@/assets/how_to_use_edpub.json`)
+    // fetch(`${process.env.VUE_APP_API_ROOT}/pages/getting_started`)
+    /* fetch(`@/assets/getting_started.json`)
       .then(response => response.json())
       .then(data => {
-        this.how_to_use_edpub = data.content;
+        this.getting_started = data.content;
       })
       .then(() => this.onResize())
       this.$nextTick(() => {
@@ -177,7 +177,7 @@ export default {
 };
 </script>
 <style scoped>
-  .how_to_use_edpub .main-width hr {
+  .getting_started .main-width hr {
     margin-bottom:2rem;
   }
   .card-grid {
@@ -188,17 +188,17 @@ export default {
     margin-bottom:1.5rem;
     margin-top:1rem;
   }
-  .how_to_use_edpub .card-grid {
+  .getting_started .card-grid {
     text-align: center;
     justify-content: space-evenly;
     grid-template-columns: auto auto;
   }
-  .how_to_use_edpub .card-grid {
+  .getting_started .card-grid {
     text-align: center;
     justify-content: space-evenly;
     grid-template-columns: auto auto;
   }
-  .how_to_use_edpub .card-grid .card:has(.icon_div) {
+  .getting_started .card-grid .card:has(.icon_div) {
     padding-top:2rem;
   }
   h5 {
@@ -243,7 +243,7 @@ export default {
     margin-bottom:unset!important;
     padding: 10px;
   }
-  .how_to_use_edpub {
+  .getting_started {
     margin-bottom:2rem;
   }
   .note {
@@ -259,7 +259,7 @@ export default {
   .last-button {
     margin-bottom:1rem;
   }
-  .how_to_use_edpub .card-grid .card.has-icon {
+  .getting_started .card-grid .card.has-icon {
     padding-top: 2rem;
   }
 </style>
