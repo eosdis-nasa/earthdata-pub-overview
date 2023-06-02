@@ -42,15 +42,10 @@ export default {
   mounted() {
     this.daacs = require('@/assets/daacs.json');
     this.$watch(() => this.$refs.sidebar.collapsed, () => { this.leftCollapsed = this.$refs.sidebar.collapsed })
-    // fetch(`${process.env.VUE_APP_API_ROOT}/pages/daacs`)
-    /* .then(response => response.json())
-    .then(data => {
-      this.daacs = data.content;
-    })
-    .then(() => this.onResize())
+    this.onResize()
     this.$nextTick(() => {
       window.addEventListener('resize', this.onResize);
-    })*/
+    })
   },
   methods: {
     collapseWindow(){

@@ -2,7 +2,6 @@
   <div class="container-grid" :class="{'left-collapsed': leftCollapsed }" id='sidebar-container'>
     <Sidebar ref="sidebar" />
     <div class="right-content" v-if="data_publication_guidelines.paragraphs">
-      <BreadCrumbs />
       <div class="data_publication_guidelines">
         <div class="mx-5">
           <div class="row pt-5 justify-content-center">
@@ -88,7 +87,6 @@
 import Rerender from './Rerender.vue';
 import BoxList from './BoxList.vue';
 import Step from './Step.vue';
-import BreadCrumbs from './BreadCrumbs.vue';
 import Sidebar from './Sidebar.vue';
 import Paragraph from './Paragraph.vue';
 import List from './List.vue';
@@ -97,7 +95,6 @@ export default {
     Rerender,
     BoxList,
     Step,
-    BreadCrumbs,
     Sidebar,
     Paragraph,
     List
@@ -113,16 +110,10 @@ export default {
   mounted() {
     this.data_publication_guidelines = require('@/assets/data_publication_guidelines.json');
     this.$watch(() => this.$refs.sidebar.collapsed, () => { this.leftCollapsed = this.$refs.sidebar.collapsed })
-    // fetch(`${process.env.VUE_APP_API_ROOT}/pages/data_publication_guidelines`)
-    /* fetch(`@/assets/data_publication_guidelines.json`)
-      .then(response => response.json())
-      .then(data => {
-        this.data_publication_guidelines = data.content;
-      })
-      .then(() => this.onResize())
-      this.$nextTick(() => {
-        window.addEventListener('resize', this.onResize);
-      }) */
+    this.onResize()
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.onResize);
+    })
   },
   methods: {
     collapseWindow(){

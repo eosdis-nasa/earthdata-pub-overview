@@ -113,16 +113,10 @@ export default {
   mounted() {
     this.how_to_use_edpub = require('@/assets/how_to_use_edpub.json');
     this.$watch(() => this.$refs.sidebar.collapsed, () => { this.leftCollapsed = this.$refs.sidebar.collapsed })
-    // fetch(`${process.env.VUE_APP_API_ROOT}/pages/how_to_use_edpub`)
-    /* fetch(`@/assets/how_to_use_edpub.json`)
-      .then(response => response.json())
-      .then(data => {
-        this.how_to_use_edpub = data.content;
-      })
-      .then(() => this.onResize())
-      this.$nextTick(() => {
-        window.addEventListener('resize', this.onResize);
-      }) */
+    this.onResize()
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.onResize);
+    })
   },
   methods: {
     collapseWindow(){

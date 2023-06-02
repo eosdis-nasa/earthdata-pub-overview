@@ -2,9 +2,9 @@
   <div class="hero-callout">
     <div class="container-lg">
       <div class="header row pt-5">
-        <div class="row pt-4 justify-content-left text-left h5 text-light">
+        <div class="row pt-4 justify-content-left text-left h3 text-light">
           <p>Earthdata Pub is one-stop-shop for researchers who want to publish their Earth Science data at a NASA Distributed Active Archive Center (DAAC)</p>
-          </div>
+        </div>
       </div>
       <div class="row pt-4 justify-content-center cta">
         <div class="col-md-8 text-center">
@@ -18,7 +18,12 @@
 
 <script>
 export default {
-  name: "Hero"
+  name: "Hero",
+  methods: {
+    getImgUrl(pic) {
+      return require('../assets/'+pic);
+    }
+  }
 };
 </script>
 <style scoped>

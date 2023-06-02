@@ -4,9 +4,24 @@
       <router-link class="navbar-brand nasa" to="/">Earthdata Pub<template v-if="this.$route.name=='Home'"> </template></router-link>
       <div class="justify-content-end" id="navbarNav">
         <div class="navbar-nav"  id="navbarSupportedContent">
-          <router-link :to="{ name: 'Home' }" class="nav-item nav-link active">Home</router-link>
-          <router-link :to="{ name: 'Getting Started' }" class="nav-item nav-link">Getting Started</router-link>
-          <router-link :to="{ name: 'Data Publication Guidelines' }" class="nav-item nav-link">Data Publication Guidelines</router-link>
+          <template v-if="this.$route.name == 'Home'">
+            <router-link :to="{ name: 'Home' }" class="nav-item nav-link active">Home</router-link>
+          </template>
+          <template v-else>
+            <router-link :to="{ name: 'Home' }" class="nav-item nav-link">Home</router-link>
+          </template>
+          <template v-if="this.$route.name == 'Getting Started'">
+            <router-link :to="{ name: 'Getting Started' }" class="nav-item nav-link active">Getting Started</router-link>
+          </template>
+          <template v-else>
+            <router-link :to="{ name: 'Getting Started' }" class="nav-item nav-link">Getting Started</router-link>
+          </template>
+          <template v-if="this.$route.name == 'Data Publication Guidelines'">
+            <router-link :to="{ name: 'Data Publication Guidelines' }" class="nav-item nav-link active">Data Publication Guidelines</router-link>
+          </template>
+          <template v-else>
+            <router-link :to="{ name: 'Data Publication Guidelines' }" class="nav-item nav-link">Data Publication Guidelines</router-link>
+          </template>
           <OtherLink link_title="Dashboard" link_url="/dashboard" link_text="Dashboard" link_class="nav-item nav-link" />
         </div>
       </div>
@@ -19,3 +34,8 @@ export default {
   props: ['navbar']
 };
 </script>
+<style scoped>
+  .nav-item.nav-link {
+    text-underline-offset: 8px;
+  }
+</style>

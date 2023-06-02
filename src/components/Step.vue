@@ -1,47 +1,30 @@
 
 <template>
-  <div>
-    <div class="container-lg">
-      <div class="row step-grid">
-        <div class="number_div">
-          <template v-if="step.number"><span class="number">{{step.number}}</span></template>
-        </div>
-        <div class="data_div">
-          <template v-if="step.heading"><p><b>{{step.heading}}</b></p></template>
-          <Paragraph :text="step.text" />
-          <template v-if="step.icon">
-            <div class="icon_div">
-              <div class="icon_box">
-                <img :src="getImgUrl(step.icon)" class="icon" alt="step icon image">
-              </div>
-              <template v-if="step.icon_text">
-                <span class="icon_text">
-                  <template v-if="step.icon == 'lightbulb.svg'">Tip:&nbsp;&nbsp;</template>
-                  <template v-else-if="step.icon == 'sticky-note.svg'">Note:&nbsp;&nbsp;</template>
-                  <template v-if="step.icon_text && step.icon_text.indexOf('<') !==-1">
-                    <Rerender :html="step.icon_text" />  
-                  </template>
-                  <template v-else>
-                    {{step.icon_text}}
-                  </template>
-                </span>
-                <template v-if="step.button && step.button.indexOf('<') !==-1">
-                  <Rerender :html="step.button" />
-                </template>
-              </template>
-            </div>
-          </template>
-          <template v-if="step.accordian_header && step.accordian_body">
-            <Accordian :header="step.accordian_header" :body="step.accordian_body"/>
-          </template>
-          <template v-if="step.paragraph">
-            <Paragraph :text="step.paragraph" />
-          </template>
-          <template v-if="step.image && step.image_alt_text">
-            <img :src="getImgUrl(step.image)" class="step_image" :alt="step.image_alt_text">
-          </template>
-        </div>
+  <div class="steps">
+    <div>
+      <div class="number_div" v-if="step.number">
+        <template v-if="step.number"><span class="number">{{step.number}}</span></template>
       </div>
+      <template v-if="step.paragraphs">
+        <div class="data_div">
+          <template v-if="step.heading">
+            <template v-if="step.heading && step.heading.indexOf('<') !==-1">
+              <p><b><Rerender :html="step.heading" />  </b></p>
+            </template>
+            <template v-else-if="step.heading">
+              <p><b>{{step.heading}}</b></p>
+            </template>
+          </template>
+          <template v-for="(step_item, index) in step.paragraphs" :key="index">
+            <StepItems v-bind:step="step_item" />
+          </template>
+        </div>
+      </template>
+      <template v-else>
+        <div class="data_div">
+          <StepItems v-bind:step="step" />
+        </div>
+      </template>
     </div>
   </div>
 </template>
@@ -49,11 +32,13 @@
 import Rerender from './Rerender.vue';
 import Accordian from './Accordian.vue';
 import Paragraph from './Paragraph.vue';
+import StepItems from './StepItems.vue';
 export default {
   components: { 
     Rerender,
     Accordian,
-    Paragraph
+    Paragraph,
+    StepItems
   },
   name: "Step",
   props: ['step'],
@@ -65,6 +50,13 @@ export default {
   methods: {
     getImgUrl(pic) {
       return require('../assets/'+pic);
+    },
+    getLast(step){
+      let isLast = false;
+      if (step.length-1==index) {
+        isLast = true;
+      }
+      return isLast;
     }
   },
   mounted() {
@@ -81,56 +73,22 @@ export default {
     padding:.5rem;
     text-align: center;
   }
+  .data_div {
+    margin-top:-3.75rem;
+    margin-left:3.75rem;
+    padding-left:.5rem;
+  }
   .number {
     font: normal normal normal 32px/43px Open Sans;
     letter-spacing: 0px;
     color: #FFFFFF;
   }
-  .icon {
-    color: #2276AC;
-    width: 1rem;
-  }
-  .icon_div {
-    border-radius: 8px;
-    border: 1px solid #ebebeb;
-    padding-left:20px;
-    padding-top:10px;
-    padding-bottom:10px;
-    margin-top: 1.5rem;
-    margin-bottom:.75rem;
-    background-color:#ffffff;
-    display:flex;
-    align-items: center;
-  }
-  .icon_box {
-    background: #F2FAFF 0% 0% no-repeat padding-box;
-    border: 1px solid #195983;
-    width: 2.5rem!important;
-    height: 2.5rem;
-    border-radius: 50%;
-    padding: 0.35rem;
-    text-align: center;
-  }
-  .icon_text {
-    margin-left:20px;
-  }
-  .icon_div a {
-    margin-left:20px;
-  }
-  .step_image {
-    border: 1px solid #ebebeb;
-    border-radius: 8px;
-    margin-top:2rem;
+  .data_div > :last-child{
     margin-bottom:2rem;
   }
-  .step-grid {
-    display: inline-grid;
-    grid-gap: 10px;
-    justify-content: space-evenly;
-    grid-template-columns: auto auto;
+  .data_div,
+  .data_div p,
+  .data_div div  {
     margin-bottom:1rem;
-  }
-  .eui-accordion {
-    margin-bottom:1.75rem!important;
   }
 </style>
