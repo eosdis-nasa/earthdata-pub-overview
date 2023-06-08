@@ -118,6 +118,9 @@ a:link.ext:after, a:visited.ext:after {
   background-position: center;
   background-size: 1120px;*/
 }
+.hero-callout .row .pt-5 {
+  padding-top:2rem!important;
+}
 .table>:not(:last-child)>:last-child>* {
   border-bottom-color: unset!important;
 }
