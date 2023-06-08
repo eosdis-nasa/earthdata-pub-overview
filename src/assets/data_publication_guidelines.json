@@ -174,7 +174,7 @@
       {
          "table":{
             "caption":"Table 2: Summary of Data Publication Activities",
-            "headers": "<tr><th rowspan='2' class='role'>ROLE</th><th colspan='3' class='publication'>PUBLICATION</th><th class='post'>POST-PUBLICATION</th></tr><tr><th class='subheader'>Review</th><th class='subheader'>Document & Archive</th><th class='subheader'>Release</th><th class='subheader'>Support & Maintain</th></tr>",
+            "headers": "<tr><th rowspan='2' class='role'>ROLE</th><th colspan='3' class='publication'>PUBLICATION</th><th class='post'>POST-PUBLICATION</th></tr><tr><th class='subheader'>Review</th><th class='subheader'>Document & Archive</th><th class='subheader'>Release</th><th class='post'>Support & Maintain</th></tr>",
             "rows":[
                {
                   "number":1,

@@ -198,7 +198,7 @@ export default {
   .getting_started h3 {
     margin-top:1rem;
   }
-  .card-grid {
+  .getting_started .card-grid {
     margin-top:.75rem;
     margin-bottom:.5rem;
   }
@@ -242,17 +242,17 @@ export default {
     margin-left: 10px;
     width:95%;
   }
-  p.icon_text {
+  .getting_started p.icon_text {
     margin-bottom:unset!important;
     padding: 10px;
   }
   .getting_started {
     margin-bottom:2rem;
   }
-  .note {
+  .getting_started .note {
     margin-bottom:1rem;
   }
-  .note .icon_div {
+  .getting_started .note .icon_div {
     margin-top:1rem;
   }
   .last-button {
