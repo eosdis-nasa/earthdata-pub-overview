@@ -336,6 +336,9 @@ h1, h2, h3 {
   background: #EFEFEF 0 0 no-repeat padding-box!important;
   color: black!important;
 }
+.table>:not(caption)>*>* {
+  border-bottom-width: unset!important;
+}
 #getting-started-hero {
   margin-bottom: 1rem!important;
 }
