@@ -338,7 +338,6 @@ h1, h2, h3 {
 }
 table.table.table-striped {
   border: 1px solid #ebebeb;
-  border-radius: 8px;
 }
 th, thead, tr {
   border-style: unset!important;
@@ -348,4 +347,23 @@ th {
 }
 #getting-started-hero {
   margin-bottom: 1rem!important;
+}
+th {
+  border-right: 1px solid #ebebeb!important;
+}
+th.post {
+  border-top: 1px solid #ebebeb!important;
+}
+.subheader:first-child {
+  border-right: 1px solid #ebebeb!important;
+}
+.role {
+  border-right: 1px solid #ebebeb!important;
+}
+th.publication {
+  border-right: 1px solid #ebebeb!important;
+}
+.subheader {
+  border-top: 1px solid #ebebeb!important;
+  border-right: 1px solid #ebebeb!important;
 }
