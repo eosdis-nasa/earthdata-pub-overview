@@ -8,24 +8,10 @@
       <div class="links_block navbar-nav">
         <template v-if="this.$route.name == 'Getting Started'">
           <template v-for="(link, index) in getStartedLinks" :key="index">
-            <template v-if="index===0">
-              <div class="heading">
-                <template v-if="this.$route.name == 'Getting Started'">
-                  <a :title=link.properName :href=link.link>{{link.properName}}</a>
-                </template>
-              </div>
-            </template>
-            <template v-else>
-              <a :title=link.properName :href=link.link>{{link.properName}}</a>
-            </template>
+            <a :title=link.properName :href=link.link>{{link.properName}}</a>
           </template>
         </template>
         <template v-else>
-          <div class="heading">
-            <template v-if="this.$route.name !== 'Getting Started'">
-              <a title="Data Publication Guidelines" href="data_publication_guidelines#guidelines">Guidelines</a>
-            </template>
-          </div>
           <template v-for="(link, index) in getPublicationLinks" :key="index">
             <a :title=link.properName :href=link.link>{{link.properName}}</a>
           </template>
@@ -53,7 +39,7 @@ export default {
     }
   },
   mounted() {
-    localStorage.setItem('overview-version','7')
+    localStorage.removeItem('overview-version')
   },
   methods: {
     toggleCollapseExpand (){

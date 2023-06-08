@@ -4,21 +4,20 @@
     "heading":"<h1>Getting Started<hr></h1>",
     "paragraphs":[
       {
-         "heading":"<h2 class='display-4' id='how'>How to Use Earthdata Pub<hr></h2>",
          "text":"The steps below will guide you through how to use Earthdata Pub to publish your data with a NASA DAAC."
       },
        {
           "text":"For more information on the data publication process, see the <a title='data publication process' href='data_publication_guidelines#publication'>Data Publication Process</a> section of the <OverviewLink name='Data Publication Guidelines' link_title='Data Publication Guidelines' link_text='Data Publication Guidelines' />."
        },
        {
-         "heading":"<h3 id='account'>Create an Earthdata Pub Account<hr></h3>",
+         "heading":"<h2 class='display-4' id='account'>Create an Earthdata Pub Account<hr></h2>",
          "text":"To create an Earthdata Pub account, please <a href='javascript:feedback.showForm();' title='Send feedback using feedback form.'>contact us</a>. If you know at which DAAC you would like to publish your data, please include that in your request. "
        },
        {
          "text":"When your account has been created, you will receive an email with your username and temporary password. You then need to log in and change your password, as the temporary passwords will expire. "
        },
        {
-          "heading":"<h3 id='accession'>Data Accession Request<hr></h3>",
+          "heading":"<h2 class='display-4' id='accession'>Data Accession Request<hr></h2>",
           "text":"If your data have not been assigned to a DAAC, you will need to have your data approved through the Data Accession process. For more information on this process, see the <a title='Data Accession Process' href='/data_publication_guidelines#accession'>Data Accession Process</a> section of the <OverviewLink name='Data Publication Guidelines' link_title='Data Publication Guidelines' link_text='Data Publication Guidelines' />."
        },
        {
@@ -68,7 +67,7 @@
           ]
        },
        {
-          "heading":"<h3 id='publication'>Data Publication Request<hr></h3>",
+          "heading":"<h2 class='display-4' id='publication'>Data Publication Request<hr></h2>",
           "text":"Once your data has been assigned to a DAAC, you can complete a Data Publication request form when you are ready to work with the DAAC to publish your data product. For more information on the data publication process, see the <a title='data publication process' href='data_publication_guidelines#publication'>Data Publication Process</a> section of the <OverviewLink name='Data Publication Guidelines' link_title='Data Publication Guidelines' link_text='Data Publication Guidelines' />."
        },
        {
@@ -109,14 +108,14 @@
           ]
        },
        {
-          "heading":"<h3 id='status'>Track Your Request Status<hr></h3>",
+          "heading":"<h2 class='display-4' id='status'>Track Your Request Status<hr></h2>",
           "text":"You can track the status of your Data Accession or Data Publication requests on the Requests page of the <OtherLink link_title='Earthdata Pub Dashboard' link_url='dashboard/' link_text='Earthdata Pub Dashboard' />. The Status column provides the current status of your request. Clicking on the status will provide additional information. "
        },
        {
           "text":"You can also filter your requests by status by using the links on the left side of the Requests page. "
        },
        {
-         "heading":"<h3 id='communicate'>Communicate with the DAAC<hr></h3>",
+         "heading":"<h2 class='display-4' id='communicate'>Communicate with the DAAC<hr></h2>",
          "text":"You can communicate with the DAAC using the Conversations page of the <OtherLink link_title='Earthdata Pub Dashboard' link_url='dashboard/' link_text='Earthdata Pub Dashboard' />. During the data accession or publication process, the DAAC may communicate with you in a variety of ways, including direct email or messages posted on the Conversations page."
       }
     ]
