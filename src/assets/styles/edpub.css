@@ -95,7 +95,7 @@ a:link.ext:after, a:visited.ext:after {
   margin-right: calc(4rem * 2)!important;
   margin-left: calc(4rem * 2)!important;
 }
-.pt-5 {
+.pt-5, #getting-started-hero .pt-5 {
   padding-top: 1.25rem!important;
 }
 
