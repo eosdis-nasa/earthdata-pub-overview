@@ -39,7 +39,7 @@ export default {
     }
   },
   mounted() {
-    localStorage.removeItem('overview-version')
+    
   },
   methods: {
     toggleCollapseExpand (){
