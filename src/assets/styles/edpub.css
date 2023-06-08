@@ -98,6 +98,10 @@ a:link.ext:after, a:visited.ext:after {
 .pt-5 {
   padding-top: 2.25rem !important;
 }
+
+#getting-started-hero .row {
+  --bs-gutter-x: unset!important;
+}
 .navbar {
   border-bottom:unset!important;
 }
