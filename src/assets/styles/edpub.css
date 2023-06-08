@@ -1,6 +1,14 @@
 .display-4 {
   font-size: 2rem!important;
 }
+h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+h1 {
+  font-weight: 300;
+  font-size: 2.5rem;
+}
 .eui-fa-chevron-circle-up,
 .eui-fa-chevron-circle-down {
   color: #2276ac;
@@ -253,6 +261,9 @@ html {
 .version{
   background-color: #195983;
 }
+.sections b {
+  font-weight: 500!important;
+}
 .btn-to-top {
   width: 80px;
   height: 80px;
@@ -265,4 +276,42 @@ html {
 }
 .btn-to-top-text {
   color:#2276ac;
+}
+ul li ul li {
+  margin-left:2.75rem;
+}
+ul li ul li:before {
+  padding-right: 0.5em;
+}
+.table {
+  border:1px solid grey;
+  margin-top:1.25rem;
+}
+table .publication {
+  text-align: center
+}
+.role {
+  border-right:1px solid grey;
+}
+.post {
+  border-left:1px solid grey;
+}
+.role,
+.post,
+th {
+  text-align:center;
+  vertical-align: initial;
+}
+table th:first-child {
+  border-right:1px solid grey;
+  border-bottom:1px solid grey;
+}
+table th:last-child {
+  border-bottom:1px solid grey;
+}
+.subheader {
+  border-right:1px solid grey;
+}
+h1, h2, h3 {
+  margin-bottom:0!important;
 }

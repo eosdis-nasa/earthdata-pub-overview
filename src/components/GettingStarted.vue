@@ -152,7 +152,20 @@ export default {
       }
     },
     fnBrowserDetect(){
-      let userAgent = navigator.userAgent;
+      let brands = '';
+      if (navigator.userAgentData === undefined) {
+        brands = navigator.userAgent
+      } else {
+        brands = navigator.userAgentData.brands
+      }
+      let userAgent = '';
+      if (navigator.userAgentData === undefined) {
+        userAgent = navigator.userAgent
+      } else {
+        for (let ea in brands){
+          userAgent += `${brands[ea].brand} ${brands[ea].version}, `
+        }
+      }
       let browserName;
       
       if(userAgent.match(/chrome|chromium|crios/i)){
@@ -168,7 +181,6 @@ export default {
         }else{
           browserName="No browser detection";
         }
-      
       return browserName;
     },
     getImgUrl(pic) {
@@ -181,7 +193,9 @@ export default {
   .getting_started .main-width hr {
     margin-bottom:2rem;
   }
-  .getting_started h1.display-4 {
+  .getting_started h1.display-4,
+  .getting_started h2.display-4,
+  .getting_started h3 {
     margin-top:1rem;
   }
   .card-grid {

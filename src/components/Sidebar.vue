@@ -21,6 +21,11 @@
           </template>
         </template>
         <template v-else>
+          <div class="heading">
+            <template v-if="this.$route.name !== 'Getting Started'">
+              <a title="Data Publication Guidelines" href="data_publication_guidelines#guidelines">Guidelines</a>
+            </template>
+          </div>
           <template v-for="(link, index) in getPublicationLinks" :key="index">
             <a :title=link.properName :href=link.link>{{link.properName}}</a>
           </template>
@@ -58,7 +63,7 @@ export default {
       const paragraphs = items.paragraphs
       let tmpArray = []
       for (const ea in paragraphs) {
-        if (paragraphs[ea].heading && paragraphs[ea].heading.indexOf('<') !==-1 && paragraphs[ea].heading.match(/h1/g) && paragraphs[ea].heading.match(/id/g)) {
+        if (paragraphs[ea].heading && paragraphs[ea].heading.indexOf('<') !==-1 && paragraphs[ea].heading.match(/id/g)) {
           const properName = paragraphs[ea].heading.split('>')[1].split('<')[0]
           const link = paragraphs[ea].heading.replace(/'/g,'').split('id=')[1].split('>')[0]
           tmpArray.push({link: `#${link}`, properName: properName});
@@ -78,8 +83,15 @@ export default {
   }
   .links_block .heading,
   .links_block .heading a {
-    background-color:#c8e3f4!important;
+    background-color:#1e6b9d!important;
     padding:initial;
+    color:white;
+  }
+  .links_block .heading,
+  .links_block .heading span {
+    background-color:#1e6b9d!important;
+    padding:initial;
+    color:white;
   }
   .expand_collapse {
     width: 40px;
@@ -123,7 +135,7 @@ export default {
     padding-top:1rem;
     padding-bottom:1rem;
     font-size:larger;
-    background-color:#c8e3f4;
+    background-color:#1e6b9d!important;
     color:black;
   }
   .sidebar_links .heading a {

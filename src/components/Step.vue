@@ -30,14 +30,10 @@
 </template>
 <script>
 import Rerender from './Rerender.vue';
-import Accordian from './Accordian.vue';
-import Paragraph from './Paragraph.vue';
 import StepItems from './StepItems.vue';
 export default {
   components: { 
     Rerender,
-    Accordian,
-    Paragraph,
     StepItems
   },
   name: "Step",
@@ -50,13 +46,6 @@ export default {
   methods: {
     getImgUrl(pic) {
       return require('../assets/'+pic);
-    },
-    getLast(step){
-      let isLast = false;
-      if (step.length-1==index) {
-        isLast = true;
-      }
-      return isLast;
     }
   },
   mounted() {
@@ -84,11 +73,14 @@ export default {
     color: #FFFFFF;
   }
   .data_div > :last-child{
-    margin-bottom:2rem;
+    margin-bottom:1rem;
   }
   .data_div,
   .data_div p,
   .data_div div  {
     margin-bottom:1rem;
+  }
+  .steps  {
+    margin-top:1rem;
   }
 </style>

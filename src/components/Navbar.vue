@@ -1,11 +1,11 @@
 <template>
   <nav class="navbar navbar-expand-md navbar-dark bg-primary">
     <div class="container-lg mx-0">
-      <router-link class="navbar-brand nasa" to="/">Earthdata Pub<template v-if="this.$route.name=='Home'"> </template></router-link>
+      <span class="navbar-brand nasa">Earthdata Pub</span>
       <div class="justify-content-end" id="navbarNav">
         <div class="navbar-nav"  id="navbarSupportedContent">
           <template v-if="this.$route.name == 'Home'">
-            <router-link :to="{ name: 'Home' }" class="nav-item nav-link active">Home</router-link>
+            <router-link :to="{ name: 'Home' }" aria-label="Home page" class="nav-item nav-link active">Home</router-link>
           </template>
           <template v-else>
             <router-link :to="{ name: 'Home' }" class="nav-item nav-link">Home</router-link>

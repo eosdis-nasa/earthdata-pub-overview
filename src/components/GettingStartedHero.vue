@@ -39,7 +39,7 @@ p {
     padding-left:15px;
     padding-right:15px;
 }
-.card {
+/* .card {
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border: 1px solid #074872;
@@ -50,9 +50,27 @@ p {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
+} */
+.card {
+    /* background-color:#ebebeb;*/
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    /* background-color: #fff; */
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    opacity: .8;
+    background: #fff 0 0 no-repeat padding-box;
+    box-shadow: 0 3px 6px #00000029;
+    border: 1px solid #70707040;
+    border-radius: 8px;
 }
 .right-card {
-    background-color:#c8e3f4;
+    background: #EFEFEF 0 0 no-repeat padding-box;
+    color: black;
 }
 #getting-started-hero {
     margin-bottom: 1rem!important;

@@ -103,5 +103,4 @@ export default {
     margin-top:2rem;
     margin-bottom:2rem;
   }
-  
-  </style>
+</style>
