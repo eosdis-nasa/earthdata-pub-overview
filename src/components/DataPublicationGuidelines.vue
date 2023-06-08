@@ -119,7 +119,6 @@ export default {
   },
   mounted() {
     this.data_publication_guidelines = require('@/assets/data_publication_guidelines.json');
-    console.log(this.data_publication_guidelines)
     this.$watch(() => this.$refs.sidebar.collapsed, () => { this.leftCollapsed = this.$refs.sidebar.collapsed })
     this.onResize()
     this.$nextTick(() => {
