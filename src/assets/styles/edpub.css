@@ -96,7 +96,7 @@ a:link.ext:after, a:visited.ext:after {
   margin-left: calc(4rem * 2)!important;
 }
 .pt-5 {
-  padding-top: 2.25rem !important;
+  padding-top: 1.25rem!important;
 }
 
 #getting-started-hero .row {
@@ -304,6 +304,9 @@ th {
 }
 h1, h2, h3 {
   margin-bottom:0!important;
+}
+h1:first-child {
+  margin-top:1rem;
 }
 #getting-started-hero .heading {
   text-align: center!important;
