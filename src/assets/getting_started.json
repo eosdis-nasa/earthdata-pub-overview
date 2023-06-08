@@ -1,0 +1,123 @@
+
+{
+    "id":5,
+    "heading":"<h1>Getting Started<hr></h1>",
+    "paragraphs":[
+      {
+         "heading":"<h2 class='display-4' id='how'>How to Use Earthdata Pub<hr></h2>",
+         "text":"The steps below will guide you through how to use Earthdata Pub to publish your data with a NASA DAAC."
+      },
+       {
+          "text":"For more information on the data publication process, see the <OverviewLink name='Data Publication Guidelines' link_title='Data Publication Guidelines' link_text='Data Publication Guidelines' />."
+       },
+       {
+         "heading":"<h3 id='account'>Create an Earthdata Pub Account<hr></h3>",
+         "text":"To create an Earthdata Pub account, please <a href='javascript:feedback.showForm();' title='Send feedback using feedback form.'>contact us</a>. If you know at which DAAC you would like to publish your data, please include that in your request. "
+       },
+       {
+         "text":"When your account has been created, you will receive an email with your username and temporary password. You then need to log in and change your password, as the temporary passwords will expire. "
+       },
+       {
+          "heading":"<h3 id='accession'>Data Accession Request<hr></h3>",
+          "text":"If your data have not been assigned to a DAAC, you will need to have your data approved through the Data Accession process. For more information on this process, see the <a title='Data Accession Process' href='/data_publication_guidelines#accession'>Data Accession Process</a> section of the <OverviewLink name='Data Publication Guidelines' link_title='Data Publication Guidelines' link_text='Data Publication Guidelines' />."
+       },
+       {
+          "step":[
+             {
+                "number":1,
+                "heading":"<span class='main-width sections'><b>Start a new Data Accession Request</b></span>",
+                "text":"Log into the <OtherLink link_title='Earthdata Pub Dashboard' link_url='dashboard/' link_text='Earthdata Pub Dashboard' /> with your Earthdata Pub account. To create a Data Accession request, click on “New Request”."
+             },
+             {
+                "number":2,
+                "heading":"<span class='main-width sections'><b>Select a DAAC</b></span>",
+                "accordian_header":"List of NASA DAACs",
+                "accordian_body":"<table class='table table-striped'><caption>Table 1. NASA DAACs and Science Disciplines</caption><thead><tr><th>NASA DAAC</th><th>Scientific Disciplines</th></tr></thead><tbody><tr><td>Alaska Satellite Facility (ASF)</td><td>SAR Products, Change Detection, Sea Ice, Polar Processes</td></tr><tr><td>Atmospheric Science Data Center (ASDC)</td><td>Radiation Budget, Clouds, Aerosols, Tropospheric Composition</td></tr><tr><td>Crustal Dynamics Data Information System (CDDIS)</td><td>Space Geodesy, Solid Earth</td></tr><tr><td>Global Hydrometeorology Resource Center (GHRC)</td><td>Lightning, Severe Weather Interactions, Atmospheric Convection, Hurricanes, Storm-induced Hazards</td></tr><tr><td>Goddard Earth Sciences Data and Information Services Center (GES DISC)</td><td>Global Precipitation, Solar Irradiance, Atmospheric Composition and Dynamics, Water and Energy</td></tr><tr><td>Land Processes DAAC (LPDAAC)</td><td>Land data products </td></tr><tr><td>Level 1 and Atmosphere Archive and Distribution System (LAADS)</td><td>MODIS (Moderate Resolution Imaging Spectrometer) Level 1 data (geolocation, L1A, and radiance L1B) and Atmosphere (Level 2 and Level 3) </td></tr><tr><td>National Snow and Ice Data Center DAAC (NSIDC DAAC)</td><td>Cryospheric Processes, Sea Ice, Snow, Ice Sheets, Frozen Ground, Glaciers, Soil Moisture</td></tr><tr><td>Oak Ridge National Laboratory (ORNL)</td><td>Biogeochemical Dynamics, Ecological Data, Environmental Processes</td></tr><tr><td>Ocean Biology DAAC (OB.DAAC)</td><td>Ocean Biology</td></tr><tr><td>Physical Oceanography DAAC (PO.DAAC)</td><td>Gravity, Ocean Circulation, Ocean Heat Budget, Ocean Surface Topography, Ocean Temperature, Ocean Waves, Ocean Winds, Ocean Salinity, Surface Water</td></tr><tr><td>Socioeconomic Data and Application Data Center (SEDAC)</td><td>Synthesized Earth science and socio-economic data</td></tr></tbody></table>",
+                "text":"Here you will select the NASA DAAC to publish your data, based on your science domain or the type of data. If you are not sure which DAAC to select, you can choose “Unknown”.",
+                "paragraph":"Specifying a DAAC does not guarantee that your data will be assigned to that DAAC. As your request is reviewed, NASA may determine that a different DAAC is more appropriate or that your data do not meet the Data Acceptance Policy section of the <OverviewLink name='Data Publication Guidelines' link_title='Data Publication Guidelines' link_text='Data Publication Guidelines' />.",
+                "icon":"sticky-note.svg",
+                "icon_text":"Some DAACs are not selectable on the form because they are not yet using Earthdata Pub for data publication. To publish data with one of those DAACs, please visit the DAAC web site to contact them."
+             },
+             {
+                "number":3,
+                "heading":"<span class='main-width sections'><b>Fill in the Data Accession Request form</b></span>",
+                "text":"In the <OtherLink link_title='Earthdata Pub Dashboard' link_url='dashboard/' link_text='Earthdata Pub Dashboard' />, click on the “Data Accession Request Form” button in the Next Action column. The information you provide about your data will be used to review and approve your Data Accession Request. ",
+                "icon":"lightbulb.svg",
+                "icon_text":"You can save your progress and return to the form later."
+             },
+             {
+                "number":4,
+                "heading":"<span class='main-width sections'><b>Submit your request</b></span>",
+                "text":"After you have filled in the Data Accession Request form, click on “Submit” to submit the request. This will initiate the Data Accession process."
+             },
+             {
+                "number":5,
+                "heading":"<span class='main-width sections'><b>Accession request is completed</b></span>",
+                "paragraphs": [
+                  {
+                     "text":"The DAAC, as well as ESDIS and ESDS if required, will review your Data Accession request and will determine if your data are approved to be published at the DAAC. The decision will be indicated in the Earthdata Pub Dashboard, and you will receive an email from the DAAC."
+                  },
+                  {
+                     "text":"If your Data Accession request has been approved, you can move to the data publication process."
+                  },
+                  {
+                     "text":"If your Data Accession request has not been approved, the DAAC will provide the reason why in the request's notes and in the email you receive."
+                  }
+               ]
+            }
+          ]
+       },
+       {
+          "heading":"<h3 id='publication'>Data Publication Request<hr></h3>",
+          "text":"Once your data has been assigned to a DAAC, you can complete a Data Publication request form when you are ready to work with the DAAC to publish your data product. For more information on the data publication process, see the Data Publication Process XXXXX section of the <OverviewLink name='Data Publication Guidelines' link_title='Data Publication Guidelines' link_text='Data Publication Guidelines' />."
+       },
+       {
+          "step":[
+             {
+                "number":1,
+                "heading":"<span class='main-width sections'><b>Fill in the Data Publication Request form</b></span>",
+                "text":"In the <OtherLink link_title='Earthdata Pub Dashboard' link_url='dashboard/' link_text='Earthdata Pub Dashboard' />, click on the “Data Publication Request Form” button in the Next Action column. The form will be pre-populated with the information you provided in the Data Accession form, if you completed that form.",
+                "icon":"lightbulb.svg",
+                "icon_text":"You can save your progress and return to the form later."
+             },
+             {
+                "number":2,
+                "heading":"<span class='main-width sections'><b>Submit your request</b></span>",
+                "text":"After you have filled in the Data Publication request form, click on “Submit” to submit the request. This will initiate the data publication process."
+             },
+             {
+                "number":3,
+                "heading":"<span class='main-width sections'><b>Collaborate with the DAAC</b></span>",
+                "paragraphs": [
+                  {
+                     "text":"The data publication process is a collaboration between you and the DAAC. The information you provide in the Data Publication form, along with sample data and related documentation, will be reviewed by the DAAC. You may be asked to provide additional information and will receive further instructions for submitting your entire data product."
+                  },
+                  {
+                     "text":"For more information on the typical activities performed during data publication, as well as your role and the role of the DAAC, see the Data Publication Process section of the <OverviewLink name='Data Publication Guidelines' link_title='Data Publication Guidelines' link_text='Data Publication Guidelines' />."
+                  },
+                  {
+                     "icon":"sticky-note.svg",
+                     "icon_text":"Some data publication steps and services may vary between NASA DAACs."
+                  }
+                ]
+             },
+             {
+               "number":4,
+               "heading":"<span class='main-width sections'><b>Data product is published</b></span>",
+               "text":"When your data product has been published, you will receive an email from the DAAC and your request status will be updated in the <OtherLink link_title='Earthdata Pub Dashboard' link_url='dashboard/' link_text='Earthdata Pub Dashboard' />."
+            }
+          ]
+       },
+       {
+          "heading":"<h3 id='status'>Track Your Request Status<hr></h3>",
+          "text":"You can track the status of your Data Accession or Data Publication requests on the Requests page of the <OtherLink link_title='Earthdata Pub Dashboard' link_url='dashboard/' link_text='Earthdata Pub Dashboard' />. The Status column provides the current status of your request. Clicking on the status will provide additional information. "
+       },
+       {
+          "text":"You can also filter your requests by status by using the links on the left side of the Requests page. "
+       },
+       {
+         "heading":"<h3 id='communicate'>Communicate with the DAAC<hr></h3>",
+         "text":"You can communicate with the DAAC using the Conversations page of the <OtherLink link_title='Earthdata Pub Dashboard' link_url='dashboard/' link_text='Earthdata Pub Dashboard' />. During the data accession or publication process, the DAAC may communicate with you in a variety of ways, including direct email or messages posted on the Conversations page."
+      }
+    ]
+ }

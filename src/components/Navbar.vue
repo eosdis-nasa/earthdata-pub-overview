@@ -1,18 +1,26 @@
 <template>
   <nav class="navbar navbar-expand-md navbar-dark bg-primary">
     <div class="container-lg mx-0">
-      <router-link class="navbar-brand nasa" to="/">Earthdata Pub<template v-if="this.$route.name=='Home'"> Overview</template><span class="badge badge-white">Beta</span></router-link>
+      <span class="navbar-brand nasa">Earthdata Pub</span>
       <div class="justify-content-end" id="navbarNav">
-        <div class="navbar-nav"  id="navbarSupportedContent" v-if="this.$route.name=='Home'">
-          <OtherLink link_title="Dashboard" link_url="/dashboard" link_text="Dashboard" link_class="btn btn-lg btn-dark-blue text-white" />
-        </div>
-        <div class="navbar-nav"  id="navbarSupportedContent" v-else>
-          <template v-if="this.$route.name=='Home'">
-            <router-link :to="{ name: 'Home' }" class="nav-item nav-link active">Overview</router-link>
+        <div class="navbar-nav"  id="navbarSupportedContent">
+          <template v-if="this.$route.name == 'Home'">
+            <router-link :to="{ name: 'Home' }" aria-label="Home page" class="nav-item nav-link active">Home</router-link>
           </template>
           <template v-else>
-            <router-link :to="{ name: 'Home' }" class="nav-item nav-link">Overview</router-link>
-            <router-link :to="{ name: 'Data Producer Resources' }" class="nav-item nav-link active">Data Producer Resources</router-link>
+            <router-link :to="{ name: 'Home' }" class="nav-item nav-link">Home</router-link>
+          </template>
+          <template v-if="this.$route.name == 'Getting Started'">
+            <router-link :to="{ name: 'Getting Started' }" class="nav-item nav-link active">Getting Started</router-link>
+          </template>
+          <template v-else>
+            <router-link :to="{ name: 'Getting Started' }" class="nav-item nav-link">Getting Started</router-link>
+          </template>
+          <template v-if="this.$route.name == 'Data Publication Guidelines'">
+            <router-link :to="{ name: 'Data Publication Guidelines' }" class="nav-item nav-link active">Data Publication Guidelines</router-link>
+          </template>
+          <template v-else>
+            <router-link :to="{ name: 'Data Publication Guidelines' }" class="nav-item nav-link">Data Publication Guidelines</router-link>
           </template>
           <OtherLink link_title="Dashboard" link_url="/dashboard" link_text="Dashboard" link_class="nav-item nav-link" />
         </div>
@@ -26,3 +34,8 @@ export default {
   props: ['navbar']
 };
 </script>
+<style scoped>
+  .nav-item.nav-link {
+    text-underline-offset: 8px;
+  }
+</style>

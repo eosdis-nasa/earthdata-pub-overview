@@ -18,6 +18,7 @@ Vue.component("OtherLink", OtherLink)
 import 'bootstrap/dist/css/bootstrap.css'
 import './assets/font-awesome.min.css'
 import './assets/styles/eui.min.css'
-import './assets/styles/edpub.min.css'
+//import './assets/styles/edpub.min.css'
+import './assets/styles/edpub.css'
 
 Vue.mount('#app')
