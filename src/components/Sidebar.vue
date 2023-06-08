@@ -53,7 +53,7 @@ export default {
     }
   },
   mounted() {
-    localStorage.setItem('overview-version','5')
+    localStorage.setItem('overview-version','6')
   },
   methods: {
     toggleCollapseExpand (){
