@@ -100,7 +100,7 @@ a:link.ext:after, a:visited.ext:after {
 }
 
 #getting-started-hero .row {
-  --bs-gutter-x: unset!important;
+  --bs-gutter-x: 0!important;
 }
 .navbar {
   border-bottom:unset!important;
@@ -291,33 +291,16 @@ ul li ul li:before {
   padding-right: 0.5em!important;
 }
 .table {
-  border:1px solid grey!important;
   margin-top:1.25rem!important;
 }
 table .publication {
   text-align: center!important
-}
-.role {
-  border-right:1px solid grey!important;
-}
-.post {
-  border-left:1px solid grey!important;
 }
 .role,
 .post,
 th {
   text-align:center!important;
   vertical-align: initial!important;
-}
-table th:first-child {
-  border-right:1px solid grey!important;
-  border-bottom:1px solid grey!important;
-}
-table th:last-child {
-  /* border-bottom:1px solid grey; */
-}
-.subheader {
-  border-right:1px solid grey!important;
 }
 h1, h2, h3 {
   margin-bottom:0!important;
