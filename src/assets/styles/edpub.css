@@ -112,7 +112,7 @@ a:link.ext:after, a:visited.ext:after {
   margin-left:2rem!important;
 }
 .hero-callout {
-  background-image: url('@/assets/earth-blue-overlay-cropped-40.png');
+  background-image: url('@/assets/earth-blue-overlay-cropped-40.svg');
   background-repeat: no-repeat;
   /*background-attachment: fixed;
   background-position: center;
