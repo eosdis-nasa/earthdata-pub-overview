@@ -13,7 +13,7 @@
           ]
        },
        {
-          "heading":"Is Your Data Right for NASA DAAC?",
+          "heading":"Is Your Data Right for a NASA DAAC?",
           "text":"In order to publish data at a NASA DAAC, it must be approved by the NASA Earth Science Data Systems (ESDS) program and the Earth Science Data and Information System (ESDIS) project. The following types of Earth Science data can be considered for publication at a NASA DAAC:",
           "list":[
             "Produced by NASA science missions",
