@@ -114,8 +114,8 @@ a:link.ext:after, a:visited.ext:after {
 .hero-callout {
   background-image: url('@/assets/earth-blue-overlay-cropped-40.svg');
   background-repeat: no-repeat;
+  background-position: top;
   /*background-attachment: fixed;
-  background-position: center;
   background-size: 1120px;*/
 }
 .hero-callout .row .pt-5 {
