@@ -67,18 +67,12 @@ export default {
     padding-left:20px;
     padding-top:10px;
     padding-bottom:10px;
-    margin-top: 1.75rem;
     margin-bottom:1rem;
     background-color:#ffffff;
     display:block;
     cursor:pointer;
     width:100%;
   }
-  .accordian_header i {
-    float:right;
-    padding-right:20px;
-    padding-top:3px;
-  } 
   .eui-accordion__body {
     font-weight:normal;
   }

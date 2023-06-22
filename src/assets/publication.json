@@ -1,0 +1,22 @@
+{
+   "id":3,
+   "heading":"What is Data Publication",
+   "paragraphs":[
+      {
+         "text":"NASA promotes the full and open sharing of all its data to research and applications communities, private industry, academia, and the general public. Data publication supports the part of the data lifecycle that results in the data being released to the public. Data publication involves a series of activities performed cooperatively by data producers like you and a NASA DAAC."
+      },
+      {
+         "heading":"Data Publication Process",
+         "text":"The primary goal of the data publication process is to make your data discoverable, available, and usable. The data publication process is a collaboration between you and a NASA DAAC and begins as soon as your data is assigned to a DAAC. Once your data product<InfoBubble text='A logically meaningful grouping of similar or related data which is packaged for distribution to users and represented with a single title and Digital Object Identifier (DOI)' /> has been published, the DAAC will continue to provide support and maintenance of your data product while it remains available to the public. The DAAC's role is essential in preserving the previous mission data and the information needed so that a new user in the future can understand how the data were used for deriving information."
+      },
+      {
+         "heading":"Data Publication Phases",
+         "text":"The table below outlines typical activities performed during the data publication and post-publication phases, as well as your role and the role of the DAAC in these activities. The activities you may be asked to perform could differ from what is shown here depending on a specific mission, project, or data requirements, and DAAC-specific processes.",
+         "image":"img_data_pub_infographic.svg",
+         "image_alt_text":"Data Publication Phases Image"
+      },
+      {
+         "text":"To publish your data at a NASA DAAC get started at the <OtherLink link_title='Earthdata Pub DAAC Selection Page' link_url='daacs/selection' link_text='Earthdata Pub DAAC Selection Page' />"
+      }
+   ]
+}

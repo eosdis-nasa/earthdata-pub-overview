@@ -1,0 +1,28 @@
+
+{
+    "id":1,
+    "heading":"What is Earthdata Pub?",
+    "paragraphs":[
+       {
+          "text":"Earthdata Pub is a resource center providing information and online tools for publishing data at NASA Distributed Active Archive Centers (DAACs).  Using Earthdata Pub you can:",
+          "list":[
+             "Learn about the data publication process",
+             "Request to publish your data at a DAAC",
+             "Submit information and files required to publish your data",
+             "Track the publication status of your data"
+          ]
+       },
+       {
+          "heading":"Is Your Data Right for a NASA DAAC?",
+          "text":"In order to publish data at a NASA DAAC, it must be approved by the NASA Earth Science Data Systems (ESDS) program and the Earth Science Data and Information System (ESDIS) project. The following types of Earth Science data can be considered for publication at a NASA DAAC:",
+          "list":[
+            "Produced by NASA science missions",
+            "Produced by scientists at NASA facilities",
+            "Resulting from NASA research program funding",
+            "Resulting from NASA Applied Science funding if aligned with Earth observation data",
+            "Created from NASA data",
+            "Strongly supporting NASA Earth observation data"
+         ]
+       }
+    ]
+ }

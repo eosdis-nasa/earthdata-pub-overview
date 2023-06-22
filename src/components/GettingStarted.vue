@@ -1,17 +1,24 @@
 <template>
   <div class="container-grid" :class="{'left-collapsed': leftCollapsed }" id='sidebar-container'>
     <Sidebar ref="sidebar" />
-    <div class="right-content" v-if="how_to_use_edpub.paragraphs">
-      <BreadCrumbs />
-      <div class="how_to_use_edpub">
+    <div class="right-content" v-if="getting_started.paragraphs">
+      <div class="getting_started">
         <div class="mx-5">
           <div class="row pt-5 justify-content-center">
-            <h1 class="display-4" v-if="how_to_use_edpub.heading">{{how_to_use_edpub.heading}}<hr></h1>
-            <template v-for="(value, index) in how_to_use_edpub.paragraphs" :key="index">
-              <h1 class="display-4" id="how" v-if="value.heading && value.heading=='How to Publish with Earthdata Pub'">{{value.heading}}<hr></h1>
-              <h1 class="display-4" id="scope" v-else-if="value.heading && value.heading=='Data Scope and Acceptance Policy'">{{value.heading}}<hr></h1>
-              <span class="display-4 main-width sections" v-else-if="value.heading && value.heading.indexOf(':') !==-1"><b>{{value.heading}}</b></span>
-              <h5 v-else-if="value.heading"><b>{{value.heading}}</b><hr></h5>
+            <template v-if="getting_started.heading && getting_started.heading.indexOf('<') !==-1">
+              <Rerender :html="getting_started.heading" />  
+            </template>
+            <template v-else-if="getting_started.heading">
+              {{getting_started.heading}}
+            </template>
+            <GettingStartedHero/>
+            <template v-for="(value, index) in getting_started.paragraphs" :key="index">
+              <template v-if="value.heading && value.heading.indexOf('<') !==-1">
+                <Rerender :html="value.heading" />  
+              </template>
+              <template v-else-if="value.heading">
+                {{value.heading}}
+              </template>
               <Paragraph :text="value.text" />
               <List :list="value.list" />
               <template v-if="value.box_list">
@@ -88,30 +95,30 @@
 import Rerender from './Rerender.vue';
 import BoxList from './BoxList.vue';
 import Step from './Step.vue';
-import BreadCrumbs from './BreadCrumbs.vue';
 import Sidebar from './Sidebar.vue';
 import Paragraph from './Paragraph.vue';
+import GettingStartedHero from './GettingStartedHero.vue';
 import List from './List.vue';
 export default {
   components: { 
     Rerender,
     BoxList,
     Step,
-    BreadCrumbs,
     Sidebar,
     Paragraph,
-    List
+    List,
+    GettingStartedHero
   },
-  name: "HowToUseEdpub",
+  name: "GettingStarted",
   data() {
     return {
-      how_to_use_edpub: [],
+      getting_started: [],
       pic:null,
       leftCollapsed: false
     }
   },
   mounted() {
-    this.how_to_use_edpub = require('@/assets/how_to_use_edpub.json');
+    this.getting_started = require('@/assets/getting_started.json');
     this.$watch(() => this.$refs.sidebar.collapsed, () => { this.leftCollapsed = this.$refs.sidebar.collapsed })
     this.onResize()
     this.$nextTick(() => {
@@ -183,29 +190,22 @@ export default {
 };
 </script>
 <style scoped>
-  .how_to_use_edpub .main-width hr {
+  .getting_started .main-width hr {
     margin-bottom:2rem;
   }
-  .card-grid {
+  .getting_started h1.display-4,
+  .getting_started h2.display-4,
+  .getting_started h3 {
+    margin-top:1rem;
+  }
+  .getting_started .card-grid {
     margin-top:.75rem;
     margin-bottom:.5rem;
   }
-  .card-grid .card:has(.icon_div) {
-    margin-bottom:1.5rem;
-    margin-top:1rem;
-  }
-  .how_to_use_edpub .card-grid {
+  .getting_started .card-grid {
     text-align: center;
     justify-content: space-evenly;
     grid-template-columns: auto auto;
-  }
-  .how_to_use_edpub .card-grid {
-    text-align: center;
-    justify-content: space-evenly;
-    grid-template-columns: auto auto;
-  }
-  .how_to_use_edpub .card-grid .card:has(.icon_div) {
-    padding-top:2rem;
   }
   h5 {
     margin-top:1rem;
@@ -238,34 +238,24 @@ export default {
     padding: 0.35rem;
     text-align: center;
   }
-  .icon_box .span {
-    max-width:90%
-  }
   .note .icon_text {
     margin-left: 10px;
     width:95%;
   }
-  p.icon_text {
+  .getting_started p.icon_text {
     margin-bottom:unset!important;
     padding: 10px;
   }
-  .how_to_use_edpub {
+  .getting_started {
     margin-bottom:2rem;
   }
-  .note {
+  .getting_started .note {
     margin-bottom:1rem;
   }
-  .note .icon_div {
+  .getting_started .note .icon_div {
     margin-top:1rem;
-  }
-  .sections {
-    margin-bottom:1.75rem;
-    margin-top:1.75rem;
   }
   .last-button {
     margin-bottom:1rem;
-  }
-  .how_to_use_edpub .card-grid .card.has-icon {
-    padding-top: 2rem;
   }
 </style>

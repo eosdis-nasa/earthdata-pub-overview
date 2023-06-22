@@ -5,27 +5,16 @@
       <i v-else class="fa fa-caret-right" id='caret'></i>
     </button>
     <div class="sidebar_links" :class="{'collapsed':collapsed}" id='sidebar-links'>
-      <div class="heading">
-        <router-link :to="{ name: 'Data Producer Resources' }" class="text-white">Data Producer Resources</router-link>
-      </div>
-      <div class="links_block">
-        <template v-if="this.$route.name == 'Data Publication'">
-          <router-link :to="{ name: 'Data Publication' }" class="text-white active">What is Data Publication</router-link>
+      <div class="links_block navbar-nav">
+        <template v-if="this.$route.name == 'Getting Started'">
+          <template v-for="(link, index) in getStartedLinks" :key="index">
+            <a :title=link.properName :href=link.link>{{link.properName}}</a>
+          </template>
         </template>
         <template v-else>
-          <router-link :to="{ name: 'Data Publication' }" class="text-white">What is Data Publication</router-link>
-        </template>
-        <template v-if="this.$route.name == 'What is a NASA DAAC'">
-          <router-link :to="{ name: 'What is a NASA DAAC' }" class="text-white active">What is a NASA DAAC</router-link>
-        </template>
-        <template v-else>
-          <router-link :to="{ name: 'What is a NASA DAAC' }" class="text-white">What is a NASA DAAC</router-link>
-        </template>
-        <template v-if="this.$route.name == 'How To Use Earthdata Pub'">
-          <router-link :to="{ name: 'How To Use Earthdata Pub' }" class="text-white active">How To Use Earthdata Pub</router-link>
-        </template>
-        <template v-else>
-          <router-link :to="{ name: 'How To Use Earthdata Pub' }" class="text-white">How To Use Earthdata Pub</router-link>
+          <template v-for="(link, index) in getPublicationLinks" :key="index">
+            <a :title=link.properName :href=link.link>{{link.properName}}</a>
+          </template>
         </template>
       </div>
     </div>
@@ -34,16 +23,39 @@
 <script>
 export default {
   name: "Sidebar",
-  mounted() {
-  },
   data() {
     return {
       collapsed: false
     }
   },
+  computed: {
+    getStartedLinks() {
+      const items = require(`@/assets/getting_started.json`);
+      return this.getLinks(items)
+    },
+    getPublicationLinks() {
+      const items = require(`@/assets/data_publication_guidelines.json`);
+      return this.getLinks(items)
+    }
+  },
+  mounted() {
+    
+  },
   methods: {
     toggleCollapseExpand (){
       this.collapsed = !this.collapsed
+    },
+    getLinks(items) {
+      const paragraphs = items.paragraphs
+      let tmpArray = []
+      for (const ea in paragraphs) {
+        if (paragraphs[ea].heading && paragraphs[ea].heading.indexOf('<') !==-1 && paragraphs[ea].heading.match(/id/g)) {
+          const properName = paragraphs[ea].heading.split('>')[1].split('<')[0]
+          const link = paragraphs[ea].heading.replace(/'/g,'').split('id=')[1].split('>')[0]
+          tmpArray.push({link: `#${link}`, properName: properName});
+        }
+      }
+      return tmpArray
     }
   }
 }
@@ -51,6 +63,21 @@ export default {
 <style scoped>
   .left-content{
     position:relative;
+  }
+  .links_block a:visited, a:link {
+    color:unset;
+  }
+  .links_block .heading,
+  .links_block .heading a {
+    background-color:#1e6b9d!important;
+    padding:initial;
+    color:white;
+  }
+  .links_block .heading,
+  .links_block .heading span {
+    background-color:#1e6b9d!important;
+    padding:initial;
+    color:white;
   }
   .expand_collapse {
     width: 40px;
@@ -67,6 +94,7 @@ export default {
     font-size:20px;
     padding-top:3px;
     padding-right:3px;
+    z-index: 1;
   }
   .left-content.collapsed {
     width: 0px;
@@ -93,10 +121,16 @@ export default {
     padding-top:1rem;
     padding-bottom:1rem;
     font-size:larger;
-    background-color:#1E6B9D;
+    background-color:#1e6b9d!important;
+    color:black;
   }
   .sidebar_links .heading a {
     text-decoration:none;
+  }
+  .sidebar_links {
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
   }
   .links_block {
     padding-bottom:2rem;
