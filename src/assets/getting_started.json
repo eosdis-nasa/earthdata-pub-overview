@@ -32,8 +32,8 @@
                 "heading":"<span class='main-width sections'><b>Select a DAAC</b></span>",
                 "accordian_header":"List of NASA DAACs",
                 "accordian_body":"<table class='table table-striped'><caption>Table 1. NASA DAACs and Science Disciplines</caption><thead><tr><th>NASA DAAC</th><th>Scientific Disciplines</th></tr></thead><tbody><tr><td>Alaska Satellite Facility (ASF)</td><td>SAR Products, Change Detection, Sea Ice, Polar Processes</td></tr><tr><td>Atmospheric Science Data Center (ASDC)</td><td>Radiation Budget, Clouds, Aerosols, Tropospheric Composition</td></tr><tr><td>Crustal Dynamics Data Information System (CDDIS)</td><td>Space Geodesy, Solid Earth</td></tr><tr><td>Global Hydrometeorology Resource Center (GHRC)</td><td>Lightning, Severe Weather Interactions, Atmospheric Convection, Hurricanes, Storm-induced Hazards</td></tr><tr><td>Goddard Earth Sciences Data and Information Services Center (GES DISC)</td><td>Global Precipitation, Solar Irradiance, Atmospheric Composition and Dynamics, Water and Energy</td></tr><tr><td>Land Processes DAAC (LPDAAC)</td><td>Land data products </td></tr><tr><td>Level 1 and Atmosphere Archive and Distribution System (LAADS)</td><td>MODIS (Moderate Resolution Imaging Spectrometer) Level 1 data (geolocation, L1A, and radiance L1B) and Atmosphere (Level 2 and Level 3) </td></tr><tr><td>National Snow and Ice Data Center DAAC (NSIDC DAAC)</td><td>Cryospheric Processes, Sea Ice, Snow, Ice Sheets, Frozen Ground, Glaciers, Soil Moisture</td></tr><tr><td>Oak Ridge National Laboratory (ORNL)</td><td>Biogeochemical Dynamics, Ecological Data, Environmental Processes</td></tr><tr><td>Ocean Biology DAAC (OB.DAAC)</td><td>Ocean Biology</td></tr><tr><td>Physical Oceanography DAAC (PO.DAAC)</td><td>Gravity, Ocean Circulation, Ocean Heat Budget, Ocean Surface Topography, Ocean Temperature, Ocean Waves, Ocean Winds, Ocean Salinity, Surface Water</td></tr><tr><td>Socioeconomic Data and Application Data Center (SEDAC)</td><td>Synthesized Earth science and socio-economic data</td></tr></tbody></table>",
-                "text":"Here you will select the NASA DAAC to publish your data, based on your science domain or the type of data. If you are not sure which DAAC to select, you can choose “Unknown”.",
-                "paragraph":"Specifying a DAAC does not guarantee that your data will be assigned to that DAAC. As your request is reviewed, NASA may determine that a different DAAC is more appropriate or that your data do not meet the <a title='data acceptance policy' href='data_publication_guidelines#acceptance'>Data Acceptance Policy</a> of the <OverviewLink name='Data Publication Guidelines' link_title='Data Publication Guidelines' link_text='Data Publication Guidelines' />.",
+                "text":"Here you will select the DAAC to publish your data, based on your science domain or the type of data. If you are not sure which DAAC to select, you can choose “Unknown”.",
+                "paragraph":"Specifying a DAAC does not guarantee that your data will be assigned to that DAAC. As your request is reviewed, NASA may determine that a different DAAC is more appropriate or that your data do not meet the <a title='data acceptance policy' href='data_publication_guidelines#acceptance'>Data Acceptance Policy</a>.",
                 "icon":"sticky-note.svg",
                 "icon_text":"Some DAACs are not selectable on the form because they are not yet using Earthdata Pub for data publication. To publish data with one of those DAACs, please visit the DAAC web site to contact them."
              },
@@ -47,7 +47,7 @@
              {
                 "number":4,
                 "heading":"<span class='main-width sections'><b>Submit your request</b></span>",
-                "text":"After you have filled in the Data Accession Request form, click on “Submit” to submit the request. This will initiate the Data Accession process."
+                "text":"After you have filled in the Data Accession Request form, click on “Submit” to submit the request. This will initiate the Data Accession process. For more information on this process, see the <a title='Data Accession Process' href='/data_publication_guidelines#accession'>Data Accession Process</a> section of the <OverviewLink name='Data Publication Guidelines' link_title='Data Publication Guidelines' link_text='Data Publication Guidelines' />."
              },
              {
                 "number":5,
@@ -68,7 +68,7 @@
        },
        {
           "heading":"<h2 class='display-4' id='publication'>Data Publication Request<hr></h2>",
-          "text":"Once your data has been assigned to a DAAC, you can complete a Data Publication request form when you are ready to work with the DAAC to publish your data product. For more information on the data publication process, see the <a title='data publication process' href='data_publication_guidelines#publication'>Data Publication Process</a> section of the <OverviewLink name='Data Publication Guidelines' link_title='Data Publication Guidelines' link_text='Data Publication Guidelines' />."
+          "text":"Once your data have been assigned to a DAAC, you can complete a Data Publication request form when you are ready to work with the DAAC to publish your data product. For more information on the data publication process, see the <a title='data publication process' href='data_publication_guidelines#publication'>Data Publication Process</a> section of the <OverviewLink name='Data Publication Guidelines' link_title='Data Publication Guidelines' link_text='Data Publication Guidelines' />."
        },
        {
           "step":[
@@ -96,7 +96,7 @@
                   },
                   {
                      "icon":"sticky-note.svg",
-                     "icon_text":"Some data publication steps and services may vary between NASA DAACs."
+                     "icon_text":"Some data publication steps and services may vary between DAACs."
                   }
                 ]
              },
