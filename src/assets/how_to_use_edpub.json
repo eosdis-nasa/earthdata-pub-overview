@@ -122,7 +122,7 @@
       },
       {
          "heading":"Data Product is Published",
-         "text":"When your data has been published, you will receive an email notification with the following details:",
+         "text":"When your data product is published, you will receive an email notification with the following details:",
          "list":[
             "The data citation<InfoBubble text='Reference or citation of other dataset evidence or sources.' icon='fa fa-external-link-alt' link_title='Data Citation Information' link_url='https://www.earthdata.nasa.gov/learn/articles/open-data-and-the-importance-of-data-citations-the-nasa-eosdis-perspective' link_text='For More Information on Data Citation' />",
             "The Digital Object Identifier (DOI)<InfoBubble text='A DOI is a unique sequence of numbers and letters that identify an object, such as a dataset or journal article.' icon='fa fa-external-link-alt' link_title='DOI information' link_url='https://www.earthdata.nasa.gov/engage/doi-process' link_text=' View information on our DOI Process' />",

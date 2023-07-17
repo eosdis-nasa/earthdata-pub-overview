@@ -11,7 +11,7 @@
       },
       {
          "heading":"<h2 class='display-4' id='acceptance'>Data Acceptance Policy<hr></h2>",
-         "text":"Data can be considered for publication at a NASA DAAC if any of the following criteria are met:",
+         "text":"Data can be considered for publication at a DAAC if any of the following criteria are met:",
          "list":[
             "Produced by NASA science missions",
             "Produced by scientists at NASA facilities",
@@ -22,20 +22,11 @@
          ]
       },
       {
-         "text":"All data published at NASA DAACs must be formally assigned by NASA to the DAAC. For more information, see Data Accession Process."
-      },
-      {
-         "heading":"<h2 class='display-4' id='benefits'>Benefits of Publishing Data at a DAAC<hr></h2>",
-         "text":"NASA DAACs are domain-focused data repositories supporting the specific needs of Earth science disciplines, while also enabling cross-disciplinary data usage. When you publish your data with a DAAC:",
-         "list":[
-            "Your data are citable, giving you credit for their use in research.",
-            "Your data are discoverable amidst a vast data catalog of complimentary data in NASA’s <a title='Earthdata Search' href='https://search.earthdata.nasa.gov' class='ext' target=_blank>Earthdata Search</a>, increasing the reach and relevance of your data.",
-            "A broader group of scientists and data users can find, understand, and use your data to address a wider variety of questions, now and in the long-term."
-         ]
+         "text":"All data published at DAACs must be formally assigned by NASA to the DAAC. For more information on this process, see the <a title='Data Accession Process' href='/data_publication_guidelines#accession'>Data Accession Process</a> section."
       },
       {
          "heading":"<h2 class='display-4' id='daacs'>The NASA DAACs<hr></h2>",
-         "text":"The table below lists the 12 NASA DAACs and their primary scientific disciplines. A link to the DAAC website is provided where additional information, including how to contact the DAAC, can be found.",
+         "text":"The table below lists the 12 DAACs and their primary scientific disciplines. A link to the DAAC website is provided where additional information, including how to contact the DAAC, can be found.",
          "table":{
             "caption":"Table 1. NASA DAACs and Science Disciplines",
             "heading":[
@@ -144,28 +135,28 @@
       },
       {
          "heading":"<h2 class='display-4' id='accession'>Data Accession Process<hr></h2>",
-         "text":"All data archived and distributed at NASA DAACs must be formally assigned by NASA to the DAAC. Data from NASA science missions and some NASA research programs are directly assigned to a DAAC by NASA ESDS. Other data, such as community-produced data, must go through the NASA Data Accession process to be assigned. "
+         "text":"All data archived and distributed at DAACs must be formally assigned by NASA to the DAAC. Data from NASA science missions and some NASA research programs are directly assigned to a DAAC by NASA ESDS. Other data, such as community-produced data, must go through the NASA Data Accession process to be assigned. "
       },
       {
          "text":"The NASA Data Accession process is initiated by submitting a Data Accession request in Earthdata Pub. During the process, the DAAC will conduct an assessment of:",
          "list":[
-            "The data product’s alignment with the Data Acceptance Policy and the DAAC’s scientific discipline",
+            "The data product’s alignment with the <a title='data acceptance policy' href='data_publication_guidelines#acceptance'>Data Acceptance Policy</a> and the DAAC’s scientific discipline",
             "The alignment of data file contents and structure with <a title='NASA standards' href='https://www.earthdata.nasa.gov/esdis/esco/standards-and-practices' class='ext' target=_blank>NASA standards</a>",
-            "The appropriate <a title='Level of Service' href='https://earthdata.nasa.gov/collaborate/new-missions/level-of-service' class='ext' target=_blank>Level of Service</a>"
+            "The appropriate <a title='Level of Service' href='https://earthdata.nasa.gov/collaborate/new-missions/level-of-service' class='ext' target=_blank>Level of Service</a> and the DAAC resources necessary to achieve the Level of Service"
          ]
       },
       {
-         "text":"During the assessment the DAAC may contact you for additional information or obtain feedback from their User Working Group, an external advisory group representing the DAAC’s scientific discipline. The DAAC will provide the assessment to NASA ESDIS and ESDS for review and approval. The length of time required to assign your data product to a DAAC will vary, but can take up to several weeks. The NASA DAAC supporting your Data Accession request can provide a time estimate."
+         "text":"During the assessment the DAAC may contact you for additional information or obtain feedback from their User Working Group, an external advisory group representing the DAAC’s scientific discipline. The DAAC will provide the assessment to NASA ESDIS and ESDS for review and approval. The length of time required to assign your data product to a DAAC will vary, but it can take up to several weeks. The DAAC supporting your Data Accession request can provide a time estimate."
       },
       {
          "text":"The DAAC will notify you of the result of your Data Accession request. If approved, you can then work with the DAAC to publish your data. If not approved, you will be advised of the reasons for the decision."
       },
       {
          "heading":"<h2 class='display-4' id='publication'>Data Publication Process<hr></h2>",
-         "text":"The primary goal of the data publication process is to make your data Findable, Accessible, Interoperable, and Reusable (<a title='FAIR' href='https://www.go-fair.org/fair-principles/' class='ext' target=_blank>FAIR</a>). The data publication process is a collaboration between you and a NASA DAAC and is initiated by submitting the Data Publication request form in Earthdata Pub. Once your data product has been published, the DAAC will continue to provide support and on-going stewardship of your data product while it remains available to the public."
+         "text":"The primary goal of the data publication process is to make your data Findable, Accessible, Interoperable, and Reusable (<a title='FAIR' href='https://www.go-fair.org/fair-principles/' class='ext' target=_blank>FAIR</a>). The data publication process is a collaboration between you and a DAAC and is initiated by submitting the Data Publication request form in Earthdata Pub. Once your data product has been published, the DAAC will continue to provide support and on-going stewardship of your data product while it remains available to the public."
       },
       {
-         "text":"The table below summarizes the typical activities performed during and after the publication after your data product, as well as your role and the role of the DAAC in these activities."
+         "text":"The table below summarizes the typical activities performed during and after the publication of your data product, as well as your role and the role of the DAAC in these activities."
       },
       {
          "icon":"sticky-note.svg",
@@ -210,7 +201,7 @@
          }
       },
       {
-        "text":"The length of time required to publish your data product will vary depending on the complexity, the volume of the data, and the designated Level of Service. The NASA DAAC publishing your data product can provide a publication time estimate."
+        "text":"The length of time required to publish your data product will vary depending on the complexity, the volume of the data, and the designated Level of Service. The DAAC publishing your data product can provide a publication time estimate."
      }
    ]
 }
