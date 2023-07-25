@@ -7,7 +7,7 @@
         <li><a href="https://www.nasa.gov/about/highlights/HP_Privacy.html">NASA Privacy Policy</a></li>
         <li><a href="https://www.usa.gov/">USA.gov</a></li>
         <li><a href="javascript:feedback.showForm();">Feedback</a></li>
-        <div style="float: right">Version: <span class="version badge eui-badge--md">V1.1.0</span></div>
+        <div style="float: right">Version: <span class="version badge eui-badge--md">V1.1.1</span></div>
       </ul>
     </div>
   </footer>
