@@ -39,11 +39,7 @@ export default {
     }
   },
   mounted() {
-    fetch(`${process.env.VUE_APP_API_ROOT}/pages/data_producer_resources`)
-      .then(response => response.json())
-      .then(data => {
-        this.data_producer_resources = data.content;
-      })
+    this.data_producer_resources = require('@/assets/data_producer_resources.json');
   },
 };
 </script>

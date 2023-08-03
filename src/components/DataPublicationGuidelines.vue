@@ -1,19 +1,26 @@
 <template>
   <div class="container-grid" :class="{'left-collapsed': leftCollapsed }" id='sidebar-container'>
     <Sidebar ref="sidebar" />
-    <div class="right-content" v-if="how_to_use_edpub.paragraphs">
-      <BreadCrumbs />
-      <div class="how_to_use_edpub">
+    <div class="right-content" v-if="data_publication_guidelines.paragraphs">
+      <div class="data_publication_guidelines">
         <div class="mx-5">
-          <div class="row pt-5 justify-content-center">
-            <h1 class="display-4" v-if="how_to_use_edpub.heading">{{how_to_use_edpub.heading}}<hr></h1>
-            <template v-for="(value, index) in how_to_use_edpub.paragraphs" :key="index">
-              <h1 class="display-4" id="how" v-if="value.heading && value.heading=='How to Publish with Earthdata Pub'">{{value.heading}}<hr></h1>
-              <h1 class="display-4" id="scope" v-else-if="value.heading && value.heading=='Data Scope and Acceptance Policy'">{{value.heading}}<hr></h1>
-              <span class="display-4 main-width sections" v-else-if="value.heading && value.heading.indexOf(':') !==-1"><b>{{value.heading}}</b></span>
-              <h5 v-else-if="value.heading"><b>{{value.heading}}</b><hr></h5>
+          <div class="pt-5">
+            <template v-if="data_publication_guidelines.heading && data_publication_guidelines.heading.indexOf('<') !==-1">
+              <Rerender :html="data_publication_guidelines.heading" />  
+            </template>
+            <template v-else-if="data_publication_guidelines.heading">
+              {{data_publication_guidelines.heading}}
+            </template>
+            <template v-for="(value, index) in data_publication_guidelines.paragraphs" :key="index">
+              <template v-if="value.heading && value.heading.indexOf('<') !==-1">
+                <Rerender :html="value.heading" />  
+              </template>
+              <template v-else-if="value.heading">
+                {{value.heading}}
+              </template>
               <Paragraph :text="value.text" />
               <List :list="value.list" />
+              <Table :table="value.table" />
               <template v-if="value.box_list">
                 <span class="display-4 main-width"><hr></span>
                 <div class="card-grid">
@@ -88,30 +95,30 @@
 import Rerender from './Rerender.vue';
 import BoxList from './BoxList.vue';
 import Step from './Step.vue';
-import BreadCrumbs from './BreadCrumbs.vue';
 import Sidebar from './Sidebar.vue';
 import Paragraph from './Paragraph.vue';
 import List from './List.vue';
+import Table from './Table.vue';
 export default {
   components: { 
     Rerender,
     BoxList,
     Step,
-    BreadCrumbs,
     Sidebar,
     Paragraph,
-    List
+    List,
+    Table
   },
-  name: "HowToUseEdpub",
+  name: "DataPublicationGuidelines",
   data() {
     return {
-      how_to_use_edpub: [],
+      data_publication_guidelines: [],
       pic:null,
       leftCollapsed: false
     }
   },
   mounted() {
-    this.how_to_use_edpub = require('@/assets/how_to_use_edpub.json');
+    this.data_publication_guidelines = require('@/assets/data_publication_guidelines.json');
     this.$watch(() => this.$refs.sidebar.collapsed, () => { this.leftCollapsed = this.$refs.sidebar.collapsed })
     this.onResize()
     this.$nextTick(() => {
@@ -183,29 +190,22 @@ export default {
 };
 </script>
 <style scoped>
-  .how_to_use_edpub .main-width hr {
+  .data_publication_guidelines .main-width hr {
     margin-bottom:2rem;
+  }
+  .data_publication_guidelines h1.display-4,
+  .data_publication_guidelines h2.display-4,
+  .data_publication_guidelines h3 {
+    margin-top:2rem;
   }
   .card-grid {
     margin-top:.75rem;
     margin-bottom:.5rem;
   }
-  .card-grid .card:has(.icon_div) {
-    margin-bottom:1.5rem;
-    margin-top:1rem;
-  }
-  .how_to_use_edpub .card-grid {
+  .data_publication_guidelines .card-grid {
     text-align: center;
     justify-content: space-evenly;
     grid-template-columns: auto auto;
-  }
-  .how_to_use_edpub .card-grid {
-    text-align: center;
-    justify-content: space-evenly;
-    grid-template-columns: auto auto;
-  }
-  .how_to_use_edpub .card-grid .card:has(.icon_div) {
-    padding-top:2rem;
   }
   h5 {
     margin-top:1rem;
@@ -238,9 +238,6 @@ export default {
     padding: 0.35rem;
     text-align: center;
   }
-  .icon_box .span {
-    max-width:90%
-  }
   .note .icon_text {
     margin-left: 10px;
     width:95%;
@@ -249,7 +246,7 @@ export default {
     margin-bottom:unset!important;
     padding: 10px;
   }
-  .how_to_use_edpub {
+  .data_publication_guidelines {
     margin-bottom:2rem;
   }
   .note {
@@ -258,14 +255,7 @@ export default {
   .note .icon_div {
     margin-top:1rem;
   }
-  .sections {
-    margin-bottom:1.75rem;
-    margin-top:1.75rem;
-  }
   .last-button {
     margin-bottom:1rem;
-  }
-  .how_to_use_edpub .card-grid .card.has-icon {
-    padding-top: 2rem;
   }
 </style>

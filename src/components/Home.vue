@@ -38,6 +38,8 @@ import Hero from './Hero.vue';
 import BoxList from './BoxList.vue';
 import Paragraph from './Paragraph.vue';
 import List from './List.vue';
+
+
 export default {
   components: { 
     Hero,
@@ -52,11 +54,7 @@ export default {
     }
   },
   mounted() {
-    fetch(`${process.env.VUE_APP_API_ROOT}/pages/home`)
-      .then(response => response.json())
-      .then(data => {
-        this.home = data.content;
-      })
+    this.home = require('@/assets/home.json');
   },
   methods: {
     getImgUrl(pic) {

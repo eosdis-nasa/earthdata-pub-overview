@@ -66,7 +66,20 @@ export default {
       }
     },
     fnBrowserDetect(){
-      let userAgent = navigator.userAgent;
+      let brands = '';
+      if (navigator.userAgentData === undefined) {
+        brands = navigator.userAgent
+      } else {
+        brands = navigator.userAgentData.brands
+      }
+      let userAgent = '';
+      if (navigator.userAgentData === undefined) {
+        userAgent = navigator.userAgent
+      } else {
+        for (let ea in brands){
+          userAgent += `${brands[ea].brand} ${brands[ea].version}, `
+        }
+      }
       let browserName;
       
       if(userAgent.match(/chrome|chromium|crios/i)){
@@ -82,7 +95,6 @@ export default {
         }else{
           browserName="No browser detection";
         }
-      
       return browserName;
     },
     getImgUrl(pic) {
@@ -90,16 +102,12 @@ export default {
     }
   },
   mounted() {
+    this.publication = require('@/assets/publication.json');
     this.$watch(() => this.$refs.sidebar.collapsed, () => { this.leftCollapsed = this.$refs.sidebar.collapsed; })
-    fetch(`${process.env.VUE_APP_API_ROOT}/pages/publication`)
-      .then(response => response.json())
-      .then(data => {
-        this.publication = data.content;
-      })
-      .then(() => this.onResize())
-      this.$nextTick(() => {
-        window.addEventListener('resize', this.onResize);
-      })
+    this.onResize()
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.onResize);
+    })
   }
 };
 </script>

@@ -1,0 +1,42 @@
+
+{
+    "id":2,
+    "heading":"Data Producer Resources",
+    "paragraphs":[
+       {
+          "text":"Below are materials and information to help you submit your data publication request."
+       },
+       {
+          "heading":"Data Producer Docs",
+          "box_list":[
+             {
+                "text":"What Is Data Publication",
+                "link_name":"Data Publication",
+                "box_link":"/data_producer_resources/data_publication",
+                "icon":"file-code.svg"
+             },
+             {
+                "text":"What is a NASA DAAC",
+                "link_name":"What is a NASA DAAC",
+                "box_link":"/data_producer_resources/nasa_daac",
+                "icon":"user-friends.svg"
+             },
+             {
+                "text":"How to Use Earthdata Pub",
+                "link_name":"How To Use Earthdata Pub",
+                "box_link":"/data_producer_resources/how_to_use_edpub",
+                "icon":"laptop-code.svg"
+             }
+          ]
+       },
+       {
+          "heading":"Other Resources",
+          "list":[
+             "<a title='Earth Observing System Data and Information System (EOSDIS)' href='https://www.earthdata.nasa.gov/eosdis' class='ext' target=_blank>Earth Observing System Data and Information System (EOSDIS)</a>",
+             "<a title='Earth Science Data and Information System (ESDIS)' href='https://www.earthdata.nasa.gov/esdis' class='ext' target=_blank>Earth Science Data and Information System (ESDIS)</a>",
+             "<a title='Earth Science Data Systems (ESDS)' href='https://espd.gsfc.nasa.gov/' class='ext' target=_blank>Earth Science Data Systems (ESDS)</a>",
+             "<a title='Earthdata EOSDIS DAACs' href='https://earthdata.nasa.gov/eosdis/daacs' class='ext' target=_blank>Earthdata EOSDIS DAACs</a>"
+          ]
+       }
+    ]
+ }
