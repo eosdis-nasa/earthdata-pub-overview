@@ -4,14 +4,14 @@
     "heading":"<h1>Getting Started<hr></h1>",
     "paragraphs":[
       {
-         "text":"The steps below will guide you through how to use Earthdata Pub to publish your data with a NASA DAAC."
+         "text":"The steps below will guide you through how to use Earthdata Pub to publish your data with a <a title='List of NASA DAACs' href='data_publication_guidelines#daacs'>NASA DAAC</a>."
       },
        {
           "text":"For more information on the data publication process, see the <a title='data publication process' href='data_publication_guidelines#publication'>Data Publication Process</a> section of the <OverviewLink name='Data Publication Guidelines' link_title='Data Publication Guidelines' link_text='Data Publication Guidelines' />."
        },
        {
          "heading":"<h2 class='display-4' id='account'>Create an Earthdata Pub Account<hr></h2>",
-         "text":"To create an Earthdata Pub account, please <a href='javascript:feedback.showForm();' title='Send feedback using feedback form.'>contact us</a>. If you know at which DAAC you would like to publish your data, please include that in your request. "
+         "text":"To create an Earthdata Pub account, please <a href='javascript:feedback.showForm();' title='Send feedback using feedback form.'>contact us</a>. If you know at which <a title='List of NASA DAACs' href='data_publication_guidelines#daacs'>DAAC</a> you would like to publish your data, please include that in your request. "
        },
        {
          "text":"When your account has been created, you will receive an email with your username and temporary password. You then need to log in and change your password, as the temporary passwords will expire. "
