@@ -1,0 +1,86 @@
+{
+  "name": "earthdata-pub-overview",
+  "version": "1.1.1",
+  "description": "Overview for Earthdata Pub",
+  "main": "index.js",
+  "private": true,
+  "engines": {
+    "node": ">=18.14.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress": "npx cypress open",
+    "cypress-headless": "npx cypress run",
+    "cypress-headless-all": "npx cypress run --browser chrome; npx cypress run --browser chromium; npx cypress run --browser edge; npx cypress run --browser electron",
+    "clean-modules": "rm -rf package-lock.json node_modules/",
+    "snyk-protect": "snyk protect",
+    "snyk-test": "snyk test",
+    "snyk-prepare": "npm run snyk-protect",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "start-overview-dev": "docker-compose -f docker-compose-dev.yml up -d",
+    "stop-overview-dev": "docker-compose -f docker-compose-dev.yml down",
+    "start-overview": "docker-compose -f docker-compose.yml up -d",
+    "stop-overview": "docker-compose -f docker-compose.yml down",
+    "start-api": "cd ../api && npm run start:detached",
+    "stop-api": "cd ../api && npm run stop",
+    "start-dashboard": "cd ../dashboard && npm run start-dashboard",
+    "stop-dashboard": "cd ../dashboard && npm run stop-dashboard",
+    "start-forms-dev": "cd ../forms && npm run start-forms-dev",
+    "stop-forms-dev": "cd ../forms && npm run stop-forms-dev",
+    "start-dev": "npm run start-api; npm run start-dashboard; npm run start-forms-dev; npm run start-overview-dev",
+    "stop-dev": "npm run stop-api; npm run stop-dashboard; npm run stop-forms-dev; npm run stop-overview-dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.earthdata.nasa.gov/scm/edpub/overview.git"
+  },
+  "author": "Earthdata Pub Dev Team",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "bootstrap": "^5.1.0",
+    "core-js": "^3.6.5",
+    "cypress-localstorage-commands": "^1.6.1",
+    "dotenv": "^14.3.2",
+    "vue": "^3.2.40",
+    "vue-router": "^4.1.5",
+    "vue-simple-scroll-up": "^0.1.5",
+    "vue3-popper": "^1.5.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
+    "@vue/compiler-sfc": "^3.0.0",
+    "axe-core": "^4.4.1",
+    "@babel/eslint-parser": "^7.19.1",
+    "cypress": "^9.5.1",
+    "cypress-axe": "^0.14.0",
+    "eslint": "^8.34.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "file-loader": "^6.2.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {
+      "vue/multi-word-component-names": "off"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
