@@ -20,8 +20,10 @@ For local development:
 
 ```bash
 npm install
-npm run serve
+npm run start-overview
 ```
+
+http://localhost:8082
 
 ### Lints and fixes files
 
