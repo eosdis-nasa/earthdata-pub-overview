@@ -16,7 +16,7 @@ the EDPub project. Be sure to read that before submitting pull requests.
 
 For local development:
 
-```
+```bash
 npm install
 npm run start-overview
 ```
@@ -25,6 +25,6 @@ http://localhost:8082
 
 ### Lints and fixes files
 
-```
+```bash
 npm run lint
 ```
