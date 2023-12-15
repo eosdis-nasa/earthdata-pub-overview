@@ -11,11 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress": "npx cypress open",
     "cypress-headless": "npx cypress run",
-    "cypress-headless-all": "npx cypress run --browser chrome; npx cypress run --browser chromium; npx cypress run --browser edge; npx cypress run --browser electron",
+    "cypress-headless-all": "npx cypress run --browser chrome && npx cypress run --browser chromium && npx cypress run --browser edge && npx cypress run --browser electron",
     "clean-modules": "rm -rf package-lock.json node_modules/",
-    "snyk-protect": "snyk protect",
-    "snyk-test": "snyk test",
-    "snyk-prepare": "npm run snyk-protect",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
@@ -37,7 +34,7 @@
     "url": "https://github.com/eosdis-nasa/earthdata-pub-overview.git"
   },
   "author": "Earthdata Pub Dev Team",
-  "license": "Apache-2.0",
+  "license": "BSD 3-Clause License",
   "dependencies": {
     "bootstrap": "^5.1.0",
     "core-js": "^3.6.5",
