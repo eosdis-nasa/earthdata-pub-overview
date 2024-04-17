@@ -1,12 +1,12 @@
-import { createWebHistory, createRouter }  from 'vue-router'
-import Home from '@/components/Home'
-import DataProducerResources from '@/components/DataProducerResources'
-import Publication from '@/components/Publication'
-import Daacs from '@/components/Daacs'
-import HowToUseEdpub from '@/components/HowToUseEdpub'
-import GettingStarted from '@/components/GettingStarted'
-import DataPublicationGuidelines from '@/components/DataPublicationGuidelines'
-import PageNotFound from '@/components/PageNotFound'
+import { createWebHistory, createRouter } from 'vue-router';
+import Home from '@/components/Home';
+import DataProducerResources from '@/components/DataProducerResources';
+import Publication from '@/components/Publication';
+import Daacs from '@/components/Daacs';
+import HowToUseEdpub from '@/components/HowToUseEdpub';
+import GettingStarted from '@/components/GettingStarted';
+import DataPublicationGuidelines from '@/components/DataPublicationGuidelines';
+import PageNotFound from '@/components/PageNotFound';
 
 const routes = [
   {
@@ -52,9 +52,9 @@ const routes = [
   {
     path: '/:catchAll(.*)',
     name: 'Not Found',
-    component: PageNotFound,
-  },
-]
+    component: PageNotFound
+  }
+];
 
 const router = createRouter({
   history: createWebHistory(),
@@ -62,4 +62,4 @@ const router = createRouter({
   base: process.env.BASE_URL
 });
 
-export default router
+export default router;
