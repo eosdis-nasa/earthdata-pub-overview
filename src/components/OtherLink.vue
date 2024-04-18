@@ -1,19 +1,24 @@
+<!-- eslint-disable max-len -->
+<!-- eslint-disable vue/no-multiple-template-root -->
 <template>
   <template v-if="link_url.match(/selection/g)">
-    <a :title="link_title" :href="formsDaacSelection" :class="link_class">{{link_text}}<template v-if="link_icon"><img :src="getImgUrl(link_icon)" alt="Arrow Image" /></template></a>
+    <a :title="link_title" :href="formsDaacSelection" :class="link_class">{{ link_text }}<template v-if="link_icon"><img
+          :src="getImgUrl(link_icon)" alt="Arrow Image" /></template></a>
   </template>
   <template v-else-if="link_url.match(/requests/g)">
-    <a :title="link_title" :href="dashboardRequests" :class="link_class">{{link_text}}<template v-if="link_icon"><img :src="getImgUrl(link_icon)" alt="Arrow Image" /></template></a>
+    <a :title="link_title" :href="dashboardRequests" :class="link_class">{{ link_text }}<template v-if="link_icon"><img
+          :src="getImgUrl(link_icon)" alt="Arrow Image" /></template></a>
   </template>
   <template v-else>
-    <a :title="link_title" :href="dashboardRoot" :class="link_class">{{link_text}}<template v-if="link_icon"><img :src="getImgUrl(link_icon)" alt="Arrow Image" /></template></a>
+    <a :title="link_title" :href="dashboardRoot" :class="link_class">{{ link_text }}<template v-if="link_icon"><img
+          :src="getImgUrl(link_icon)" alt="Arrow Image" /></template></a>
   </template>
 </template>
 
 <script>
 export default {
-  name: "OtherLink",
-  props: ["link_title", "link_url", "link_text", "link_class", "link_icon"],
+  name: 'OtherLink',
+  props: ['link_title', 'link_url', 'link_text', 'link_class', 'link_icon'],
   computed: {
     dashboardRoot() {
       return process.env.VUE_APP_DASHBOARD_ROOT;
@@ -27,7 +32,8 @@ export default {
   },
   methods: {
     getImgUrl(pic) {
-      return require('../assets/'+pic);
+      // eslint-disable-next-line import/no-dynamic-require, global-require
+      return require(`../assets/${pic}`);
     }
   }
 };
