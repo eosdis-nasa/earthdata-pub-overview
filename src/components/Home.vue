@@ -1,3 +1,6 @@
+<!-- eslint-disable vue/no-v-for-template-key -->
+<!-- eslint-disable vue/no-multiple-template-root -->
+<!-- eslint-disable max-len -->
 <template>
   <Hero />
   <div class="home">
@@ -23,20 +26,20 @@ import Hero from './Hero.vue';
 import Paragraph from './Paragraph.vue';
 import List from './List.vue';
 
-
 export default {
   components: {
     Hero,
     Paragraph,
     List
   },
-  name: "Home",
+  name: 'Home',
   data() {
     return {
       home: []
-    }
+    };
   },
   mounted() {
+    // eslint-disable-next-line global-require
     this.home = require('@/assets/home.json');
   },
   methods: {

@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <!-- Unreleased changes can be added here. -->
 - Overview app code cleanup and mobile improvements
+- Linted code
 - Content updates for EDPUB 1084, links to 'List of NASA DAACs' section added
 
 ## 1.1.1 2023-07-27

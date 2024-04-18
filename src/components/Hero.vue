@@ -1,3 +1,4 @@
+<!-- eslint-disable max-len -->
 <template>
   <div class="hero-callout">
     <div class="container-lg">
@@ -20,7 +21,7 @@
 
 <script>
 export default {
-  name: "Hero",
+  name: 'Hero',
   methods: {
   }
 };

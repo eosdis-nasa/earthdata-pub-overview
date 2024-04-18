@@ -17,7 +17,8 @@
             <OverviewLink :name="link_name" :link_title="link_title" :link_text="link_text" />
           </template>
           <template v-else>
-            <span class="fas fa-external-link-alt"></span><a :href="link_url" :title="link_title" target="_blank">{{
+            <span class="fas fa-external-link-alt"></span>
+            <a :href="link_url" :title="link_title" target="_blank">{{
               link_text }}</a>
           </template>
         </template>
@@ -27,41 +28,42 @@
 </template>
 
 <script>
-let isFullscreen = window.outerWidth == screen.width && window.outerHeight == screen.height
-let firefoxWidthProperty = isFullscreen ? window.outerWidth : window.innerWidth
-let windowWidth = null
+// eslint-disable-next-line no-restricted-globals
+let isFullscreen = window.outerWidth === screen.width && window.outerHeight === screen.height;
+let firefoxWidthProperty = isFullscreen ? window.outerWidth : window.innerWidth;
+let windowWidth = null;
 export default {
-  name: "InfoBubble",
-  props: ["heading", "text", "icon", "link_url", "link_title", "link_text", "link_name"],
+  name: 'InfoBubble',
+  props: ['heading', 'text', 'icon', 'link_url', 'link_title', 'link_text', 'link_name'],
   data() {
     return {
-      pageOffset: "0"
-    }
+      pageOffset: '0'
+    };
   },
   methods: {
     onResize() {
-      isFullscreen = window.outerWidth == screen.width && window.outerHeight == screen.height
-      firefoxWidthProperty = isFullscreen ? window.outerWidth : window.innerWidth
-      windowWidth = this.fnBrowserDetect() === 'firefox' ? firefoxWidthProperty : window.innerWidth
-      this.pageOffset = windowWidth > 1450 ? ((windowWidth - 1450) / 2).toString() : "0"
+      // eslint-disable-next-line no-restricted-globals
+      isFullscreen = window.outerWidth === screen.width && window.outerHeight === screen.height;
+      firefoxWidthProperty = isFullscreen ? window.outerWidth : window.innerWidth;
+      windowWidth = this.fnBrowserDetect() === 'firefox' ? firefoxWidthProperty : window.innerWidth;
+      this.pageOffset = windowWidth > 1450 ? ((windowWidth - 1450) / 2).toString() : '0';
     },
     fnBrowserDetect() {
       let brands = '';
       if (navigator.userAgentData === undefined) {
-        brands = navigator.userAgent
+        brands = navigator.userAgent;
       } else {
-        brands = navigator.userAgentData.brands
+        brands = navigator.userAgentData.brands;
       }
       let userAgent = '';
       if (navigator.userAgentData === undefined) {
-        userAgent = navigator.userAgent
+        userAgent = navigator.userAgent;
       } else {
         for (let ea in brands) {
           userAgent += `${brands[ea].brand} ${brands[ea].version}, `
         }
       }
       let browserName;
-
       if (userAgent.match(/chrome|chromium|crios/i)) {
         browserName = "chrome";
       } else if (userAgent.match(/firefox|fxios/i)) {
@@ -79,10 +81,10 @@ export default {
     }
   },
   mounted() {
-    this.onResize()
+    this.onResize();
     this.$nextTick(() => {
       window.addEventListener('resize', this.onResize);
-    })
+    });
   },
   beforeUnmount() {
     window.removeEventListener('resize', this.onResize);

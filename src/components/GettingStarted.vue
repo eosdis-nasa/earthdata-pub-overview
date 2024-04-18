@@ -1,3 +1,5 @@
+<!-- eslint-disable max-len -->
+<!-- eslint-disable vue/no-v-for-template-key -->
 <template>
   <div class="container-grid" :class="{ 'left-collapsed': leftCollapsed }" id='sidebar-container'>
     <Sidebar ref="sidebar" />
@@ -106,6 +108,7 @@ import Step from './Step.vue';
 import Sidebar from './Sidebar.vue';
 import Paragraph from './Paragraph.vue';
 import List from './List.vue';
+
 export default {
   components: {
     Rerender,
@@ -115,82 +118,87 @@ export default {
     Paragraph,
     List
   },
-  name: "GettingStarted",
+  name: 'GettingStarted',
   data() {
     return {
       getting_started: [],
       pic: null,
       leftCollapsed: false
-    }
+    };
   },
   mounted() {
+    // eslint-disable-next-line global-require
     this.getting_started = require('@/assets/getting_started.json');
-    this.$watch(() => this.$refs.sidebar.collapsed, () => { this.leftCollapsed = this.$refs.sidebar.collapsed })
-    this.onResize()
+    // eslint-disable-next-line max-len
+    this.$watch(() => this.$refs.sidebar.collapsed, () => { this.leftCollapsed = this.$refs.sidebar.collapsed; });
+    this.onResize();
     this.$nextTick(() => {
       window.addEventListener('resize', this.onResize);
-    })
+    });
   },
   methods: {
     collapseWindow() {
       if (document.getElementById('sidebar') !== null && document.getElementById('sidebar').classList !== null && document.getElementById('sidebar').classList.contains('collapsed')) {
         const link = document.getElementById('expand-window-button');
-        for (var i = 0; i < 1; i++)
-          link.click();
+        // eslint-disable-next-line no-plusplus
+        for (let i = 0; i < 1; i++) link.click();
       }
     },
     expandWindow() {
       if (document.getElementById('sidebar') !== null && document.getElementById('sidebar').classList !== null && !document.getElementById('sidebar').classList.contains('collapsed')) {
         const link = document.getElementById('expand-window-button');
-        for (var i = 0; i < 1; i++)
-          link.click();
+        // eslint-disable-next-line no-plusplus
+        for (let i = 0; i < 1; i++) link.click();
       }
     },
     onResize() {
-      let isFullscreen = window.outerWidth == screen.width && window.outerHeight == screen.height
-      let firefoxWidthProperty = isFullscreen ? window.outerWidth : window.innerWidth
-      let windowWidth = this.fnBrowserDetect() === 'firefox' ? firefoxWidthProperty : window.innerWidth
-      this.pageOffset = windowWidth > 1450 ? ((windowWidth - 1450) / 2).toString() : "0"
+      // eslint-disable-next-line max-len, no-restricted-globals
+      const isFullscreen = window.outerWidth === screen.width && window.outerHeight === screen.height;
+      const firefoxWidthProperty = isFullscreen ? window.outerWidth : window.innerWidth;
+      const windowWidth = this.fnBrowserDetect() === 'firefox' ? firefoxWidthProperty : window.innerWidth;
+      this.pageOffset = windowWidth > 1450 ? ((windowWidth - 1450) / 2).toString() : '0';
       if (windowWidth < 1280) {
-        this.expandWindow()
+        this.expandWindow();
       } else {
-        this.collapseWindow()
+        this.collapseWindow();
       }
     },
     fnBrowserDetect() {
       let brands = '';
       if (navigator.userAgentData === undefined) {
-        brands = navigator.userAgent
+        brands = navigator.userAgent;
       } else {
-        brands = navigator.userAgentData.brands
+        brands = navigator.userAgentData.brands;
       }
       let userAgent = '';
       if (navigator.userAgentData === undefined) {
-        userAgent = navigator.userAgent
+        userAgent = navigator.userAgent;
       } else {
-        for (let ea in brands) {
-          userAgent += `${brands[ea].brand} ${brands[ea].version}, `
+        // eslint-disable-next-line no-restricted-syntax, guard-for-in
+        for (const ea in brands) {
+          userAgent += `${brands[ea].brand} ${brands[ea].version}, `;
         }
       }
       let browserName;
 
       if (userAgent.match(/chrome|chromium|crios/i)) {
-        browserName = "chrome";
+        browserName = 'chrome';
       } else if (userAgent.match(/firefox|fxios/i)) {
-        browserName = "firefox";
+        browserName = 'firefox';
       } else if (userAgent.match(/safari/i)) {
-        browserName = "safari";
+        browserName = 'safari';
       } else if (userAgent.match(/opr\//i)) {
-        browserName = "opera";
+        browserName = 'opera';
       } else if (userAgent.match(/edg/i)) {
-        browserName = "edge";
+        browserName = 'edge';
       } else {
-        browserName = "No browser detection";
+        browserName = 'No browser detection';
       }
       return browserName;
     },
     getImgUrl(pic) {
-      return require('../assets/' + pic);
+      // eslint-disable-next-line import/no-dynamic-require, global-require
+      return require(`../assets/${pic}`);
     }
   }
 };

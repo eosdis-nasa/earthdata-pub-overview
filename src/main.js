@@ -1,19 +1,19 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import OverviewLink from './components/OverviewLink'
-import OtherLink from './components/OtherLink'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import OverviewLink from './components/OverviewLink';
+import OtherLink from './components/OtherLink';
 
-const Vue = createApp(App)
+import 'bootstrap/dist/css/bootstrap.css';
+import './assets/font-awesome.min.css';
+import './assets/styles/eui.min.css';
+import './assets/styles/edpub.min.css';
 
-Vue.use(router)
+const Vue = createApp(App);
 
-Vue.component("OverviewLink", OverviewLink)
-Vue.component("OtherLink", OtherLink)
+Vue.use(router);
 
-import 'bootstrap/dist/css/bootstrap.css'
-import './assets/font-awesome.min.css'
-import './assets/styles/eui.min.css'
-import './assets/styles/edpub.min.css'
+Vue.component('OverviewLink', OverviewLink);
+Vue.component('OtherLink', OtherLink);
 
-Vue.mount('#app')
+Vue.mount('#app');

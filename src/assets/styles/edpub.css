@@ -117,6 +117,9 @@ a:link.ext:after, a:visited.ext:after {
 .hero-callout .row .pt-5 {
   padding-top:2rem!important;
 }
+.hero-callout .btn {
+  margin-right: 15px;
+}
 .data_publication_guidelines .table_wrapper ul {
   padding-left: 2rem!important;
 }
