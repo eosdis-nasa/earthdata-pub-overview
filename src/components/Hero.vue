@@ -23,19 +23,7 @@
 export default {
   name: 'Hero',
   methods: {
-    getImgUrl(pic) {
-      // eslint-disable-next-line import/no-dynamic-require, global-require
-      return require(`../assets/${pic}`);
-    }
   }
 };
 </script>
-<style scoped>
-.hero-callout .btn {
-  margin-right: 15px;
-}
-
-.hero-callout {
-  background-color: #2276ac;
-}
-</style>
+<style scoped></style>

@@ -112,14 +112,96 @@ a:link.ext:after, a:visited.ext:after {
   margin-left:2rem!important;
 }
 .hero-callout {
-  background-image: url('@/assets/earth-blue-overlay-cropped-40.svg');
-  background-repeat: no-repeat;
-  background-position: top;
-  /*background-attachment: fixed;
-  background-size: 1120px;*/
+  background-color: #2276ac;
 }
 .hero-callout .row .pt-5 {
   padding-top:2rem!important;
+}
+.hero-callout .btn {
+  margin-right: 15px;
+}
+.data_publication_guidelines .table_wrapper ul {
+  padding-left: 2rem!important;
+}
+.right-content {
+  min-width: -webkit-fill-available !important;
+}
+@media (min-width: 0px) {
+  .hero-callout {
+    font-size: calc(1.425rem + 1vw);
+    background-image: url('@/assets/earth-blue-overlay-cropped-40.svg')!important;
+    background-repeat: no-repeat!important;
+    background-position: bottom!important;
+  }
+  .header.row.pt-5 {
+    margin-right: calc(1rem* 2) !important;
+    margin-left: calc(1rem* 2) !important;
+  }
+  .navbar-brand.nasa {
+    white-space: wrap !important;
+  }
+  .icon_box {
+    display:none
+  }
+  .icon_div {
+    padding:10px!important;
+  }
+  .icon_text {
+    margin:unset!important;
+  }
+  .accordian_header {
+    padding-left:10px!important;
+    width:fit-content!important;
+  }
+  .eui-accordion__body.active {
+    width:fit-content!important;
+  }
+  .eui-accordion {
+    overflow: auto;
+  }
+  .table_wrapper {
+    overflow: auto;
+  }
+  table {
+    background-color: #ffffff;
+  }
+  .data_publication_guidelines ul {
+    padding-left: unset!important
+  }
+}
+@media (min-width: 768px) {
+.navbar-expand-md .navbar-nav .nav-link {
+    width:max-content
+}}
+@media (min-width: 616px) {
+  .hero-callout {
+    font-size: calc(1.425rem + 1vw);
+    background-image: url('@/assets/earth-blue-overlay-cropped-40.svg')!important;
+    background-repeat: no-repeat!important;
+    background-position: top!important;
+  }
+  .header.row.pt-5 {
+    margin-right: calc(2rem* 2) !important;
+    margin-left: calc(2rem* 2) !important;
+  }
+  .navbar-brand.nasa {
+    white-space: nowrap !important;
+  }
+  .icon_box {
+    display:unset!important
+  }
+  .icon_div {
+    padding:20px!important;
+  }
+  .icon_text {
+    margin-left:20px!important;
+  }
+  .accordian_header{
+    width:unset!important;
+  }
+  .data_publication_guidelines ul {
+    padding-left: 2rem!important;
+  }
 }
 .table>:not(:last-child)>:last-child>* {
   border-bottom-color: unset!important;
