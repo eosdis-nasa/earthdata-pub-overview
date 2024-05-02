@@ -46,34 +46,21 @@
     "vue3-popper": "^1.5.0"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.16.3",
     "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-eslint": "^5.0.8",
     "@vue/cli-service": "^5.0.8",
     "@vue/compiler-sfc": "^3.0.0",
     "axe-core": "^4.4.1",
-    "@babel/eslint-parser": "^7.19.1",
     "cypress": "^9.5.1",
     "cypress-axe": "^0.14.0",
-    "eslint": "^8.34.0",
-    "eslint-plugin-vue": "^7.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-vue": "^9.25.0",
+    "eslint-webpack-plugin": "^3.1.1",
     "file-loader": "^6.2.0",
     "webpack-cli": "^4.10.0"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
-    },
-    "rules": {
-      "vue/multi-word-component-names": "off"
-    }
   },
   "browserslist": [
     "> 1%",

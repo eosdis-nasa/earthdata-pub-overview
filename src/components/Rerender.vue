@@ -3,19 +3,19 @@
 </template>
 
 <script>
-import {compile} from 'vue/dist/vue.esm-bundler';
+import { compile } from 'vue/dist/vue.esm-bundler';
+
 export default {
-  name: "Rerender",
-  props: ["html"],
+  name: 'Rerender',
+  props: ['html'],
   mounted() {
-    this.compiled = compile(this.html)
+    this.compiled = compile(this.html);
   },
-  data(){
+  data() {
     return {
       compiled: null
-    }
+    };
   }
 };
 </script>
-<style>
-</style>
+<style></style>
