@@ -1,3 +1,4 @@
+<!-- Currently not being used -->
 <template class='popper'>
   <Popper :locked=true :offsetSkid="pageOffset" :key="pageOffset">
     <span class="fa fa-info-circle"></span>
@@ -18,7 +19,7 @@
           <template v-else>
             <span class="fas fa-external-link-alt"></span>
             <a :href="link_url" :title="link_title" target="_blank">{{
-    link_text }}</a>
+              link_text }}</a>
           </template>
         </template>
       </div>
@@ -58,25 +59,23 @@ export default {
       if (navigator.userAgentData === undefined) {
         userAgent = navigator.userAgent;
       } else {
-        // eslint-disable-next-line no-restricted-syntax, guard-for-in
-        for (const ea in brands) {
-          userAgent += `${brands[ea].brand} ${brands[ea].version}, `;
+        for (let ea in brands) {
+          userAgent += `${brands[ea].brand} ${brands[ea].version}, `
         }
       }
       let browserName;
-
       if (userAgent.match(/chrome|chromium|crios/i)) {
-        browserName = 'chrome';
+        browserName = "chrome";
       } else if (userAgent.match(/firefox|fxios/i)) {
-        browserName = 'firefox';
+        browserName = "firefox";
       } else if (userAgent.match(/safari/i)) {
-        browserName = 'safari';
+        browserName = "safari";
       } else if (userAgent.match(/opr\//i)) {
-        browserName = 'opera';
+        browserName = "opera";
       } else if (userAgent.match(/edg/i)) {
-        browserName = 'edge';
+        browserName = "edge";
       } else {
-        browserName = 'No browser detection';
+        browserName = "No browser detection";
       }
       return browserName;
     }

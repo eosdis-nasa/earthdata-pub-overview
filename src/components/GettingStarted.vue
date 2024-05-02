@@ -13,7 +13,6 @@
             <template v-else-if="getting_started.heading">
               {{ getting_started.heading }}
             </template>
-            <GettingStartedHero />
             <template v-for="(value, index) in getting_started.paragraphs" :key="index">
               <template v-if="value.heading && value.heading.indexOf('<') !== -1">
                 <Rerender :html="value.heading" />
@@ -108,7 +107,6 @@ import BoxList from './BoxList.vue';
 import Step from './Step.vue';
 import Sidebar from './Sidebar.vue';
 import Paragraph from './Paragraph.vue';
-import GettingStartedHero from './GettingStartedHero.vue';
 import List from './List.vue';
 
 export default {
@@ -118,8 +116,7 @@ export default {
     Step,
     Sidebar,
     Paragraph,
-    List,
-    GettingStartedHero
+    List
   },
   name: 'GettingStarted',
   data() {
