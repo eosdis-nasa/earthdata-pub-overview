@@ -24,7 +24,7 @@
               <Paragraph :text="value.text" />
               <List :list="value.list" />
               <div class="table_wrapper">
-                <Table :table="value.table" />
+                <TableGrid :table="value.table" />
               </div>
               <template v-if="value.box_list">
                 <span class="display-4 main-width">
@@ -112,6 +112,7 @@ import Step from './Step.vue';
 import Sidebar from './Sidebar.vue';
 import Paragraph from './Paragraph.vue';
 import List from './List.vue';
+import TableGrid from './TableGrid.vue';
 
 export default {
   components: {
@@ -120,7 +121,8 @@ export default {
     Step,
     Sidebar,
     Paragraph,
-    List
+    List,
+    TableGrid
   },
   name: 'DataPublicationGuidelines',
   data() {
