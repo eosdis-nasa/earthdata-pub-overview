@@ -215,8 +215,6 @@ a:link.ext:after, a:visited.ext:after {
   .container-lg,
   .row {
     --bs-gutter-x: unset } 
-  #earthdata-tophat2 {
-    overflow: hidden } 
 }
 @media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container {
