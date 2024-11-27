@@ -29,38 +29,25 @@
              },
              {
                 "number":2,
-                "heading":"<span class='main-width sections'><b>Select a DAAC</b></span>",
-                "accordian_header":"List of NASA DAACs",
-                "accordian_body":"<table class='table table-striped'><caption>Table 1. NASA DAACs and Science Disciplines</caption><thead><tr><th>NASA DAAC</th><th>Scientific Disciplines</th></tr></thead><tbody><tr><td>Alaska Satellite Facility (ASF)</td><td>SAR Products, Change Detection, Sea Ice, Polar Processes</td></tr><tr><td>Atmospheric Science Data Center (ASDC)</td><td>Radiation Budget, Clouds, Aerosols, Tropospheric Composition</td></tr><tr><td>Crustal Dynamics Data Information System (CDDIS)</td><td>Space Geodesy, Solid Earth</td></tr><tr><td>Global Hydrometeorology Resource Center (GHRC)</td><td>Lightning, Severe Weather Interactions, Atmospheric Convection, Hurricanes, Storm-induced Hazards</td></tr><tr><td>Goddard Earth Sciences Data and Information Services Center (GES DISC)</td><td>Global Precipitation, Solar Irradiance, Atmospheric Composition and Dynamics, Water and Energy</td></tr><tr><td>Land Processes DAAC (LPDAAC)</td><td>Land data products </td></tr><tr><td>Level 1 and Atmosphere Archive and Distribution System (LAADS)</td><td>MODIS (Moderate Resolution Imaging Spectrometer) Level 1 data (geolocation, L1A, and radiance L1B) and Atmosphere (Level 2 and Level 3) </td></tr><tr><td>National Snow and Ice Data Center DAAC (NSIDC DAAC)</td><td>Cryospheric Processes, Sea Ice, Snow, Ice Sheets, Frozen Ground, Glaciers, Soil Moisture</td></tr><tr><td>Oak Ridge National Laboratory (ORNL)</td><td>Biogeochemical Dynamics, Ecological Data, Environmental Processes</td></tr><tr><td>Ocean Biology DAAC (OB.DAAC)</td><td>Ocean Biology</td></tr><tr><td>Physical Oceanography DAAC (PO.DAAC)</td><td>Gravity, Ocean Circulation, Ocean Heat Budget, Ocean Surface Topography, Ocean Temperature, Ocean Waves, Ocean Winds, Ocean Salinity, Surface Water</td></tr><tr><td>Socioeconomic Data and Application Data Center (SEDAC)</td><td>Synthesized Earth science and socio-economic data</td></tr></tbody></table>",
-                "text":"Here you will select the DAAC to publish your data, based on your science domain or the type of data. If you are not sure which DAAC to select, you can choose “Unknown”.",
-                "paragraph":"Specifying a DAAC does not guarantee that your data will be assigned to that DAAC. As your request is reviewed, NASA may determine that a different DAAC is more appropriate or that your data do not meet the <a title='data acceptance policy' href='data_publication_guidelines#acceptance'>Data Acceptance Policy</a>.",
-                "icon":"sticky-note.svg",
-                "icon_text":"Some DAACs are not selectable on the form because they are not yet using Earthdata Pub for data publication. To publish data with one of those DAACs, please visit the DAAC web site to contact them."
-             },
-             {
-                "number":3,
                 "heading":"<span class='main-width sections'><b>Fill in the Data Accession Request form</b></span>",
                 "text":"In the <OtherLink link_title='Earthdata Pub Dashboard' link_url='dashboard/' link_text='Earthdata Pub Dashboard' />, click on the “Data Accession Request Form” button in the Next Action column. The information you provide about your data will be used to review and approve your Data Accession Request. ",
                 "icon":"lightbulb.svg",
                 "icon_text":"You can save your progress and return to the form later."
              },
              {
-                "number":4,
+                "number":3,
                 "heading":"<span class='main-width sections'><b>Submit your request</b></span>",
                 "text":"After you have filled in the Data Accession Request form, click on “Submit” to submit the request. This will initiate the Data Accession process. For more information on this process, see the <a title='Data Accession Process' href='/data_publication_guidelines#accession'>Data Accession Process</a> section of the <OverviewLink name='Data Publication Guidelines' link_title='Data Publication Guidelines' link_text='Data Publication Guidelines' />."
              },
              {
-                "number":5,
+                "number":4,
                 "heading":"<span class='main-width sections'><b>Accession request is completed</b></span>",
                 "paragraphs": [
                   {
-                     "text":"The DAAC, as well as ESDIS and ESDS if required, will review your Data Accession request and will determine if your data are approved to be published at the DAAC. The decision will be indicated in the Earthdata Pub Dashboard, and you will receive an email from the DAAC."
+                     "text":"Your data will be evaluated by NASA Earth Science Data and Information Systems personnel who will determine whether your data are approved to be published at a DAAC. The decision will be documented in the Earthdata Pub Dashboard, and you will receive an email explaining the decision."
                   },
                   {
                      "text":"If your Data Accession request has been approved, you can move to the data publication process."
-                  },
-                  {
-                     "text":"If your Data Accession request has not been approved, the DAAC will provide the reason why in the request's notes and in the email you receive."
                   }
                ]
             }
@@ -116,7 +103,7 @@
        },
        {
          "heading":"<h2 class='display-4' id='communicate'>Communicate with the DAAC<hr></h2>",
-         "text":"You can communicate with the DAAC using the Conversations page of the <OtherLink link_title='Earthdata Pub Dashboard' link_url='dashboard/' link_text='Earthdata Pub Dashboard' />. During the data accession or publication process, the DAAC may communicate with you in a variety of ways, including direct email or messages posted on the Conversations page."
+         "text":"You can communicate about your data product using the Conversations page of the <OtherLink link_title='Earthdata Pub Dashboard' link_url='dashboard/' link_text='Earthdata Pub Dashboard' />. Communication can be conducted on the Conversations page during the Data Accession or Data Publication process."
       }
     ]
  }
