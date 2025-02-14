@@ -28,3 +28,10 @@ http://localhost:8082
 ```bash
 npm run lint
 ```
+
+## References
+
+- EOSDIS Slack Channel: #earthdatapub
+- EDPub Wiki: [https://wiki.earthdata.nasa.gov/display/EDPUB/Earthdata+Pub+Home](https://wiki.earthdata.nasa.gov/display/EDPUB/Earthdata+Pub+Home)
+- EDPub Roadmap: [https://wiki.earthdata.nasa.gov/display/EDPUB/EDPub+Feature+Roadmap](https://wiki.earthdata.nasa.gov/display/EDPUB/EDPub+Feature+Roadmap)
+
