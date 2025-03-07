@@ -12,7 +12,7 @@
                "icon":"globe-americas.svg"
             },
             {
-               "text":"<a title='Data Scope & Acceptance Policy' href='#scope'>Data Scope & Acceptance Policy</a>",
+               "text":"<a title='Data Scope & Acceptance Guidelines' href='#scope'>Data Scope & Acceptance Guidelines</a>",
                "icon":"clipboard-list.svg"
             }
          ]
@@ -138,7 +138,7 @@
          "button":"<OtherLink link_title='Start New Request' link_url='dashboard/requests' link_text='Start New Request' link_class='btn btn-md btn-green text-white ext' />"
       },
       {
-         "heading":"Data Scope and Acceptance Policy",
+         "heading":"Data Scope and Acceptance Guidelines",
          "text":"NASA's Earth Observing System Data and Information System (EOSDIS) is responsible for the storage and public distribution of NASA Earth observation data. The scope of data which will be considered for publication at a NASA DAAC includes data:",
          "list":[
             "Produced by NASA science missions",
