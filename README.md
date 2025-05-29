@@ -1,4 +1,7 @@
-# Earthdata Pub Overview
+:no_entry: [DEPRECATED] - This repository has been integrated directly to the Earthdata Pub Dashboard
+rather than remaining a standalone module: https://github.com/eosdis-nasa/earthdata-pub-dashboard/pull/133
+
+# [DEPRECATED]  - Earthdata Pub Overview
 
 Earthdata Pub Overview is a collection of introduction pages that explain Earthdata Pub and the process of publishing data with EOSDIS through Earthdata Pub. This page has been called an introduction page, overview page, info(rmation) page.
 
